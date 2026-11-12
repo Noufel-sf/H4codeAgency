@@ -34,18 +34,23 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+html.dark {
+  color-scheme: dark;
   background-color: #090B10;
   color: #F5F7FC;
-  color-scheme: dark;
+}
+
+html.light {
+  color-scheme: light;
+  background-color: #ffffff;
+  color: #0f172a;
 }
 
 body {
-  background-color: #090B10;
-  color: #F5F7FC;
   overflow-x: hidden;
   min-height: 100vh;
-  selection-background-color: #315BDB;
-  selection-color: #ffffff;
 }
 
 ::selection {
@@ -58,11 +63,14 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #090B10;
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1c2433;
+  background: #cbd5e1;
   border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #1c2433;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #315BDB;
@@ -71,9 +79,15 @@ body {
 /* Studio ambient grid */
 .bg-studio-grid {
   background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.dark .bg-studio-grid {
+  background-image: 
     linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 48px 48px;
 }
 
 /* Studio radial glow */

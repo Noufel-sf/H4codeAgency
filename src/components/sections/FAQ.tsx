@@ -19,7 +19,7 @@ export function FAQ() {
   const questions = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7'] as const;
 
   return (
-    <section id="faq" className="relative py-24 sm:py-32 bg-[#090B10]">
+    <section id="faq" className="relative py-24 sm:py-32 bg-white dark:bg-[#090B10] transition-colors duration-200">
       <Container size="narrow">
         <AnimatedSection direction="up">
           <SectionHeading
@@ -46,8 +46,8 @@ export function FAQ() {
                   className={cn(
                     'rounded-2xl transition-all duration-300 overflow-hidden border',
                     isOpen
-                      ? 'bg-[#121824] border-[#4776F5]/40 shadow-lg shadow-black/20'
-                      : 'bg-[#10141C]/80 border-white/[0.08] hover:border-white/15'
+                      ? 'bg-blue-50/50 dark:bg-[#121824] border-blue-200 dark:border-[#4776F5]/40 shadow-sm dark:shadow-lg dark:shadow-black/20'
+                      : 'bg-slate-50 dark:bg-[#10141C]/80 border-slate-200/80 dark:border-white/[0.08] hover:border-slate-300 dark:hover:border-white/15'
                   )}
                 >
                   <button
@@ -56,7 +56,7 @@ export function FAQ() {
                     aria-expanded={isOpen}
                     className="w-full p-5 sm:p-6 text-start flex items-center justify-between gap-4 cursor-pointer select-none"
                   >
-                    <span className="text-base sm:text-lg font-bold text-[#F5F7FC]">
+                    <span className="text-base sm:text-lg font-bold text-slate-900 dark:text-[#F5F7FC]">
                       {question}
                     </span>
                     <div
@@ -64,7 +64,7 @@ export function FAQ() {
                         'w-7 h-7 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300',
                         isOpen
                           ? 'bg-[#315BDB] text-white rotate-180'
-                          : 'bg-white/[0.05] text-[#929BAA]'
+                          : 'bg-slate-200/80 dark:bg-white/[0.05] text-slate-600 dark:text-[#929BAA]'
                       )}
                     >
                       <ChevronDown className="w-4 h-4" />
@@ -72,7 +72,7 @@ export function FAQ() {
                   </button>
 
                   {isOpen && (
-                    <div className="px-5 sm:px-6 pb-6 pt-1 text-sm sm:text-base text-[#929BAA] leading-relaxed border-t border-white/[0.04] animate-in fade-in duration-200">
+                    <div className="px-5 sm:px-6 pb-6 pt-1 text-sm sm:text-base text-slate-600 dark:text-[#929BAA] leading-relaxed border-t border-slate-200/60 dark:border-white/[0.04] animate-in fade-in duration-200">
                       {answer}
                     </div>
                   )}

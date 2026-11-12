@@ -5,6 +5,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { siteConfig } from '@/config/site';
 import { Toaster } from 'sonner';
+import { ThemeProvider } from '@/components/theme/ThemeProvider';
 import '@/app/compiled.css';
 
 export function generateStaticParams() {
@@ -120,16 +121,17 @@ export default async function LocaleLayout({
       <body
         className={`${
           isRtl ? 'font-arabic' : 'font-sans'
-        } bg-[#090B10] text-[#F5F7FC] antialiased selection:bg-[#315BDB] selection:text-white`}
+        } bg-white text-slate-900 dark:bg-[#090B10] dark:text-[#F5F7FC] antialiased transition-colors duration-200 selection:bg-[#315BDB] selection:text-white`}
       >
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
-          <Toaster
-            position={isRtl ? 'bottom-left' : 'bottom-right'}
-            richColors
-            theme="dark"
-          />
-        </NextIntlClientProvider>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            {children}
+            <Toaster
+              position={isRtl ? 'bottom-left' : 'bottom-right'}
+              richColors
+            />
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -45,13 +45,13 @@ export function LanguageSwitcher({ className }: { className?: string }) {
         aria-expanded={isOpen}
         aria-haspopup="true"
         aria-label="Select Language"
-        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium text-[#F5F7FC] bg-white/[0.05] hover:bg-white/[0.1] border border-white/10 hover:border-white/20 transition-all duration-200 cursor-pointer"
+        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium text-slate-800 dark:text-[#F5F7FC] bg-slate-100 hover:bg-slate-200 dark:bg-white/[0.05] dark:hover:bg-white/[0.1] border border-slate-200 dark:border-white/10 transition-all duration-200 cursor-pointer"
       >
-        <Globe className="w-3.5 h-3.5 text-[#4776F5]" />
+        <Globe className="w-3.5 h-3.5 text-[#315BDB] dark:text-[#4776F5]" />
         <span>{activeLang.short}</span>
         <ChevronDown
           className={cn(
-            'w-3 h-3 text-[#929BAA] transition-transform duration-200',
+            'w-3 h-3 text-slate-500 dark:text-[#929BAA] transition-transform duration-200',
             isOpen && 'rotate-180'
           )}
         />
@@ -59,7 +59,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
 
       {isOpen && (
         <div
-          className="absolute end-0 mt-2 w-36 rounded-xl bg-[#10141C] border border-white/10 shadow-2xl p-1 z-50 animate-in fade-in zoom-in-95 duration-150 backdrop-blur-xl"
+          className="absolute end-0 mt-2 w-36 rounded-xl bg-white dark:bg-[#10141C] border border-slate-200 dark:border-white/10 shadow-2xl p-1 z-50 animate-in fade-in zoom-in-95 duration-150 backdrop-blur-xl"
           role="menu"
         >
           {languages.map((lang) => {
@@ -72,15 +72,15 @@ export function LanguageSwitcher({ className }: { className?: string }) {
                 className={cn(
                   'w-full flex items-center justify-between px-3 py-2 text-xs rounded-lg font-medium transition-colors cursor-pointer',
                   isActive
-                    ? 'bg-[#315BDB]/20 text-[#4776F5]'
-                    : 'text-[#929BAA] hover:text-[#F5F7FC] hover:bg-white/[0.05]'
+                    ? 'bg-blue-50 text-blue-600 dark:bg-[#315BDB]/20 dark:text-[#4776F5]'
+                    : 'text-slate-600 dark:text-[#929BAA] hover:text-slate-900 dark:hover:text-[#F5F7FC] hover:bg-slate-100 dark:hover:bg-white/[0.05]'
                 )}
               >
                 <div className="flex items-center gap-2">
-                  <span className="font-semibold text-[11px] text-white/50">{lang.short}</span>
+                  <span className="font-semibold text-[11px] text-slate-400 dark:text-white/50">{lang.short}</span>
                   <span>{lang.label}</span>
                 </div>
-                {isActive && <Check className="w-3.5 h-3.5 text-[#4776F5]" />}
+                {isActive && <Check className="w-3.5 h-3.5 text-blue-600 dark:text-[#4776F5]" />}
               </button>
             );
           })}

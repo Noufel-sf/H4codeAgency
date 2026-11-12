@@ -25,10 +25,10 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[92vh] flex items-center pt-32 pb-20 overflow-hidden bg-studio-grid"
+      className="relative min-h-[92vh] flex items-center pt-32 pb-20 overflow-hidden bg-studio-grid bg-white dark:bg-[#090B10] transition-colors duration-200"
     >
       {/* Background ambient lighting */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[450px] glow-blue blur-[140px] pointer-events-none opacity-80" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[450px] glow-blue blur-[140px] pointer-events-none opacity-60 dark:opacity-80" />
       <div className="absolute top-1/3 end-10 w-[350px] h-[350px] bg-[#4776F5]/10 blur-[120px] pointer-events-none" />
 
       <Container className="relative z-10">
@@ -37,7 +37,7 @@ export function Hero() {
           <div className="lg:col-span-7 space-y-6 sm:space-y-8 text-center lg:text-start">
             {/* Availability Pill */}
             <AnimatedSection direction="down" delay={0.1}>
-              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-white/10 bg-white/[0.04] backdrop-blur-md text-xs font-medium text-[#F5F7FC] shadow-sm">
+              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-slate-200 dark:border-white/10 bg-slate-100/90 dark:bg-white/[0.04] backdrop-blur-md text-xs font-medium text-slate-800 dark:text-[#F5F7FC] shadow-sm">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
@@ -48,9 +48,9 @@ export function Hero() {
 
             {/* Main Headline */}
             <AnimatedSection direction="up" delay={0.2}>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] font-black tracking-tight leading-[1.08] text-[#F5F7FC]">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] font-black tracking-tight leading-[1.08] text-slate-900 dark:text-[#F5F7FC]">
                 <span>{t('headlinePrefix')} </span>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4776F5] via-[#60A5FA] to-[#315BDB] drop-shadow-sm">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2563EB] to-[#315BDB] dark:from-[#4776F5] dark:via-[#60A5FA] dark:to-[#315BDB] drop-shadow-sm">
                   {t('headlineHighlight')}
                 </span>
               </h1>
@@ -58,7 +58,7 @@ export function Hero() {
 
             {/* Supporting Description */}
             <AnimatedSection direction="up" delay={0.3}>
-              <p className="max-w-2xl text-base sm:text-lg md:text-xl text-[#929BAA] leading-relaxed mx-auto lg:mx-0">
+              <p className="max-w-2xl text-base sm:text-lg md:text-xl text-slate-600 dark:text-[#929BAA] leading-relaxed mx-auto lg:mx-0">
                 {t('description')}
               </p>
             </AnimatedSection>
@@ -89,18 +89,18 @@ export function Hero() {
 
             {/* Studio Credibility Metrics */}
             <AnimatedSection direction="up" delay={0.5}>
-              <div className="pt-8 border-t border-white/[0.08] grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0 text-start">
+              <div className="pt-8 border-t border-slate-200 dark:border-white/[0.08] grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0 text-start">
                 <div>
-                  <div className="text-2xl sm:text-3xl font-extrabold text-[#F5F7FC]">99.8%</div>
-                  <div className="text-[11px] sm:text-xs text-[#929BAA] mt-0.5">{t('metrics.satisfaction')}</div>
+                  <div className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-[#F5F7FC]">99.8%</div>
+                  <div className="text-[11px] sm:text-xs text-slate-500 dark:text-[#929BAA] mt-0.5">{t('metrics.satisfaction')}</div>
                 </div>
-                <div className="border-s border-white/[0.08] ps-4">
-                  <div className="text-2xl sm:text-3xl font-extrabold text-[#4776F5]">98+</div>
-                  <div className="text-[11px] sm:text-xs text-[#929BAA] mt-0.5">{t('metrics.performance')}</div>
+                <div className="border-s border-slate-200 dark:border-white/[0.08] ps-4">
+                  <div className="text-2xl sm:text-3xl font-extrabold text-blue-600 dark:text-[#4776F5]">98+</div>
+                  <div className="text-[11px] sm:text-xs text-slate-500 dark:text-[#929BAA] mt-0.5">{t('metrics.performance')}</div>
                 </div>
-                <div className="border-s border-white/[0.08] ps-4">
-                  <div className="text-2xl sm:text-3xl font-extrabold text-[#F5F7FC]">100%</div>
-                  <div className="text-[11px] sm:text-xs text-[#929BAA] mt-0.5">{t('metrics.delivery')}</div>
+                <div className="border-s border-slate-200 dark:border-white/[0.08] ps-4">
+                  <div className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-[#F5F7FC]">100%</div>
+                  <div className="text-[11px] sm:text-xs text-slate-500 dark:text-[#929BAA] mt-0.5">{t('metrics.delivery')}</div>
                 </div>
               </div>
             </AnimatedSection>
@@ -111,9 +111,9 @@ export function Hero() {
             <AnimatedSection direction="left" delay={0.3}>
               <div className="relative mx-auto max-w-md lg:max-w-none">
                 {/* Layered Glass IDE Mockup */}
-                <div className="relative rounded-2xl bg-[#0D111A]/90 border border-white/[0.12] shadow-2xl backdrop-blur-xl overflow-hidden">
+                <div className="relative rounded-2xl bg-[#0D111A] border border-slate-800 dark:border-white/[0.12] shadow-2xl backdrop-blur-xl overflow-hidden">
                   {/* Window Bar */}
-                  <div className="flex items-center justify-between px-4 py-3 bg-[#121824]/80 border-b border-white/[0.08]">
+                  <div className="flex items-center justify-between px-4 py-3 bg-[#121824] border-b border-white/[0.08]">
                     <div className="flex items-center gap-1.5">
                       <div className="w-3 h-3 rounded-full bg-red-500/80" />
                       <div className="w-3 h-3 rounded-full bg-amber-500/80" />
@@ -162,24 +162,24 @@ export function Hero() {
                 </div>
 
                 {/* Floating Studio Accent Badge: Top-Right */}
-                <div className="absolute -top-6 -end-4 sm:-end-6 p-3 rounded-xl bg-[#121824]/90 border border-[#4776F5]/40 shadow-xl backdrop-blur-md hidden sm:flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-[#315BDB]/20 flex items-center justify-center text-[#4776F5]">
+                <div className="absolute -top-6 -end-4 sm:-end-6 p-3 rounded-xl bg-white/95 dark:bg-[#121824]/90 border border-slate-200 dark:border-[#4776F5]/40 shadow-xl backdrop-blur-md hidden sm:flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-lg bg-blue-50 dark:bg-[#315BDB]/20 flex items-center justify-center text-blue-600 dark:text-[#4776F5]">
                     <Code2 className="w-4 h-4" />
                   </div>
                   <div>
-                    <div className="text-[11px] text-[#929BAA]">Next-Gen Architecture</div>
-                    <div className="text-xs font-bold text-white">Full RTL & LTR Ready</div>
+                    <div className="text-[11px] text-slate-500 dark:text-[#929BAA]">Next-Gen Architecture</div>
+                    <div className="text-xs font-bold text-slate-900 dark:text-white">Full RTL & LTR Ready</div>
                   </div>
                 </div>
 
                 {/* Floating Studio Accent Badge: Bottom-Left */}
-                <div className="absolute -bottom-6 -start-4 sm:-start-6 p-3 rounded-xl bg-[#121824]/90 border border-white/10 shadow-xl backdrop-blur-md hidden sm:flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400">
+                <div className="absolute -bottom-6 -start-4 sm:-start-6 p-3 rounded-xl bg-white/95 dark:bg-[#121824]/90 border border-slate-200 dark:border-white/10 shadow-xl backdrop-blur-md hidden sm:flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-lg bg-emerald-500/10 dark:bg-emerald-500/20 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
                     <Zap className="w-4 h-4" />
                   </div>
                   <div>
-                    <div className="text-[11px] text-[#929BAA]">Sub-second TTFB</div>
-                    <div className="text-xs font-bold text-emerald-400">Optimal Lighthouse 100</div>
+                    <div className="text-[11px] text-slate-500 dark:text-[#929BAA]">Sub-second TTFB</div>
+                    <div className="text-xs font-bold text-emerald-600 dark:text-emerald-400">Optimal Lighthouse 100</div>
                   </div>
                 </div>
               </div>
@@ -191,7 +191,7 @@ export function Hero() {
         <div className="mt-16 sm:mt-24 text-center">
           <a
             href="#services"
-            className="inline-flex flex-col items-center gap-2 text-xs text-[#5E6778] hover:text-[#F5F7FC] transition-colors group cursor-pointer"
+            className="inline-flex flex-col items-center gap-2 text-xs text-slate-400 dark:text-[#5E6778] hover:text-slate-900 dark:hover:text-[#F5F7FC] transition-colors group cursor-pointer"
             aria-label="Scroll to services"
           >
             <span>{t('scroll')}</span>

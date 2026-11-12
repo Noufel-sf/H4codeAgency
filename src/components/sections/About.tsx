@@ -30,7 +30,7 @@ export function About() {
   ];
 
   return (
-    <section id="about" className="relative py-24 sm:py-32 bg-[#0B0E15] border-y border-white/[0.06]">
+    <section id="about" className="relative py-24 sm:py-32 bg-white dark:bg-[#0B0E15] border-y border-slate-200 dark:border-white/[0.06] transition-colors duration-200">
       {/* Background glow */}
       <div className="absolute top-1/3 end-0 w-80 h-80 bg-[#4776F5]/10 blur-[140px] pointer-events-none" />
 
@@ -48,9 +48,9 @@ export function About() {
             </AnimatedSection>
 
             <AnimatedSection direction="up" delay={0.15}>
-              <div className="space-y-4 text-base sm:text-lg text-[#929BAA] leading-relaxed">
+              <div className="space-y-4 text-base sm:text-lg text-slate-600 dark:text-[#929BAA] leading-relaxed">
                 <p>{t('paragraph1')}</p>
-                <p className="text-[#F5F7FC]/80">{t('paragraph2')}</p>
+                <p className="text-slate-900 font-medium dark:text-[#F5F7FC]/80">{t('paragraph2')}</p>
               </div>
             </AnimatedSection>
 
@@ -62,16 +62,16 @@ export function About() {
                   direction="up"
                   delay={0.1 * index + 0.2}
                 >
-                  <div className="p-5 rounded-xl bg-[#121824]/60 border border-white/[0.08] hover:border-white/20 transition-colors h-full">
+                  <div className="p-5 rounded-xl bg-slate-50 dark:bg-[#121824]/60 border border-slate-200 dark:border-white/[0.08] hover:border-slate-300 dark:hover:border-white/20 transition-colors h-full">
                     <div className="flex items-center gap-3 mb-2.5">
-                      <div className="p-2 rounded-lg bg-white/[0.04] border border-white/10">
+                      <div className="p-2 rounded-lg bg-white dark:bg-white/[0.04] border border-slate-200 dark:border-white/10 shadow-xs">
                         {item.icon}
                       </div>
-                      <h4 className="font-bold text-sm text-[#F5F7FC]">
+                      <h4 className="font-bold text-sm text-slate-900 dark:text-[#F5F7FC]">
                         {t(`differentiators.${item.key}.title`)}
                       </h4>
                     </div>
-                    <p className="text-xs text-[#929BAA] leading-relaxed">
+                    <p className="text-xs text-slate-600 dark:text-[#929BAA] leading-relaxed">
                       {t(`differentiators.${item.key}.desc`)}
                     </p>
                   </div>

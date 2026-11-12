@@ -26,7 +26,7 @@ export function ProjectCard({
   const isEven = index % 2 === 0;
 
   return (
-    <div className="group rounded-3xl bg-[#10141C] border border-white/[0.08] hover:border-[#4776F5]/40 transition-all duration-500 overflow-hidden shadow-xl hover:shadow-[0_20px_50px_-15px_rgba(49,91,219,0.2)]">
+    <div className="group rounded-3xl bg-white dark:bg-[#10141C] border border-slate-200 dark:border-white/[0.08] hover:border-blue-400 dark:hover:border-[#4776F5]/40 transition-all duration-500 overflow-hidden shadow-sm hover:shadow-xl dark:hover:shadow-[0_20px_50px_-15px_rgba(49,91,219,0.2)]">
       <div className={cn(
         'grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-6 sm:p-10',
         isEven ? '' : 'lg:[&>*:first-child]:order-2'
@@ -34,15 +34,15 @@ export function ProjectCard({
         {/* Info Column */}
         <div className="lg:col-span-5 space-y-5">
           <div className="space-y-2">
-            <span className="text-xs font-semibold tracking-wider uppercase text-[#4776F5]">
+            <span className="text-xs font-semibold tracking-wider uppercase text-blue-600 dark:text-[#4776F5]">
               {category}
             </span>
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-[#F5F7FC] group-hover:text-white transition-colors">
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-[#F5F7FC] group-hover:text-blue-600 dark:group-hover:text-white transition-colors">
               {title}
             </h3>
           </div>
 
-          <p className="text-sm sm:text-base text-[#929BAA] leading-relaxed">
+          <p className="text-sm sm:text-base text-slate-600 dark:text-[#929BAA] leading-relaxed">
             {description}
           </p>
 
@@ -51,7 +51,7 @@ export function ProjectCard({
             {technologies.map((tech, idx) => (
               <span
                 key={idx}
-                className="px-3 py-1 rounded-full text-xs font-medium bg-white/[0.04] text-[#F5F7FC]/80 border border-white/[0.08]"
+                className="px-3 py-1 rounded-full text-xs font-medium bg-slate-100 dark:bg-white/[0.04] text-slate-700 dark:text-[#F5F7FC]/80 border border-slate-200 dark:border-white/[0.08]"
               >
                 {tech}
               </span>
@@ -62,15 +62,15 @@ export function ProjectCard({
           <div className="pt-4 flex items-center gap-4">
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 text-xs font-semibold text-[#4776F5] hover:text-[#60A5FA] transition-colors group/link cursor-pointer"
+              className="inline-flex items-center gap-2 text-xs font-semibold text-blue-600 dark:text-[#4776F5] hover:text-blue-700 dark:hover:text-[#60A5FA] transition-colors group/link cursor-pointer"
             >
               <span>{viewLabel}</span>
               <ArrowUpRight className="w-4 h-4 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 rtl:group-hover/link:-translate-x-0.5" />
             </a>
-            <span className="text-white/20">•</span>
+            <span className="text-slate-300 dark:text-white/20">•</span>
             <a
               href="#contact"
-              className="inline-flex items-center gap-1.5 text-xs font-medium text-[#929BAA] hover:text-[#F5F7FC] transition-colors"
+              className="inline-flex items-center gap-1.5 text-xs font-medium text-slate-500 dark:text-[#929BAA] hover:text-slate-900 dark:hover:text-[#F5F7FC] transition-colors"
             >
               <ExternalLink className="w-3.5 h-3.5" />
               <span>{liveLabel}</span>

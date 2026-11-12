@@ -50,7 +50,7 @@ export function SectionHeading({
       {badge && (
         <div
           className={cn(
-            'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase mb-4 border border-white/10 bg-white/[0.03] text-[#929BAA]',
+            'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase mb-4 border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-white/[0.03] text-slate-700 dark:text-[#929BAA]',
             align === 'center' ? 'mx-auto' : ''
           )}
         >
@@ -58,11 +58,11 @@ export function SectionHeading({
           <span>{badge}</span>
         </div>
       )}
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#F5F7FC] leading-[1.15]">
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-[#F5F7FC] leading-[1.15]">
         {renderTitle()}
       </h2>
       {description && (
-        <p className="mt-4 sm:mt-5 text-base sm:text-lg text-[#929BAA] leading-relaxed">
+        <p className="mt-4 sm:mt-5 text-base sm:text-lg text-slate-600 dark:text-[#929BAA] leading-relaxed">
           {description}
         </p>
       )}

@@ -43,7 +43,7 @@ export function Technologies() {
   ];
 
   return (
-    <section className="relative py-24 sm:py-32 bg-[#090B10]">
+    <section className="relative py-24 sm:py-32 bg-white dark:bg-[#090B10] transition-colors duration-200">
       <Container>
         <AnimatedSection direction="up">
           <SectionHeading
@@ -61,9 +61,9 @@ export function Technologies() {
               direction="up"
               delay={0.15 * cIdx}
             >
-              <div className="rounded-2xl bg-[#10141C] border border-white/[0.08] p-6 space-y-4 hover:border-white/20 transition-all">
-                <div className="flex items-center justify-between pb-3 border-b border-white/[0.08]">
-                  <h3 className="text-xs font-bold uppercase tracking-wider text-[#4776F5]">
+              <div className="rounded-2xl bg-slate-50/90 dark:bg-[#10141C] border border-slate-200 dark:border-white/[0.08] p-6 space-y-4 hover:border-slate-300 dark:hover:border-white/20 transition-all shadow-xs">
+                <div className="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-white/[0.08]">
+                  <h3 className="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-[#4776F5]">
                     {t(`categories.${cat.categoryKey}`)}
                   </h3>
                   <span className="w-2 h-2 rounded-full bg-[#315BDB]" />
@@ -73,12 +73,12 @@ export function Technologies() {
                   {cat.items.map((item, iIdx) => (
                     <div
                       key={iIdx}
-                      className="flex items-center justify-between p-3 rounded-xl bg-white/[0.02] border border-white/[0.04] hover:bg-white/[0.05] transition-colors"
+                      className="flex items-center justify-between p-3 rounded-xl bg-white dark:bg-white/[0.02] border border-slate-200/80 dark:border-white/[0.04] hover:bg-slate-100/50 dark:hover:bg-white/[0.05] transition-colors shadow-xs"
                     >
-                      <span className="text-sm font-semibold text-[#F5F7FC]">
+                      <span className="text-sm font-semibold text-slate-900 dark:text-[#F5F7FC]">
                         {item.name}
                       </span>
-                      <span className="text-[11px] font-mono text-[#929BAA] px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.06]">
+                      <span className="text-[11px] font-mono text-slate-500 dark:text-[#929BAA] px-2 py-0.5 rounded bg-slate-100 dark:bg-white/[0.04] border border-slate-200 dark:border-white/[0.06]">
                         {item.tag}
                       </span>
                     </div>
