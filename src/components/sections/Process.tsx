@@ -12,93 +12,94 @@ export function Process() {
     {
       key: 'step1',
       number: '01',
-      rotation: 'lg:-rotate-2 hover:lg:rotate-0',
+      rotation: 'md:-rotate-2 hover:md:rotate-0',
       icon: (
         <svg
-          viewBox="0 0 160 160"
+          viewBox="0 0 200 200"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-36 h-36 stroke-slate-200 dark:stroke-white/[0.07] transition-all duration-300 group-hover:stroke-emerald-400/30 dark:group-hover:stroke-emerald-400/20"
-          strokeWidth="4"
+          className="w-44 h-44 sm:w-48 sm:h-48 stroke-[#E5E9F0] dark:stroke-white/[0.08] transition-colors duration-300 group-hover:stroke-emerald-400/40 dark:group-hover:stroke-emerald-400/25"
+          strokeWidth="10"
           strokeLinecap="round"
           strokeLinejoin="round"
         >
-          {/* Lightbulb bulb */}
-          <path d="M80 30 C55 30 44 48 44 70 C44 85 55 96 59 108 L101 108 C105 96 116 85 116 70 C116 48 105 30 80 30 Z" />
-          {/* Base coils */}
-          <line x1="62" y1="118" x2="98" y2="118" />
-          <line x1="68" y1="128" x2="92" y2="128" />
-          {/* Filament */}
-          <path d="M68 76 L74 60 L86 60 L92 76" strokeWidth="3" />
-          {/* Rays */}
-          <line x1="22" y1="56" x2="34" y2="62" />
-          <line x1="18" y1="78" x2="30" y2="78" />
-          <line x1="24" y1="100" x2="36" y2="94" />
-          <line x1="138" y1="56" x2="126" y2="62" />
-          <line x1="142" y1="78" x2="130" y2="78" />
-          <line x1="136" y1="100" x2="124" y2="94" />
+          {/* Lightbulb outer shape */}
+          <path d="M100 42 C72 42 54 62 54 88 C54 106 66 118 72 132 L128 132 C134 118 146 106 146 88 C146 62 128 42 100 42 Z" />
+          {/* Screw base */}
+          <path d="M78 144 L122 144" strokeWidth="9" />
+          <path d="M84 156 L116 156" strokeWidth="8" />
+          {/* Inner Filament Loop */}
+          <path d="M86 96 C86 76 114 76 114 96" strokeWidth="8" />
+          {/* Left Radiant Rays */}
+          <path d="M30 68 L42 74" strokeWidth="9" />
+          <path d="M26 94 L38 94" strokeWidth="9" />
+          <path d="M30 120 L42 114" strokeWidth="9" />
+          {/* Right Radiant Rays */}
+          <path d="M170 68 L158 74" strokeWidth="9" />
+          <path d="M174 94 L162 94" strokeWidth="9" />
+          <path d="M170 120 L158 114" strokeWidth="9" />
         </svg>
       )
     },
     {
       key: 'step2',
       number: '02',
-      rotation: 'lg:rotate-0 hover:lg:-rotate-1',
+      rotation: 'md:rotate-0 hover:md:-rotate-1',
       icon: (
         <svg
-          viewBox="0 0 160 160"
+          viewBox="0 0 200 200"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-36 h-36 stroke-slate-200 dark:stroke-white/[0.07] transition-all duration-300 group-hover:stroke-emerald-400/30 dark:group-hover:stroke-emerald-400/20"
-          strokeWidth="4"
+          className="w-44 h-44 sm:w-48 sm:h-48 stroke-[#E5E9F0] dark:stroke-white/[0.08] transition-colors duration-300 group-hover:stroke-emerald-400/40 dark:group-hover:stroke-emerald-400/25"
+          strokeWidth="10"
           strokeLinecap="round"
           strokeLinejoin="round"
         >
-          {/* Bezier curve path */}
-          <path d="M28 112 C 28 60, 132 60, 132 112" />
-          {/* Handle line connecting control points */}
-          <line x1="24" y1="56" x2="136" y2="56" strokeDasharray="3 3" strokeWidth="2.5" />
-          {/* Control point 1 circle */}
-          <circle cx="24" cy="56" r="6.5" />
+          {/* Arched Bezier curve */}
+          <path d="M34 135 C34 70 166 70 166 135" strokeWidth="10" />
+          {/* Control handle connecting bar */}
+          <path d="M32 64 L168 64" strokeWidth="7" />
+          {/* Left control point circle */}
+          <circle cx="32" cy="64" r="8" strokeWidth="8" />
+          {/* Right control point circle */}
+          <circle cx="168" cy="64" r="8" strokeWidth="8" />
           {/* Center anchor square */}
-          <rect x="73" y="49" width="14" height="14" rx="2" />
-          {/* Control point 2 circle */}
-          <circle cx="136" cy="56" r="6.5" />
-          {/* Pen nib */}
-          <path d="M80 63 L60 114 L80 136 L100 114 Z" />
-          <circle cx="80" cy="98" r="4" className="fill-slate-200 dark:fill-white/[0.07]" />
-          <line x1="80" y1="102" x2="80" y2="136" />
+          <rect x="91" y="55" width="18" height="18" rx="3" strokeWidth="8" />
+          {/* Pen nib body */}
+          <path d="M100 74 L74 134 L100 160 L126 134 Z" strokeWidth="9" />
+          <circle cx="100" cy="116" r="4" fill="currentColor" className="fill-[#E5E9F0] dark:fill-white/[0.08]" stroke="none" />
+          <path d="M100 122 L100 160" strokeWidth="8" />
         </svg>
       )
     },
     {
       key: 'step3',
       number: '03',
-      rotation: 'lg:rotate-2 hover:lg:rotate-0',
+      rotation: 'md:rotate-2 hover:md:rotate-0',
       icon: (
         <svg
-          viewBox="0 0 160 160"
+          viewBox="0 0 200 200"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-36 h-36 stroke-slate-200 dark:stroke-white/[0.07] transition-all duration-300 group-hover:stroke-emerald-400/30 dark:group-hover:stroke-emerald-400/20"
-          strokeWidth="4"
+          className="w-44 h-44 sm:w-48 sm:h-48 stroke-[#E5E9F0] dark:stroke-white/[0.08] transition-colors duration-300 group-hover:stroke-emerald-400/40 dark:group-hover:stroke-emerald-400/25"
+          strokeWidth="10"
           strokeLinecap="round"
           strokeLinejoin="round"
         >
-          {/* Rocket body */}
-          <path d="M125 35 C85 35 60 70 52 95 L65 108 C90 100 125 75 125 35 Z" />
-          {/* Window */}
-          <circle cx="95" cy="65" r="9" />
-          {/* Top fin */}
-          <path d="M86 42 C68 38 52 46 48 56 C52 70 65 72 65 72" />
-          {/* Bottom fin */}
-          <path d="M118 74 C122 92 114 108 104 112 C90 108 88 95 88 95" />
+          {/* Rocket fuselage */}
+          <path d="M152 48 C105 46 72 82 64 114 L86 136 C118 128 154 95 152 48 Z" strokeWidth="10" />
+          {/* Porthole window */}
+          <circle cx="116" cy="84" r="12" strokeWidth="8" />
+          {/* Upper fin */}
+          <path d="M104 54 C82 50 62 60 58 72 C64 88 80 88 80 88" strokeWidth="8" />
+          {/* Lower fin */}
+          <path d="M146 96 C150 118 140 138 128 142 C112 136 112 120 112 120" strokeWidth="8" />
           {/* Exhaust flame */}
-          <path d="M52 95 L40 107 C36 111 38 116 44 116 L49 116 L49 121 C49 127 54 129 58 125 L70 113" />
-          {/* Speed & particle lines */}
-          <line x1="28" y1="124" x2="18" y2="134" />
-          <line x1="36" y1="138" x2="26" y2="148" />
-          <line x1="48" y1="140" x2="42" y2="146" />
+          <path d="M64 114 L50 128 C46 132 48 138 54 138 L60 138 L60 144 C60 150 66 152 70 148 L86 136" strokeWidth="8" />
+          {/* Speed sparks and trails */}
+          <path d="M36 148 L24 160" strokeWidth="7" />
+          <path d="M46 164 L34 176" strokeWidth="7" />
+          <path d="M60 166 L52 174" strokeWidth="7" />
         </svg>
       )
     }
@@ -123,12 +124,12 @@ export function Process() {
           </div>
         </AnimatedSection>
 
-        {/* 3 Playing-Card Grid with Curved Hand-Drawn Connectors */}
-        <div className="relative max-w-6xl mx-auto">
+        {/* Compact Playing-Card Grid with Curved Hand-Drawn Connectors */}
+        <div className="relative max-w-4xl mx-auto">
           {/* Curved Connector Arrow 1: Between Card 1 and Card 2 (Top Arch) */}
-          <div className="hidden lg:block absolute -top-8 left-[30%] w-24 h-16 pointer-events-none z-20 rtl:left-auto rtl:right-[30%] rtl:-scale-x-100">
+          <div className="hidden md:block absolute -top-8 left-[31%] w-20 lg:w-24 h-14 pointer-events-none z-20 rtl:left-auto rtl:right-[31%] rtl:-scale-x-100">
             <svg
-              viewBox="0 0 100 50"
+              viewBox="0 0 90 45"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               className="w-full h-full stroke-slate-400 dark:stroke-slate-500"
@@ -137,16 +138,16 @@ export function Process() {
               strokeLinejoin="round"
             >
               {/* Arched path */}
-              <path d="M 5 45 C 15 10, 70 8, 92 32" />
+              <path d="M 6 40 C 14 10, 68 8, 84 28" />
               {/* Arrow tip pointing to card 2 */}
-              <path d="M 80 32 L 93 33 L 90 20" />
+              <path d="M 72 28 L 85 29 L 83 17" />
             </svg>
           </div>
 
           {/* Curved Connector Arrow 2: Between Card 2 and Card 3 (Bottom Arch) */}
-          <div className="hidden lg:block absolute -bottom-8 left-[63%] w-24 h-16 pointer-events-none z-20 rtl:left-auto rtl:right-[63%] rtl:-scale-x-100">
+          <div className="hidden md:block absolute -bottom-7 left-[64%] w-20 lg:w-24 h-14 pointer-events-none z-20 rtl:left-auto rtl:right-[64%] rtl:-scale-x-100">
             <svg
-              viewBox="0 0 100 50"
+              viewBox="0 0 90 45"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               className="w-full h-full stroke-slate-400 dark:stroke-slate-500"
@@ -155,13 +156,13 @@ export function Process() {
               strokeLinejoin="round"
             >
               {/* Swooping under path */}
-              <path d="M 5 10 C 20 44, 72 44, 92 20" />
+              <path d="M 6 12 C 20 40, 68 40, 84 18" />
               {/* Arrow tip pointing to card 3 */}
-              <path d="M 79 19 L 93 19 L 90 32" />
+              <path d="M 72 17 L 85 18 L 83 30" />
             </svg>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-6 lg:gap-8 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-6 items-stretch justify-center">
             {steps.map((step, index) => {
               const title = t(`steps.${step.key}.title`);
               const desc = t(`steps.${step.key}.desc`);
@@ -171,32 +172,32 @@ export function Process() {
                   key={step.key}
                   direction="up"
                   delay={0.12 * index}
-                  className="h-full"
+                  className="h-full flex justify-center"
                 >
                   <div
-                    className={`group relative h-full rounded-[2rem] bg-white dark:bg-[#111622] border border-slate-200/90 dark:border-white/10 p-7 sm:p-9 flex flex-col justify-between shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.3)] transition-all duration-300 hover:shadow-xl hover:border-slate-300 dark:hover:border-white/20 transform-gpu ${step.rotation}`}
+                    className={`group relative w-full max-w-[310px] md:max-w-none h-full rounded-[1.75rem] bg-white dark:bg-[#111622] border border-slate-200/90 dark:border-white/10 p-6 sm:p-7 flex flex-col justify-between shadow-[0_4px_24px_rgba(0,0,0,0.03)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.3)] transition-all duration-300 hover:shadow-xl hover:border-slate-300 dark:hover:border-white/20 transform-gpu ${step.rotation}`}
                   >
                     {/* Top Content: Green Step Number & Step Title */}
                     <div>
                       {/* Step Number in Emerald Green */}
-                      <span className="font-mono text-2xl font-bold text-emerald-600 dark:text-emerald-400 tracking-tight block">
+                      <span className="font-mono text-base sm:text-lg font-bold text-[#15803d] dark:text-[#22c55e] tracking-tight block">
                         {step.number}
                       </span>
 
                       {/* Step Title */}
-                      <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mt-3 mb-6 leading-snug">
+                      <h3 className="text-xl sm:text-[22px] font-bold text-slate-900 dark:text-white mt-2 mb-3 leading-tight tracking-tight">
                         {title}
                       </h3>
                     </div>
 
-                    {/* Centered Large Faint Line Watermark Icon */}
-                    <div className="my-6 flex items-center justify-center py-4 select-none pointer-events-none">
+                    {/* Centered Large Line Watermark Icon */}
+                    <div className="my-2 sm:my-3 flex items-center justify-center py-2 select-none pointer-events-none">
                       {step.icon}
                     </div>
 
                     {/* Bottom Content: Step Description */}
                     <div>
-                      <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed font-normal">
+                      <p className="text-xs sm:text-[13px] text-slate-600 dark:text-slate-400 leading-relaxed font-normal">
                         {desc}
                       </p>
                     </div>
