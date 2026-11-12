@@ -159,9 +159,9 @@ export function Projects() {
   const projectKeys = ['project1', 'project2', 'project3', 'project4'] as const;
 
   return (
-    <section id="work" className="relative py-24 sm:py-32 bg-white dark:bg-[#090B10] transition-colors duration-200">
+    <section id="work" className="relative py-24 sm:py-32 bg-background border-t border-border transition-colors duration-200">
       {/* Background ambient lighting */}
-      <div className="absolute top-1/4 start-1/2 -translate-x-1/2 w-[600px] h-96 glow-blue blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/4 start-1/2 -translate-x-1/2 w-[600px] h-96 bg-primary/10 blur-[140px] pointer-events-none" />
 
       <Container>
         <AnimatedSection direction="up">

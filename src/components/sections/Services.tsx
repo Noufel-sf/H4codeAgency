@@ -52,9 +52,9 @@ export function Services() {
   ];
 
   return (
-    <section id="services" className="relative py-24 sm:py-32 bg-slate-50/70 dark:bg-[#090B10] transition-colors duration-200">
+    <section id="services" className="relative py-24 sm:py-32 bg-background border-t border-border transition-colors duration-200">
       {/* Subtle ambient blur */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-[#315BDB]/5 blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-0 w-96 h-96 bg-primary/5 blur-[120px] pointer-events-none" />
 
       <Container>
         <AnimatedSection direction="up">

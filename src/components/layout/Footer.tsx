@@ -55,24 +55,24 @@ export function Footer() {
   ];
 
   return (
-    <footer className="relative bg-slate-100 dark:bg-[#07090D] border-t border-slate-200 dark:border-white/[0.08] pt-16 pb-12 overflow-hidden transition-colors duration-200">
+    <footer className="relative bg-surface border-t border-border pt-16 pb-12 overflow-hidden transition-colors duration-200">
       {/* Background ambient glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-24 bg-[#315BDB]/10 blur-[90px] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-24 bg-primary/10 blur-[90px] pointer-events-none" />
 
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12 mb-14">
           {/* Brand info */}
           <div className="lg:col-span-2 space-y-4">
             <a href="#home" className="inline-flex items-center gap-2.5">
-              <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-br from-[#315BDB] to-[#121824] border border-white/15 shadow-[0_0_12px_rgba(49,91,219,0.25)]">
+              <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary text-primary-foreground shadow-sm">
                 <span className="font-black text-xs text-white">H4</span>
               </div>
-              <span className="font-extrabold text-xl tracking-wider text-slate-900 dark:text-[#F5F7FC]">
-                H4<span className="text-[#315BDB] dark:text-[#4776F5]">CODE</span>
+              <span className="font-extrabold text-xl tracking-wider text-foreground">
+                H4<span className="text-primary">CODE</span>
               </span>
             </a>
 
-            <p className="text-sm text-slate-600 dark:text-[#929BAA] max-w-sm leading-relaxed">
+            <p className="text-sm text-muted-foreground max-w-sm leading-relaxed">
               {t('tagline')}
             </p>
 
@@ -82,7 +82,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
-                className="w-9 h-9 rounded-full bg-white dark:bg-white/[0.04] hover:bg-blue-50 dark:hover:bg-[#315BDB]/20 border border-slate-200 dark:border-white/10 hover:border-blue-300 dark:hover:border-[#4776F5]/40 flex items-center justify-center text-slate-600 dark:text-[#929BAA] hover:text-blue-600 dark:hover:text-[#F5F7FC] transition-all shadow-xs"
+                className="w-9 h-9 rounded-full bg-card hover:bg-surface border border-border hover:border-primary/40 flex items-center justify-center text-muted-foreground hover:text-foreground transition-all shadow-xs"
               >
                 <GithubIcon className="w-4 h-4" />
               </a>
@@ -91,7 +91,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="w-9 h-9 rounded-full bg-white dark:bg-white/[0.04] hover:bg-blue-50 dark:hover:bg-[#315BDB]/20 border border-slate-200 dark:border-white/10 hover:border-blue-300 dark:hover:border-[#4776F5]/40 flex items-center justify-center text-slate-600 dark:text-[#929BAA] hover:text-blue-600 dark:hover:text-[#F5F7FC] transition-all shadow-xs"
+                className="w-9 h-9 rounded-full bg-card hover:bg-surface border border-border hover:border-primary/40 flex items-center justify-center text-muted-foreground hover:text-foreground transition-all shadow-xs"
               >
                 <LinkedinIcon className="w-4 h-4" />
               </a>
@@ -100,14 +100,14 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
-                className="w-9 h-9 rounded-full bg-white dark:bg-white/[0.04] hover:bg-emerald-50 dark:hover:bg-[#315BDB]/20 border border-slate-200 dark:border-white/10 hover:border-emerald-300 dark:hover:border-[#4776F5]/40 flex items-center justify-center text-slate-600 dark:text-[#929BAA] hover:text-emerald-600 dark:hover:text-[#F5F7FC] transition-all shadow-xs"
+                className="w-9 h-9 rounded-full bg-card hover:bg-surface border border-border hover:border-emerald-500/40 flex items-center justify-center text-muted-foreground hover:text-emerald-600 dark:hover:text-emerald-400 transition-all shadow-xs"
               >
                 <MessageCircle className="w-4 h-4" />
               </a>
               <a
                 href={`mailto:${siteConfig.contact.email}`}
                 aria-label="Email"
-                className="w-9 h-9 rounded-full bg-white dark:bg-white/[0.04] hover:bg-blue-50 dark:hover:bg-[#315BDB]/20 border border-slate-200 dark:border-white/10 hover:border-blue-300 dark:hover:border-[#4776F5]/40 flex items-center justify-center text-slate-600 dark:text-[#929BAA] hover:text-blue-600 dark:hover:text-[#F5F7FC] transition-all shadow-xs"
+                className="w-9 h-9 rounded-full bg-card hover:bg-surface border border-border hover:border-primary/40 flex items-center justify-center text-muted-foreground hover:text-foreground transition-all shadow-xs"
               >
                 <Mail className="w-4 h-4" />
               </a>
@@ -116,7 +116,7 @@ export function Footer() {
 
           {/* Navigation Column */}
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-900 dark:text-white mb-4">
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-foreground mb-4">
               {t('linksTitle')}
             </h4>
             <ul className="space-y-2.5">
@@ -124,7 +124,7 @@ export function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-xs text-slate-600 dark:text-[#929BAA] hover:text-slate-900 dark:hover:text-white transition-colors"
+                    className="text-xs text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {link.label}
                   </a>
@@ -135,7 +135,7 @@ export function Footer() {
 
           {/* Capabilities Column */}
           <div className="lg:col-span-1">
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-900 dark:text-white mb-4">
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-foreground mb-4">
               {t('servicesTitle')}
             </h4>
             <ul className="space-y-2.5">
@@ -143,7 +143,7 @@ export function Footer() {
                 <li key={idx}>
                   <a
                     href={service.href}
-                    className="text-xs text-slate-600 dark:text-[#929BAA] hover:text-slate-900 dark:hover:text-white transition-colors"
+                    className="text-xs text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {service.label}
                   </a>
@@ -154,17 +154,17 @@ export function Footer() {
 
           {/* Studio Office & Back to Top */}
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-900 dark:text-white mb-4">
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-foreground mb-4">
               {t('connectTitle')}
             </h4>
-            <div className="space-y-3 text-xs text-slate-600 dark:text-[#929BAA]">
+            <div className="space-y-3 text-xs text-muted-foreground">
               <p>contact@h4code.agency</p>
               <p>Mon - Fri, 9AM - 6PM GMT+1</p>
               <div className="pt-2">
                 <button
                   type="button"
                   onClick={scrollToTop}
-                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white dark:bg-white/[0.05] hover:bg-slate-200 dark:hover:bg-white/[0.1] border border-slate-200 dark:border-white/10 text-xs font-medium text-slate-800 dark:text-[#F5F7FC] transition-all cursor-pointer group shadow-xs"
+                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-card hover:bg-surface border border-border text-xs font-medium text-foreground transition-all cursor-pointer group shadow-xs"
                 >
                   <span>{t('backToTop')}</span>
                   <ArrowUp className="w-3.5 h-3.5 transition-transform group-hover:-translate-y-0.5" />
@@ -175,15 +175,15 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-8 border-t border-slate-200 dark:border-white/[0.07] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-[#5E6778]">
+        <div className="pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
           <p>
             © 2026 {siteConfig.legalName}. {t('rights')}
           </p>
           <div className="flex items-center gap-6">
-            <a href="#home" className="hover:text-slate-900 dark:hover:text-[#929BAA] transition-colors">
+            <a href="#home" className="hover:text-foreground transition-colors">
               {t('privacy')}
             </a>
-            <a href="#home" className="hover:text-slate-900 dark:hover:text-[#929BAA] transition-colors">
+            <a href="#home" className="hover:text-foreground transition-colors">
               {t('terms')}
             </a>
           </div>

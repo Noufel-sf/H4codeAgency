@@ -13,9 +13,9 @@ export function Testimonials() {
   const testimonialKeys = ['item1', 'item2', 'item3'] as const;
 
   return (
-    <section className="relative py-24 sm:py-32 bg-slate-50/70 dark:bg-[#0C0F17] border-y border-slate-200 dark:border-white/[0.06] transition-colors duration-200 overflow-hidden">
+    <section className="relative py-24 sm:py-32 bg-background border-y border-border transition-colors duration-200 overflow-hidden">
       {/* Background ambient lighting */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-72 bg-[#315BDB]/5 blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-72 bg-primary/5 blur-[120px] pointer-events-none" />
 
       <Container>
         <AnimatedSection direction="up">
@@ -40,22 +40,22 @@ export function Testimonials() {
                 direction="up"
                 delay={0.15 * index}
               >
-                <div className="relative rounded-2xl bg-white dark:bg-[#10141C] border border-slate-200 dark:border-white/[0.08] p-7 flex flex-col justify-between h-full hover:border-blue-400 dark:hover:border-[#4776F5]/40 transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-lg">
+                <div className="relative rounded-2xl bg-card border border-border p-7 flex flex-col justify-between h-full hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-lg">
                   <div>
-                    <Quote className="w-8 h-8 text-blue-500/40 dark:text-[#315BDB]/40 mb-4" />
-                    <p className="text-sm sm:text-base text-slate-800 dark:text-[#F5F7FC]/90 leading-relaxed italic mb-6">
+                    <Quote className="w-8 h-8 text-primary/40 mb-4" />
+                    <p className="text-sm sm:text-base text-foreground/90 leading-relaxed italic mb-6">
                       &ldquo;{quote}&rdquo;
                     </p>
                   </div>
 
-                  <div className="pt-5 border-t border-slate-100 dark:border-white/[0.08] flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#315BDB] to-[#121824] border border-white/10 flex items-center justify-center font-bold text-xs text-white">
+                  <div className="pt-5 border-t border-border/60 flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-xs shadow-xs">
                       {author.charAt(0)}
                     </div>
                     <div>
-                      <div className="text-sm font-bold text-slate-900 dark:text-white">{author}</div>
-                      <div className="text-xs text-slate-500 dark:text-[#929BAA]">
-                        {role}, <span className="text-blue-600 dark:text-[#4776F5] font-medium">{company}</span>
+                      <div className="text-sm font-bold text-foreground">{author}</div>
+                      <div className="text-xs text-muted-foreground">
+                        {role}, <span className="text-primary font-medium">{company}</span>
                       </div>
                     </div>
                   </div>

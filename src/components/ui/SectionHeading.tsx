@@ -30,7 +30,7 @@ export function SectionHeading({
       );
       if (isHighlight) {
         return (
-          <span key={i} className="text-[#4776F5] font-semibold">
+          <span key={i} className="text-primary font-semibold">
             {part}
           </span>
         );
@@ -50,19 +50,19 @@ export function SectionHeading({
       {badge && (
         <div
           className={cn(
-            'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase mb-4 border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-white/[0.03] text-slate-700 dark:text-[#929BAA]',
+            'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase mb-4 border border-border bg-surface text-muted-foreground',
             align === 'center' ? 'mx-auto' : ''
           )}
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-[#315BDB] animate-pulse" />
+          <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
           <span>{badge}</span>
         </div>
       )}
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-[#F5F7FC] leading-[1.15]">
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground leading-[1.15]">
         {renderTitle()}
       </h2>
       {description && (
-        <p className="mt-4 sm:mt-5 text-base sm:text-lg text-slate-600 dark:text-[#929BAA] leading-relaxed">
+        <p className="mt-4 sm:mt-5 text-base sm:text-lg text-muted-foreground leading-relaxed">
           {description}
         </p>
       )}

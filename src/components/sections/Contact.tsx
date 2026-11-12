@@ -78,9 +78,9 @@ export function Contact() {
   ];
 
   return (
-    <section id="contact" className="relative py-24 sm:py-32 bg-slate-50/70 dark:bg-[#080B11] border-t border-slate-200 dark:border-white/[0.08] transition-colors duration-200 overflow-hidden">
+    <section id="contact" className="relative py-24 sm:py-32 bg-background border-t border-border transition-colors duration-200 overflow-hidden">
       {/* Background glow */}
-      <div className="absolute top-1/2 end-10 w-96 h-96 bg-[#315BDB]/10 blur-[150px] pointer-events-none" />
+      <div className="absolute top-1/2 end-10 w-96 h-96 bg-primary/10 blur-[150px] pointer-events-none" />
 
       <Container>
         <AnimatedSection direction="up">
@@ -97,10 +97,10 @@ export function Contact() {
           <div className="lg:col-span-5 space-y-8">
             <AnimatedSection direction="up" delay={0.1}>
               <div className="space-y-4">
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white">
+                <h3 className="text-xl font-bold text-foreground">
                   {t('directContact.title')}
                 </h3>
-                <p className="text-sm text-slate-600 dark:text-[#929BAA] leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   {t('directContact.responseGuarantee')}
                 </p>
               </div>
@@ -111,14 +111,14 @@ export function Contact() {
               <AnimatedSection direction="up" delay={0.2}>
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
-                  className="flex items-start gap-4 p-5 rounded-2xl bg-white dark:bg-[#10141C] border border-slate-200 dark:border-white/[0.08] hover:border-blue-400 dark:hover:border-[#4776F5]/40 transition-all shadow-xs group"
+                  className="flex items-start gap-4 p-5 rounded-2xl bg-card border border-border hover:border-primary/40 transition-all shadow-xs group"
                 >
-                  <div className="w-11 h-11 rounded-xl bg-blue-50 dark:bg-white/[0.04] border border-blue-100 dark:border-white/10 flex items-center justify-center text-blue-600 dark:text-[#4776F5] group-hover:bg-blue-100 dark:group-hover:bg-[#315BDB]/20 transition-colors">
+                  <div className="w-11 h-11 rounded-xl bg-surface border border-border flex items-center justify-center text-primary group-hover:bg-primary/10 transition-colors">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="text-xs text-slate-500 dark:text-[#929BAA]">{t('directContact.emailTitle')}</div>
-                    <div className="text-sm font-semibold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-[#4776F5] transition-colors">
+                    <div className="text-xs text-muted-foreground">{t('directContact.emailTitle')}</div>
+                    <div className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
                       {siteConfig.contact.email}
                     </div>
                   </div>
@@ -130,14 +130,14 @@ export function Contact() {
                   href={siteConfig.contact.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-4 p-5 rounded-2xl bg-white dark:bg-[#10141C] border border-slate-200 dark:border-white/[0.08] hover:border-emerald-400 dark:hover:border-[#4776F5]/40 transition-all shadow-xs group"
+                  className="flex items-start gap-4 p-5 rounded-2xl bg-card border border-border hover:border-emerald-500/40 transition-all shadow-xs group"
                 >
-                  <div className="w-11 h-11 rounded-xl bg-emerald-50 dark:bg-white/[0.04] border border-emerald-100 dark:border-white/10 flex items-center justify-center text-emerald-600 dark:text-emerald-400 group-hover:bg-emerald-100 dark:group-hover:bg-emerald-500/20 transition-colors">
+                  <div className="w-11 h-11 rounded-xl bg-surface border border-border flex items-center justify-center text-emerald-600 dark:text-emerald-400 group-hover:bg-emerald-500/10 transition-colors">
                     <MessageCircle className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="text-xs text-slate-500 dark:text-[#929BAA]">{t('directContact.whatsappTitle')}</div>
-                    <div className="text-sm font-semibold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                    <div className="text-xs text-muted-foreground">{t('directContact.whatsappTitle')}</div>
+                    <div className="text-sm font-semibold text-foreground group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
                       {t('directContact.whatsappValue')}
                     </div>
                   </div>
@@ -145,13 +145,13 @@ export function Contact() {
               </AnimatedSection>
 
               <AnimatedSection direction="up" delay={0.3}>
-                <div className="flex items-start gap-4 p-5 rounded-2xl bg-white dark:bg-[#10141C] border border-slate-200 dark:border-white/[0.08] shadow-xs">
-                  <div className="w-11 h-11 rounded-xl bg-amber-50 dark:bg-white/[0.04] border border-amber-100 dark:border-white/10 flex items-center justify-center text-amber-600 dark:text-amber-400">
+                <div className="flex items-start gap-4 p-5 rounded-2xl bg-card border border-border shadow-xs">
+                  <div className="w-11 h-11 rounded-xl bg-surface border border-border flex items-center justify-center text-amber-600 dark:text-amber-400">
                     <Clock className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="text-xs text-slate-500 dark:text-[#929BAA]">{t('directContact.availabilityTitle')}</div>
-                    <div className="text-sm font-medium text-slate-900 dark:text-white">
+                    <div className="text-xs text-muted-foreground">{t('directContact.availabilityTitle')}</div>
+                    <div className="text-sm font-medium text-foreground">
                       {t('directContact.availabilityValue')}
                     </div>
                   </div>
@@ -163,22 +163,22 @@ export function Contact() {
           {/* Form */}
           <div className="lg:col-span-7">
             <AnimatedSection direction="left" delay={0.2}>
-              <div className="rounded-3xl bg-white dark:bg-[#10141C] border border-slate-200 dark:border-white/[0.1] p-6 sm:p-10 shadow-xl dark:shadow-2xl relative">
+              <div className="rounded-3xl bg-card border border-border p-6 sm:p-10 shadow-xl relative">
                 {isSubmitted ? (
                   <div className="py-12 text-center space-y-4 animate-in fade-in zoom-in-95 duration-300">
                     <div className="w-16 h-16 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mx-auto">
                       <CheckCircle2 className="w-8 h-8" />
                     </div>
-                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
+                    <h3 className="text-2xl font-bold text-foreground">
                       {t('form.successTitle')}
                     </h3>
-                    <p className="text-sm text-slate-600 dark:text-[#929BAA] max-w-md mx-auto leading-relaxed">
+                    <p className="text-sm text-muted-foreground max-w-md mx-auto leading-relaxed">
                       {t('form.successDesc')}
                     </p>
                     <button
                       type="button"
                       onClick={() => setIsSubmitted(false)}
-                      className="mt-4 px-6 py-2.5 rounded-full text-xs font-semibold bg-slate-100 hover:bg-slate-200 dark:bg-white/[0.05] dark:hover:bg-white/[0.1] border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white transition-all cursor-pointer"
+                      className="mt-4 px-6 py-2.5 rounded-full text-xs font-semibold bg-surface hover:bg-surface-hover border border-border text-foreground transition-all cursor-pointer"
                     >
                       Send another message
                     </button>
@@ -188,14 +188,14 @@ export function Contact() {
                     {/* Name & Email */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       <div className="space-y-2">
-                        <label className="block text-xs font-semibold text-slate-800 dark:text-[#F5F7FC]">
-                          {t('form.nameLabel')} <span className="text-blue-600 dark:text-[#4776F5]">*</span>
+                        <label className="block text-xs font-semibold text-foreground">
+                          {t('form.nameLabel')} <span className="text-primary">*</span>
                         </label>
                         <input
                           type="text"
                           placeholder={t('form.namePlaceholder')}
                           {...register('name')}
-                          className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-[#090B10] border border-slate-200 dark:border-white/10 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-[#5E6778] focus:outline-none focus:border-[#315BDB] focus:ring-1 focus:ring-[#315BDB] transition-all"
+                          className="w-full px-4 py-3 rounded-xl bg-surface border border-border text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                         />
                         {errors.name && (
                           <p className="text-xs text-rose-500 dark:text-rose-400">
@@ -205,14 +205,14 @@ export function Contact() {
                       </div>
 
                       <div className="space-y-2">
-                        <label className="block text-xs font-semibold text-slate-800 dark:text-[#F5F7FC]">
-                          {t('form.emailLabel')} <span className="text-blue-600 dark:text-[#4776F5]">*</span>
+                        <label className="block text-xs font-semibold text-foreground">
+                          {t('form.emailLabel')} <span className="text-primary">*</span>
                         </label>
                         <input
                           type="email"
                           placeholder={t('form.emailPlaceholder')}
                           {...register('email')}
-                          className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-[#090B10] border border-slate-200 dark:border-white/10 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-[#5E6778] focus:outline-none focus:border-[#315BDB] focus:ring-1 focus:ring-[#315BDB] transition-all"
+                          className="w-full px-4 py-3 rounded-xl bg-surface border border-border text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                         />
                         {errors.email && (
                           <p className="text-xs text-rose-500 dark:text-rose-400">
@@ -225,31 +225,31 @@ export function Contact() {
                     {/* Company & Service */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       <div className="space-y-2">
-                        <label className="block text-xs font-semibold text-slate-800 dark:text-[#F5F7FC]">
+                        <label className="block text-xs font-semibold text-foreground">
                           {t('form.companyLabel')}
                         </label>
                         <input
                           type="text"
                           placeholder={t('form.companyPlaceholder')}
                           {...register('company')}
-                          className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-[#090B10] border border-slate-200 dark:border-white/10 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-[#5E6778] focus:outline-none focus:border-[#315BDB] focus:ring-1 focus:ring-[#315BDB] transition-all"
+                          className="w-full px-4 py-3 rounded-xl bg-surface border border-border text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                         />
                       </div>
 
                       <div className="space-y-2">
-                        <label className="block text-xs font-semibold text-slate-800 dark:text-[#F5F7FC]">
-                          {t('form.serviceLabel')} <span className="text-blue-600 dark:text-[#4776F5]">*</span>
+                        <label className="block text-xs font-semibold text-foreground">
+                          {t('form.serviceLabel')} <span className="text-primary">*</span>
                         </label>
                         <select
                           {...register('service')}
                           defaultValue=""
-                          className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-[#090B10] border border-slate-200 dark:border-white/10 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-[#315BDB] focus:ring-1 focus:ring-[#315BDB] transition-all cursor-pointer"
+                          className="w-full px-4 py-3 rounded-xl bg-surface border border-border text-sm text-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all cursor-pointer"
                         >
-                          <option value="" disabled className="bg-white dark:bg-[#10141C] text-slate-400 dark:text-[#5E6778]">
+                          <option value="" disabled className="bg-card text-muted-foreground">
                             {t('form.servicePlaceholder')}
                           </option>
                           {services.map((s) => (
-                            <option key={s.value} value={s.value} className="bg-white dark:bg-[#10141C] text-slate-900 dark:text-white">
+                            <option key={s.value} value={s.value} className="bg-card text-foreground">
                               {s.label}
                             </option>
                           ))}
@@ -264,19 +264,19 @@ export function Contact() {
 
                     {/* Budget */}
                     <div className="space-y-2">
-                      <label className="block text-xs font-semibold text-slate-800 dark:text-[#F5F7FC]">
+                      <label className="block text-xs font-semibold text-foreground">
                         {t('form.budgetLabel')}
                       </label>
                       <select
                         {...register('budget')}
                         defaultValue=""
-                        className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-[#090B10] border border-slate-200 dark:border-white/10 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-[#315BDB] focus:ring-1 focus:ring-[#315BDB] transition-all cursor-pointer"
+                        className="w-full px-4 py-3 rounded-xl bg-surface border border-border text-sm text-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all cursor-pointer"
                       >
-                        <option value="" disabled className="bg-white dark:bg-[#10141C] text-slate-400 dark:text-[#5E6778]">
+                        <option value="" disabled className="bg-card text-muted-foreground">
                           {t('form.budgetPlaceholder')}
                         </option>
                         {budgets.map((b) => (
-                          <option key={b.value} value={b.value} className="bg-white dark:bg-[#10141C] text-slate-900 dark:text-white">
+                          <option key={b.value} value={b.value} className="bg-card text-foreground">
                             {b.label}
                           </option>
                         ))}
@@ -285,14 +285,14 @@ export function Contact() {
 
                     {/* Message Details */}
                     <div className="space-y-2">
-                      <label className="block text-xs font-semibold text-slate-800 dark:text-[#F5F7FC]">
-                        {t('form.messageLabel')} <span className="text-blue-600 dark:text-[#4776F5]">*</span>
+                      <label className="block text-xs font-semibold text-foreground">
+                        {t('form.messageLabel')} <span className="text-primary">*</span>
                       </label>
                       <textarea
                         rows={4}
                         placeholder={t('form.messagePlaceholder')}
                         {...register('message')}
-                        className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-[#090B10] border border-slate-200 dark:border-white/10 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-[#5E6778] focus:outline-none focus:border-[#315BDB] focus:ring-1 focus:ring-[#315BDB] transition-all resize-none"
+                        className="w-full px-4 py-3 rounded-xl bg-surface border border-border text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all resize-none"
                       />
                       {errors.message && (
                         <p className="text-xs text-rose-500 dark:text-rose-400">
@@ -305,7 +305,7 @@ export function Contact() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-4 px-6 rounded-full bg-[#315BDB] hover:bg-[#4776F5] text-white font-bold text-sm shadow-[0_0_24px_rgba(49,91,219,0.3)] hover:shadow-[0_0_36px_rgba(71,118,245,0.5)] border border-[#4776F5]/40 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                      className="w-full py-4 px-6 rounded-full bg-primary hover:bg-primary-hover text-primary-foreground font-bold text-sm shadow-md transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
                     >
                       {isSubmitting ? (
                         <span>{t('form.submitting')}</span>

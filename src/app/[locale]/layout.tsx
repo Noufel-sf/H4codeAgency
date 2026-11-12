@@ -121,7 +121,7 @@ export default async function LocaleLayout({
       <body
         className={`${
           isRtl ? 'font-arabic' : 'font-sans'
-        } bg-white text-slate-900 dark:bg-[#090B10] dark:text-[#F5F7FC] antialiased transition-colors duration-200 selection:bg-[#315BDB] selection:text-white`}
+        } bg-background text-foreground antialiased transition-colors duration-200 selection:bg-primary selection:text-white`}
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <NextIntlClientProvider locale={locale} messages={messages}>

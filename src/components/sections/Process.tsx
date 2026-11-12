@@ -18,7 +18,7 @@ export function Process() {
           viewBox="0 0 200 200"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-44 h-44 sm:w-48 sm:h-48 stroke-[#E5E9F0] dark:stroke-white/[0.08] transition-colors duration-300 group-hover:stroke-emerald-400/40 dark:group-hover:stroke-emerald-400/25"
+          className="w-44 h-44 sm:w-48 sm:h-48 stroke-border transition-colors duration-300 group-hover:stroke-primary/30"
           strokeWidth="10"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -50,7 +50,7 @@ export function Process() {
           viewBox="0 0 200 200"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-44 h-44 sm:w-48 sm:h-48 stroke-[#E5E9F0] dark:stroke-white/[0.08] transition-colors duration-300 group-hover:stroke-emerald-400/40 dark:group-hover:stroke-emerald-400/25"
+          className="w-44 h-44 sm:w-48 sm:h-48 stroke-border transition-colors duration-300 group-hover:stroke-primary/30"
           strokeWidth="10"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -81,7 +81,7 @@ export function Process() {
           viewBox="0 0 200 200"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-44 h-44 sm:w-48 sm:h-48 stroke-[#E5E9F0] dark:stroke-white/[0.08] transition-colors duration-300 group-hover:stroke-emerald-400/40 dark:group-hover:stroke-emerald-400/25"
+          className="w-44 h-44 sm:w-48 sm:h-48 stroke-border transition-colors duration-300 group-hover:stroke-primary/30"
           strokeWidth="10"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -108,17 +108,17 @@ export function Process() {
   return (
     <section
       id="process"
-      className="relative py-24 sm:py-32 bg-slate-50/60 dark:bg-[#090D14] border-t border-slate-200/80 dark:border-white/[0.06] transition-colors duration-200 overflow-hidden"
+      className="relative py-24 sm:py-32 bg-surface/50 border-t border-border transition-colors duration-200 overflow-hidden"
     >
       <Container>
         {/* Centered Pill Badge & Headline matching user reference */}
         <AnimatedSection direction="up">
           <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16 sm:mb-20">
-            <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium border border-slate-200 dark:border-white/10 bg-white/80 dark:bg-white/[0.04] text-slate-700 dark:text-slate-300 shadow-sm backdrop-blur-sm mb-5">
+            <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium border border-border bg-card text-muted-foreground shadow-sm mb-5">
               {t('badge')}
             </span>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground tracking-tight leading-tight">
               {t('headline')}
             </h2>
           </div>
@@ -132,7 +132,7 @@ export function Process() {
               viewBox="0 0 90 45"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="w-full h-full stroke-slate-400 dark:stroke-slate-500"
+              className="w-full h-full stroke-muted-foreground/60"
               strokeWidth="2.2"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -150,7 +150,7 @@ export function Process() {
               viewBox="0 0 90 45"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="w-full h-full stroke-slate-400 dark:stroke-slate-500"
+              className="w-full h-full stroke-muted-foreground/60"
               strokeWidth="2.2"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -175,7 +175,7 @@ export function Process() {
                   className="h-full flex justify-center"
                 >
                   <div
-                    className={`group relative w-full max-w-[310px] md:max-w-none h-full rounded-[1.75rem] bg-white dark:bg-[#111622] border border-slate-200/90 dark:border-white/10 p-6 sm:p-7 flex flex-col justify-between shadow-[0_4px_24px_rgba(0,0,0,0.03)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.3)] transition-all duration-300 hover:shadow-xl hover:border-slate-300 dark:hover:border-white/20 transform-gpu ${step.rotation}`}
+                    className={`group relative w-full max-w-[310px] md:max-w-none h-full rounded-[1.75rem] bg-card border border-border p-6 sm:p-7 flex flex-col justify-between shadow-[0_4px_24px_rgba(0,0,0,0.03)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.3)] transition-all duration-300 hover:shadow-xl hover:border-primary/40 transform-gpu ${step.rotation}`}
                   >
                     {/* Top Content: Green Step Number & Step Title */}
                     <div>
@@ -185,7 +185,7 @@ export function Process() {
                       </span>
 
                       {/* Step Title */}
-                      <h3 className="text-xl sm:text-[22px] font-bold text-slate-900 dark:text-white mt-2 mb-3 leading-tight tracking-tight">
+                      <h3 className="text-xl sm:text-[22px] font-bold text-foreground mt-2 mb-3 leading-tight tracking-tight">
                         {title}
                       </h3>
                     </div>
@@ -197,7 +197,7 @@ export function Process() {
 
                     {/* Bottom Content: Step Description */}
                     <div>
-                      <p className="text-xs sm:text-[13px] text-slate-600 dark:text-slate-400 leading-relaxed font-normal">
+                      <p className="text-xs sm:text-[13px] text-muted-foreground leading-relaxed font-normal">
                         {desc}
                       </p>
                     </div>

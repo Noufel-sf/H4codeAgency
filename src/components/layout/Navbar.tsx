@@ -63,19 +63,19 @@ export function Navbar() {
   return (
     <>
       <header className="fixed top-4 sm:top-6 inset-x-0 z-50 flex justify-center px-4 pointer-events-none">
-        <div className="pointer-events-auto flex items-center justify-between sm:justify-center gap-2 sm:gap-6 px-4 sm:px-6 py-2 sm:py-2.5 rounded-full bg-white/90 dark:bg-[#121824]/90 backdrop-blur-xl border border-slate-200/90 dark:border-white/10 shadow-[0_8px_30px_rgb(0,0,0,0.06)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.4)] transition-all duration-300">
+        <div className="pointer-events-auto flex items-center justify-between sm:justify-center gap-2 sm:gap-6 px-4 sm:px-6 py-2 sm:py-2.5 rounded-full glass-panel transition-all duration-300">
           
           {/* Brand Logo */}
           <a
             href="#home"
-            className="flex items-center gap-2 font-bold text-sm sm:text-base tracking-tight text-slate-900 dark:text-white hover:opacity-85 transition-opacity"
+            className="flex items-center gap-2 font-bold text-sm sm:text-base tracking-tight text-foreground hover:opacity-85 transition-opacity"
             aria-label="H4Code"
           >
             <span className="font-extrabold text-base sm:text-lg">H4Code</span>
           </a>
 
           {/* Desktop Links Divider */}
-          <div className="hidden lg:block w-[1px] h-4 bg-slate-200 dark:bg-white/10" />
+          <div className="hidden lg:block w-[1px] h-4 bg-border" />
 
           {/* Desktop Nav Links */}
           <nav className="hidden lg:flex items-center gap-5 text-xs font-medium">
@@ -88,8 +88,8 @@ export function Navbar() {
                   className={cn(
                     'transition-colors duration-200',
                     isActive
-                      ? 'text-blue-600 dark:text-[#4776F5] font-semibold'
-                      : 'text-slate-600 dark:text-slate-300 hover:text-slate-950 dark:hover:text-white'
+                      ? 'text-primary font-bold'
+                      : 'text-muted-foreground hover:text-foreground'
                   )}
                 >
                   {item.label}
@@ -99,7 +99,7 @@ export function Navbar() {
           </nav>
 
           {/* Inline Language Switcher */}
-          <div className="flex items-center gap-1.5 text-xs font-semibold ps-2 border-s border-slate-200 dark:border-white/10">
+          <div className="flex items-center gap-1.5 text-xs font-semibold ps-2 border-s border-border">
             {languages.map((lang, idx) => {
               const isSelected = lang.code === locale;
               return (
@@ -110,14 +110,14 @@ export function Navbar() {
                     className={cn(
                       'transition-colors cursor-pointer px-1 py-0.5 rounded text-xs',
                       isSelected
-                        ? 'text-blue-600 dark:text-[#4776F5] font-bold'
-                        : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                        ? 'text-primary font-bold'
+                        : 'text-muted-foreground hover:text-foreground'
                     )}
                   >
                     {lang.label}
                   </button>
                   {idx < languages.length - 1 && (
-                    <span className="text-slate-300 dark:text-white/20 text-[10px]">/</span>
+                    <span className="text-border text-[10px]">/</span>
                   )}
                 </React.Fragment>
               );
@@ -125,7 +125,7 @@ export function Navbar() {
           </div>
 
           {/* Theme Toggle (Sun / Moon) */}
-          <div className="ps-1 sm:ps-2 border-s border-slate-200 dark:border-white/10 flex items-center">
+          <div className="ps-1 sm:ps-2 border-s border-border flex items-center">
             <ThemeToggle className="w-8 h-8 rounded-full" />
           </div>
 
@@ -133,7 +133,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
-            className="lg:hidden p-1.5 rounded-full text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors"
+            className="lg:hidden p-1.5 rounded-full text-foreground hover:bg-surface transition-colors"
             aria-label="Open menu"
           >
             <Menu className="w-4 h-4" />
