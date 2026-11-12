@@ -107,7 +107,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={isRtl ? 'rtl' : 'ltr'}
-      className="scroll-smooth dark"
+      className="scroll-smooth"
       suppressHydrationWarning
     >
       <head>

@@ -20,7 +20,7 @@ export default async function HomePage({ params }: PageProps) {
   setRequestLocale(locale);
 
   return (
-    <div className="relative min-h-screen bg-[#090B10] text-[#F5F7FC] flex flex-col">
+    <div className="relative min-h-screen bg-white text-slate-900 dark:bg-[#090B10] dark:text-[#F5F7FC] flex flex-col transition-colors duration-200">
       <Navbar />
       <main className="flex-1">
         <Hero />
