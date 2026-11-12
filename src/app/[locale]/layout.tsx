@@ -5,7 +5,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { siteConfig } from '@/config/site';
 import { Toaster } from 'sonner';
-import '@/app/globals.css';
+import '@/app/compiled.css';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));

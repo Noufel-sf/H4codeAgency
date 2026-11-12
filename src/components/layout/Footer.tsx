@@ -177,7 +177,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-white/[0.07] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#5E6778]">
           <p>
-            © {new Date().getFullYear()} {siteConfig.legalName}. {t('rights')}
+            © 2026 {siteConfig.legalName}. {t('rights')}
           </p>
           <div className="flex items-center gap-6">
             <a href="#home" className="hover:text-[#929BAA] transition-colors">
