@@ -10,12 +10,12 @@
     "letsTalk": "Let's Talk"
   },
   "hero": {
-    "status": "Available for Q1/Q2 Projects",
-    "headlinePrefix": "WE BUILD DIGITAL EXPERIENCES",
-    "headlineHighlight": "THAT MOVE BUSINESSES FORWARD.",
-    "description": "We design and engineer bespoke web applications, high-converting platforms, and scalable digital products that empower ambitious brands to lead their markets.",
+    "tagline": "Digital Development Studio • Premium Engineering",
+    "headlinePrefix": "Your Brand Deserves",
+    "headlineHighlight": "More Than Just A Social Page.",
+    "description": "We design your brand identity, build your high-converting platform, and engineer scalable software that moves your business forward — from initial concept to launch and scale.",
     "ctaPrimary": "Start a Project",
-    "ctaSecondary": "Explore Our Work",
+    "ctaSecondary": "View Our Work",
     "scroll": "Scroll to explore",
     "metrics": {
       "satisfaction": "Client Satisfaction",

@@ -10,12 +10,12 @@
     "letsTalk": "Échangeons"
   },
   "hero": {
-    "status": "Disponibles pour projets T1/T2",
-    "headlinePrefix": "NOUS CONCEVONS DES EXPÉRIENCES DIGITALES",
-    "headlineHighlight": "QUI FONT PROGRESSER LES ENTREPRISES.",
-    "description": "Nous concevons et développons des applications web sur mesure, des plateformes performantes et des produits digitaux scalables pour propulser les marques ambitieuses.",
+    "tagline": "Studio de Développement Digital • Ingénierie d'Élite",
+    "headlinePrefix": "Votre Marque Mérite",
+    "headlineHighlight": "Bien Plus Qu'une Simple Page Réseau.",
+    "description": "Nous façonnons votre identité, développons votre plateforme e-commerce et concevons des logiciels sur mesure qui convertissent et accélèrent vos ventes.",
     "ctaPrimary": "Démarrer un Projet",
-    "ctaSecondary": "Explorer Nos Réalisations",
+    "ctaSecondary": "Voir nos Réalisations",
     "scroll": "Faites défiler pour explorer",
     "metrics": {
       "satisfaction": "Satisfaction Client",
