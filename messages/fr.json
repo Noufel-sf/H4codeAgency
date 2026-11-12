@@ -118,34 +118,24 @@
     }
   },
   "process": {
-    "badge": "NOTRE MÉTHODOLOGIE",
-    "headline": "De votre vision à un produit digital performant.",
-    "description": "Une approche rigoureuse et éprouvée pour éliminer les incertitudes et livrer une solution irréprochable dans les délais impartis.",
+    "badge": "Comment ça marche",
+    "headline": "Voici à quoi ressemble notre collaboration",
+    "description": "Un processus transparent en 3 étapes clés, de l'idée initiale jusqu'à la mise en ligne et le suivi continu.",
     "steps": {
       "step1": {
         "number": "01",
-        "title": "Immersion & Découverte",
-        "desc": "Nous explorons en profondeur vos objectifs commerciaux, vos utilisateurs cibles et vos exigences techniques pour définir des critères de succès clairs."
+        "title": "Compréhension et Cadrage",
+        "desc": "Nous échangeons pour comprendre votre vision, vos objectifs et votre audience ; nous analysons le marché et convenons ensemble de chaque détail."
       },
       "step2": {
         "number": "02",
-        "title": "Stratégie & Planification",
-        "desc": "Nous définissons l'architecture technique, sélectionnons la stack optimale et établissons une feuille de route détaillée avec des jalons précis."
+        "title": "Lancement du Développement",
+        "desc": "Nous débutons la mise en œuvre du projet, en vous partageant des bilans réguliers et en prenant les décisions majeures en totale concertation."
       },
       "step3": {
         "number": "03",
-        "title": "Design & Prototypage",
-        "desc": "Nous concevons des interfaces soignées et des prototypes interactifs vivants pour valider la hiérarchie visuelle et l'expérience utilisateur."
-      },
-      "step4": {
-        "number": "04",
-        "title": "Développement de Précision",
-        "desc": "Nous écrivons un code propre, modulaire et rigoureusement testé avec intégration continue et audits complets de performance et de sécurité."
-      },
-      "step5": {
-        "number": "05",
-        "title": "Déploiement & Suivi",
-        "desc": "Nous orchestrons le déploiement sur infrastructure cloud, analysons les performances réelles et vous accompagnons dans les évolutions continues."
+        "title": "Livraison et Accompagnement",
+        "desc": "Nous vous livrons le projet dans son intégralité, assorti d'une période d'assistance pour vos ajustements et retours d'expérience."
       }
     }
   },

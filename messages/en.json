@@ -118,34 +118,24 @@
     }
   },
   "process": {
-    "badge": "HOW WE WORK",
-    "headline": "From your idea to a working product.",
-    "description": "A structured, battle-tested methodology designed to eliminate ambiguity and deliver exceptional quality on schedule.",
+    "badge": "How it works",
+    "headline": "Here's what working together looks like",
+    "description": "A clear, transparent 3-step collaboration flow from your initial concept to delivery and beyond.",
     "steps": {
       "step1": {
         "number": "01",
-        "title": "Discovery & Alignment",
-        "desc": "We dive deep into your business objectives, operational hurdles, target demographic, and core technical requirements to define clear success metrics."
+        "title": "Understanding and Planning",
+        "desc": "We meet to understand your idea, your goals, and your audience; we analyze the market and your competitors; and we agree on all the details."
       },
       "step2": {
         "number": "02",
-        "title": "Strategy & Planning",
-        "desc": "We formulate the technical architecture, choose the optimal technology stack, delineate project milestones, and map out the data hierarchy."
+        "title": "Start of Implementation",
+        "desc": "We begin implementing the project, providing ongoing updates and sharing progress and important decisions with you."
       },
       "step3": {
         "number": "03",
-        "title": "Design & Prototyping",
-        "desc": "We craft high-fidelity UI designs and interactive prototypes, refining typography, layout balance, and micro-interactions with your team."
-      },
-      "step4": {
-        "number": "04",
-        "title": "Precision Engineering",
-        "desc": "We write modular, thoroughly tested code with continuous integration, responsive optimization, and rigorous security audits."
-      },
-      "step5": {
-        "number": "05",
-        "title": "Launch & Evolution",
-        "desc": "We orchestrate smooth production deployments, conduct post-launch monitoring, and provide ongoing architectural refinement."
+        "title": "Delivery and Follow-Up",
+        "desc": "We deliver the project to you in its entirety, along with a post-delivery support period for minor adjustments and feedback."
       }
     }
   },
