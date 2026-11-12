@@ -1,0 +1,288 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "services": "Services",
+    "about": "À Propos",
+    "work": "Projets",
+    "process": "Méthode",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "letsTalk": "Échangeons"
+  },
+  "hero": {
+    "status": "Disponibles pour projets T1/T2",
+    "headlinePrefix": "NOUS CONCEVONS DES EXPÉRIENCES DIGITALES",
+    "headlineHighlight": "QUI FONT PROGRESSER LES ENTREPRISES.",
+    "description": "Nous concevons et développons des applications web sur mesure, des plateformes performantes et des produits digitaux scalables pour propulser les marques ambitieuses.",
+    "ctaPrimary": "Démarrer un Projet",
+    "ctaSecondary": "Explorer Nos Réalisations",
+    "scroll": "Faites défiler pour explorer",
+    "metrics": {
+      "satisfaction": "Satisfaction Client",
+      "performance": "Score Moyen Lighthouse",
+      "delivery": "Livraison dans les Délais"
+    }
+  },
+  "services": {
+    "badge": "NOS EXPERTISES",
+    "headline": "Tout ce dont vous avez besoin pour forger votre présence digitale.",
+    "description": "De la conception stratégique au déploiement en production, nos services d'ingénierie et de design s'adaptent avec précision à vos ambitions.",
+    "items": {
+      "webDev": {
+        "title": "Développement Web Moderne",
+        "description": "Applications web d'entreprise, sites vitrines premium et plateformes dynamiques propulsées par des architectures de pointe garantissant une vitesse optimale.",
+        "tags": ["Next.js & React", "SSR Haute Performance", "CMS Scalable", "Optimisation SEO"]
+      },
+      "ecommerce": {
+        "title": "Solutions E-Commerce",
+        "description": "Boutiques en ligne haut de gamme et tunnels d'achat optimisés pour maximiser le taux de conversion et fidéliser votre clientèle.",
+        "tags": ["Boutiques Sur Mesure", "Stripe & Passerelles", "Gestion des Stocks", "Paiement Fluide"]
+      },
+      "webApps": {
+        "title": "Applications Web Sur Mesure (SaaS)",
+        "description": "Plateformes SaaS complexes, portails clients et outils de gestion d'entreprise conçus avec des normes de sécurité rigoureuses et une modélisation robuste.",
+        "tags": ["Plateformes SaaS", "Gestion des Droits", "Écosystèmes d'API", "Télémétrie Temps Réel"]
+      },
+      "uiux": {
+        "title": "Design UI/UX & Produit",
+        "description": "Interfaces ergonomiques et raffinées façonnées avec une attention maniaque à la hiérarchie visuelle, à la typographie et aux micro-interactions.",
+        "tags": ["Design Systems", "Prototypes Interactifs", "Wireframing", "Audit Expérience Client"]
+      },
+      "mobile": {
+        "title": "Développement Mobile",
+        "description": "Applications mobiles multiplateformes performantes offrant la fluidité et le rendu natif sur iOS et Android à partir d'une base de code unifiée.",
+        "tags": ["React Native", "Composants Natifs", "Mode Hors Ligne", "Auth Biométrique"]
+      },
+      "aiAutomation": {
+        "title": "IA & Automatisation des Processus",
+        "description": "Intégration d'agents intelligents, d'automatisation de workflows complexes et d'outils prédictifs au cœur de vos opérations d'entreprise.",
+        "tags": ["Workflows LLM", "Automatisations d'API", "Analyse Intelligente", "Pipelines de Données"]
+      }
+    }
+  },
+  "about": {
+    "badge": "POURQUOI NOUS CHOISIR",
+    "headline": "La technologie n'est pas une fin en soi. Résoudre vos défis l'est.",
+    "paragraph1": "Nous sommes un studio resserré d'ingénieurs seniors et de designers de produits alliant rigueur technique et créativité visuelle pour concevoir des logiciels à fort impact.",
+    "paragraph2": "Nous refusons les modèles préfabriqués génériques. Nous collaborons étroitement avec les fondateurs et décideurs pour bâtir des solutions sur mesure qui évoluent sans dette technique.",
+    "differentiators": {
+      "item1": {
+        "title": "Architecture Orientée Métier",
+        "desc": "Nous analysons vos leviers de croissance et vos contraintes opérationnelles avant d'écrire la moindre ligne de code."
+      },
+      "item2": {
+        "title": "Artisanat Numérique Sur Mesure",
+        "desc": "Aucun template standard. Chaque interface, transition et schéma de données est pensé exclusivement pour votre identité de marque."
+      },
+      "item3": {
+        "title": "Performance Obsessionnelle",
+        "desc": "Temps de chargement inférieurs à la seconde, accessibilité irréprochable et code propre pensé pour la pérennité."
+      },
+      "item4": {
+        "title": "Collaboration Transparente",
+        "desc": "Accès direct aux développeurs principaux, points hebdomadaires réguliers et démonstrations interactives à chaque jalon."
+      }
+    }
+  },
+  "projects": {
+    "badge": "RÉALISATIONS SÉLECTIONNÉES",
+    "headline": "Des expériences numériques conçues pour marquer les esprits.",
+    "description": "Un aperçu soigné de plateformes sur mesure, d'applications web et d'écosystèmes digitaux que nous avons développés.",
+    "viewProject": "Voir l'Étude de Cas",
+    "livePreview": "Site en Ligne",
+    "items": {
+      "project1": {
+        "title": "Nexus Enterprise Cloud",
+        "category": "Plateforme SaaS & Analytique",
+        "description": "Tableau de bord haute performance pour la surveillance d'infrastructures cloud multi-régions avec streaming de métriques en temps réel.",
+        "tech": ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "WebSockets"]
+      },
+      "project2": {
+        "title": "Aura Maison Luxury",
+        "category": "E-Commerce de Luxe & Flagship",
+        "description": "Expérience d'achat numérique ultra-raffinée proposant des aperçus 3D interactifs de produits et un tunnel de paiement multi-devises.",
+        "tech": ["React", "Shopify API", "Framer Motion", "Tailwind CSS"]
+      },
+      "project3": {
+        "title": "Synapse Health Mobile",
+        "category": "Application Médicale & Téléconsultation",
+        "description": "Portail patient conforme aux normes de santé assurant des consultations asynchrones, des appels vidéo chiffrés et la prise de rendez-vous.",
+        "tech": ["React Native", "Node.js", "WebRTC", "PostgreSQL"]
+      },
+      "project4": {
+        "title": "Kinetix AI Workflow Studio",
+        "category": "Plateforme d'Automatisation IA",
+        "description": "Canevas interactif visuel permettant d'orchestrer des agents IA d'entreprise, des flux de données automatisés et des synchronisations complexes.",
+        "tech": ["Next.js", "TypeScript", "Python FastAPI", "Tailwind CSS", "Docker"]
+      }
+    }
+  },
+  "process": {
+    "badge": "NOTRE MÉTHODOLOGIE",
+    "headline": "De votre vision à un produit digital performant.",
+    "description": "Une approche rigoureuse et éprouvée pour éliminer les incertitudes et livrer une solution irréprochable dans les délais impartis.",
+    "steps": {
+      "step1": {
+        "number": "01",
+        "title": "Immersion & Découverte",
+        "desc": "Nous explorons en profondeur vos objectifs commerciaux, vos utilisateurs cibles et vos exigences techniques pour définir des critères de succès clairs."
+      },
+      "step2": {
+        "number": "02",
+        "title": "Stratégie & Planification",
+        "desc": "Nous définissons l'architecture technique, sélectionnons la stack optimale et établissons une feuille de route détaillée avec des jalons précis."
+      },
+      "step3": {
+        "number": "03",
+        "title": "Design & Prototypage",
+        "desc": "Nous concevons des interfaces soignées et des prototypes interactifs vivants pour valider la hiérarchie visuelle et l'expérience utilisateur."
+      },
+      "step4": {
+        "number": "04",
+        "title": "Développement de Précision",
+        "desc": "Nous écrivons un code propre, modulaire et rigoureusement testé avec intégration continue et audits complets de performance et de sécurité."
+      },
+      "step5": {
+        "number": "05",
+        "title": "Déploiement & Suivi",
+        "desc": "Nous orchestrons le déploiement sur infrastructure cloud, analysons les performances réelles et vous accompagnons dans les évolutions continues."
+      }
+    }
+  },
+  "technologies": {
+    "badge": "NOTRE BOÎTE À OUTILS",
+    "headline": "Conçu avec les technologies les plus modernes.",
+    "description": "Nous sélectionnons des technologies modernes et éprouvées qui allient performance, robustesse et vélocité de développement.",
+    "categories": {
+      "frontend": "Frontend & Expérience",
+      "backend": "Backend & Cloud",
+      "mobileAi": "Mobile & Systèmes IA"
+    }
+  },
+  "testimonials": {
+    "badge": "TÉMOIGNAGES CLIENTS",
+    "headline": "Le travail d'excellence se reflète dans les résultats de ceux qui l'utilisent.",
+    "description": "Ce que les fondateurs et directeurs techniques partagent après avoir collaboré avec notre équipe d'ingénierie.",
+    "items": {
+      "item1": {
+        "quote": "H4Code a transformé notre MVP initial en une véritable plateforme d'entreprise. La vitesse de chargement a augmenté de 300% et la rétention utilisateur a doublé dès le premier mois.",
+        "author": "Marcus Vance",
+        "role": "Directeur Technique",
+        "company": "Vanguard Dynamics"
+      },
+      "item2": {
+        "quote": "Le niveau technique et l'exigence esthétique de cette équipe sont exceptionnels. Notre boutique a été livrée en avance et dépasse toutes nos attentes.",
+        "author": "Elena Rostova",
+        "role": "Fondatrice & CEO",
+        "company": "Aura Maison Luxury"
+      },
+      "item3": {
+        "quote": "Collaborer avec H4Code, c'est comme disposer de cofondateurs techniques d'élite. Ils ne se contentent pas de coder, ils subliment votre stratégie.",
+        "author": "Sami Benali",
+        "role": "Head of Product",
+        "company": "Kinetix Intelligence"
+      }
+    }
+  },
+  "faq": {
+    "badge": "QUESTIONS FRÉQUENTES",
+    "headline": "Des réponses claires à vos interrogations.",
+    "description": "Tout ce que vous devez savoir sur notre mode de collaboration, nos délais de livraison et nos standards de qualité.",
+    "items": {
+      "q1": {
+        "question": "Quels types de projets développez-vous ?",
+        "answer": "Nous développons des applications web sur mesure haute performance, des sites institutionnels haut de gamme, des boutiques e-commerce scalables, des applications mobiles iOS et Android, ainsi que des plateformes d'automatisation IA."
+      },
+      "q2": {
+        "question": "Comment se déroule le processus de développement ?",
+        "answer": "Notre méthode s'articule en cinq étapes : Découverte, Stratégie & Architecture, Design Interactif, Développement Rigoureux, et Déploiement en Production, avec des points de suivi hebdomadaires continus."
+      },
+      "q3": {
+        "question": "Quelle est la durée moyenne d'un projet ?",
+        "answer": "Les sites vitrines et landing pages requièrent généralement 2 à 4 semaines. Les plateformes SaaS complexes, portails sur mesure et boutiques avancées s'étendent de 6 à 12 semaines selon le périmètre fonctionnel."
+      },
+      "q4": {
+        "question": "Pouvez-vous intervenir sur une base de code existante ou refondre un site actuel ?",
+        "answer": "Tout à fait. Nous réalisons régulièrement des audits d'architecture pour moderniser des systèmes existants, éliminer les goulots d'étranglement ou refondre entièrement une plateforme vers Next.js."
+      },
+      "q5": {
+        "question": "Assurez-vous la maintenance et le support après le lancement ?",
+        "answer": "Absolument. Nous proposons des contrats de maintenance incluant la veille sécuritaire, les mises à jour techniques, le dimensionnement des serveurs et le développement de nouvelles fonctionnalités."
+      },
+      "q6": {
+        "question": "Pouvez-vous intégrer des API tierces (Stripe, CRM, IA) ?",
+        "answer": "Oui. Nous possédons une solide expertise dans l'intégration d'API de paiement (Stripe, PayPal), de CRM (HubSpot, Salesforce), de modèles IA (OpenAI, Anthropic) et de bases de données cloud."
+      },
+      "q7": {
+        "question": "Comment obtenir une estimation pour mon projet ?",
+        "answer": "Remplissez le formulaire de contact ci-dessous avec vos besoins, votre calendrier et votre budget prévisionnel. Nous étudierons votre demande et organiserons un premier échange technique sous 24h."
+      }
+    }
+  },
+  "contact": {
+    "badge": "ENGAGEONS LA CONVERSATION",
+    "headline": "Vous avez un projet en tête ? Créons quelque chose d'exceptionnel ensemble.",
+    "description": "Partagez vos ambitions, vos objectifs et votre calendrier. Notre équipe technique analysera votre demande et reviendra vers vous sous 24 heures.",
+    "form": {
+      "nameLabel": "Nom Complet",
+      "namePlaceholder": "ex. Thomas Laurent",
+      "emailLabel": "Email Professionnel",
+      "emailPlaceholder": "thomas@entreprise.fr",
+      "companyLabel": "Société / Organisation (Optionnel)",
+      "companyPlaceholder": "ex. Studio Horizon",
+      "serviceLabel": "Expertise Requise",
+      "servicePlaceholder": "Sélectionnez un service",
+      "budgetLabel": "Budget Estimé (USD)",
+      "budgetPlaceholder": "Sélectionnez une tranche de budget",
+      "messageLabel": "Détails & Objectifs du Projet",
+      "messagePlaceholder": "Décrivez votre projet, vos objectifs clés, les défis à relever et la date de lancement visée...",
+      "submit": "Transmettre la Demande",
+      "submitting": "Transmission en cours...",
+      "successTitle": "Demande Envoyée avec Succès",
+      "successDesc": "Merci ! Notre équipe d'ingénierie a bien reçu votre brief et vous contactera dans les prochaines 24 heures.",
+      "errorTitle": "Échec de l'Envoi",
+      "errorDesc": "Une erreur inattendue est survenue. Veuillez réessayer ou nous contacter directement par email.",
+      "servicesOptions": {
+        "web": "Développement Web Moderne",
+        "ecommerce": "Solutions E-Commerce",
+        "webapp": "Applications Web Sur Mesure (SaaS)",
+        "uiux": "Design UI/UX & Produit",
+        "mobile": "Développement Mobile (iOS / Android)",
+        "ai": "IA & Automatisation des Processus"
+      },
+      "budgetOptions": {
+        "tier1": "3 000 $ - 7 000 $",
+        "tier2": "7 000 $ - 15 000 $",
+        "tier3": "15 000 $ - 30 000 $",
+        "tier4": "+30 000 $"
+      },
+      "errors": {
+        "nameMin": "Le nom doit comporter au moins 2 caractères.",
+        "emailInvalid": "Veuillez saisir une adresse email professionnelle valide.",
+        "serviceRequired": "Veuillez sélectionner l'expertise principale souhaitée.",
+        "messageMin": "Veuillez fournir au moins 15 caractères pour détailler votre projet."
+      }
+    },
+    "directContact": {
+      "title": "Canaux Directs",
+      "emailTitle": "Contactez-nous par Email",
+      "emailValue": "contact@h4code.agency",
+      "whatsappTitle": "WhatsApp Direct",
+      "whatsappValue": "+1 (555) 234-5678",
+      "availabilityTitle": "Horaires du Studio",
+      "availabilityValue": "Lundi - Vendredi, 9h00 - 18h00 (GMT+1)",
+      "responseGuarantee": "Délai de réponse moyen : moins de 4 heures."
+    }
+  },
+  "footer": {
+    "tagline": "Nous façonnons des expériences numériques d'élite qui permettent aux marques ambitieuses d'exceller.",
+    "rights": "Tous droits réservés.",
+    "backToTop": "Haut de Page",
+    "linksTitle": "Navigation",
+    "servicesTitle": "Expertises",
+    "connectTitle": "Nous Suivre",
+    "privacy": "Politique de Confidentialité",
+    "terms": "Conditions d'Utilisation"
+  }
+}
+

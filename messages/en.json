@@ -1,0 +1,288 @@
+{
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "work": "Our Work",
+    "process": "Process",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "letsTalk": "Let's Talk"
+  },
+  "hero": {
+    "status": "Available for Q1/Q2 Projects",
+    "headlinePrefix": "WE BUILD DIGITAL EXPERIENCES",
+    "headlineHighlight": "THAT MOVE BUSINESSES FORWARD.",
+    "description": "We design and engineer bespoke web applications, high-converting platforms, and scalable digital products that empower ambitious brands to lead their markets.",
+    "ctaPrimary": "Start a Project",
+    "ctaSecondary": "Explore Our Work",
+    "scroll": "Scroll to explore",
+    "metrics": {
+      "satisfaction": "Client Satisfaction",
+      "performance": "Average Lighthouse Score",
+      "delivery": "On-Time Delivery"
+    }
+  },
+  "services": {
+    "badge": "WHAT WE DO",
+    "headline": "Everything you need to build your digital presence.",
+    "description": "From concept through production deployment, our engineering & design services are engineered to scale seamlessly with your vision.",
+    "items": {
+      "webDev": {
+        "title": "Web Development",
+        "description": "Enterprise-grade web applications, corporate websites, and dynamic platforms built with cutting-edge architectures for unmatched speed.",
+        "tags": ["Next.js & React", "High-Performance SSR", "Scalable CMS", "SEO Optimized"]
+      },
+      "ecommerce": {
+        "title": "E-Commerce Solutions",
+        "description": "High-conversion digital storefronts and tailored checkout experiences engineered to maximize transaction throughput and customer retention.",
+        "tags": ["Custom Stores", "Stripe & Global Gateways", "Inventory Sync", "Optimized Cart Flow"]
+      },
+      "webApps": {
+        "title": "Custom Web Applications",
+        "description": "Complex SaaS platforms, client portals, and bespoke management systems engineered with rigorous security and clean data modeling.",
+        "tags": ["SaaS Platforms", "Role-Based Auth", "API Ecosystems", "Real-Time Telemetry"]
+      },
+      "uiux": {
+        "title": "UI/UX & Product Design",
+        "description": "Human-centered interfaces crafted with obsessive attention to hierarchy, typography, intuitive micro-interactions, and design systems.",
+        "tags": ["Design Systems", "Interactive Prototypes", "Wireframing", "User Journey Audits"]
+      },
+      "mobile": {
+        "title": "Mobile Development",
+        "description": "Performant cross-platform mobile experiences that deliver native speed and polished feel across iOS and Android from a unified codebase.",
+        "tags": ["React Native", "Native Modules", "Offline Mode", "Biometric Auth"]
+      },
+      "aiAutomation": {
+        "title": "AI & Process Automation",
+        "description": "Integrating state-of-the-art LLMs, intelligent workflow automation, and custom predictive tools directly into your core business operations.",
+        "tags": ["LLM & Agent Workflows", "API Automations", "Intelligent Document Parsing", "Data Pipelines"]
+      }
+    }
+  },
+  "about": {
+    "badge": "WHY WORK WITH US",
+    "headline": "Technology is not the goal. Solving your problems is.",
+    "paragraph1": "We are a tight-knit collective of senior software engineers and product designers who bridge the gap between creative artistry and robust computational systems.",
+    "paragraph2": "Instead of churning out generic page templates, we collaborate closely with founders and executive teams to engineer purposeful software that scales without technical debt.",
+    "differentiators": {
+      "item1": {
+        "title": "Business-First Architecture",
+        "desc": "We analyze your revenue drivers and customer pain points before writing a single line of production code."
+      },
+      "item2": {
+        "title": "Bespoke Craftsmanship",
+        "desc": "Zero cookie-cutter templates. Every layout, transition, and database model is tailor-crafted to your brand identity."
+      },
+      "item3": {
+        "title": "Obsessive Performance",
+        "desc": "Sub-second load times, stellar accessibility standards, and clean maintainable codebases built for enterprise longevity."
+      },
+      "item4": {
+        "title": "Transparent Collaboration",
+        "desc": "Direct access to lead engineers, regular video checkpoints, shared milestone roadmaps, and honest advisory."
+      }
+    }
+  },
+  "projects": {
+    "badge": "SELECTED WORK",
+    "headline": "Digital experiences built to make a difference.",
+    "description": "A curated preview of bespoke platforms, web products, and modern interfaces we have engineered.",
+    "viewProject": "View Case Study",
+    "livePreview": "Live Site",
+    "items": {
+      "project1": {
+        "title": "Nexus Enterprise Cloud",
+        "category": "SaaS Platform & Analytics",
+        "description": "A high-performance observability and infrastructure dashboard handling multi-region Kubernetes telemetry with real-time streaming.",
+        "tech": ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "WebSockets"]
+      },
+      "project2": {
+        "title": "Aura Maison Luxury",
+        "category": "E-Commerce & Digital Flagship",
+        "description": "An ultra-refined digital shopping experience featuring interactive 3D product previews, multi-currency checkout, and headless commerce.",
+        "tech": ["React", "Shopify API", "Framer Motion", "Tailwind CSS"]
+      },
+      "project3": {
+        "title": "Synapse Health Mobile",
+        "category": "Healthcare Telemedicine App",
+        "description": "HIPAA-compliant patient portal enabling asynchronous doctor consultations, encrypted video calls, and automated appointment workflows.",
+        "tech": ["React Native", "Node.js", "WebRTC", "PostgreSQL"]
+      },
+      "project4": {
+        "title": "Kinetix AI Workflow Studio",
+        "category": "AI Automation Platform",
+        "description": "Interactive node-based canvas for orchestrating enterprise LLM agents, automated data pipelines, and scheduled sync jobs.",
+        "tech": ["Next.js", "TypeScript", "Python FastApi", "Tailwind CSS", "Docker"]
+      }
+    }
+  },
+  "process": {
+    "badge": "HOW WE WORK",
+    "headline": "From your idea to a working product.",
+    "description": "A structured, battle-tested methodology designed to eliminate ambiguity and deliver exceptional quality on schedule.",
+    "steps": {
+      "step1": {
+        "number": "01",
+        "title": "Discovery & Alignment",
+        "desc": "We dive deep into your business objectives, operational hurdles, target demographic, and core technical requirements to define clear success metrics."
+      },
+      "step2": {
+        "number": "02",
+        "title": "Strategy & Planning",
+        "desc": "We formulate the technical architecture, choose the optimal technology stack, delineate project milestones, and map out the data hierarchy."
+      },
+      "step3": {
+        "number": "03",
+        "title": "Design & Prototyping",
+        "desc": "We craft high-fidelity UI designs and interactive prototypes, refining typography, layout balance, and micro-interactions with your team."
+      },
+      "step4": {
+        "number": "04",
+        "title": "Precision Engineering",
+        "desc": "We write modular, thoroughly tested code with continuous integration, responsive optimization, and rigorous security audits."
+      },
+      "step5": {
+        "number": "05",
+        "title": "Launch & Evolution",
+        "desc": "We orchestrate smooth production deployments, conduct post-launch monitoring, and provide ongoing architectural refinement."
+      }
+    }
+  },
+  "technologies": {
+    "badge": "OUR TOOLKIT",
+    "headline": "Built with modern technologies.",
+    "description": "We handpick modern, battle-tested tools that guarantee high performance, security, and developer agility.",
+    "categories": {
+      "frontend": "Frontend & Creative",
+      "backend": "Backend & Cloud",
+      "mobileAi": "Mobile & AI Systems"
+    }
+  },
+  "testimonials": {
+    "badge": "CLIENT FEEDBACK",
+    "headline": "Good work speaks through the people who experience it.",
+    "description": "Here is what ambitious founders and technical leaders say about collaborating with our engineering team.",
+    "items": {
+      "item1": {
+        "quote": "H4Code transformed our fragmented MVP into an enterprise-grade platform. Our page speed increased by 300% and user retention doubled within the first month.",
+        "author": "Marcus Vance",
+        "role": "CTO",
+        "company": "Vanguard Dynamics"
+      },
+      "item2": {
+        "quote": "The engineering caliber and visual sensibility of this team are unmatched. They delivered ahead of schedule and solved challenges our previous agency couldn't.",
+        "author": "Elena Rostova",
+        "role": "Founder & CEO",
+        "company": "Aura Luxury Digital"
+      },
+      "item3": {
+        "quote": "Working with H4Code felt like having world-class technical co-founders. They don't just execute code; they elevate your entire digital strategy.",
+        "author": "Sami Benali",
+        "role": "Head of Product",
+        "company": "Kinetix Intelligence"
+      }
+    }
+  },
+  "faq": {
+    "badge": "FREQUENTLY ASKED QUESTIONS",
+    "headline": "Answers to common questions.",
+    "description": "Everything you need to know about our collaboration model, delivery timelines, and engineering standards.",
+    "items": {
+      "q1": {
+        "question": "What types of projects do you develop?",
+        "answer": "We develop custom high-performance web applications, bespoke corporate websites, scalable e-commerce storefronts, cross-platform mobile apps, and custom AI-powered automation platforms."
+      },
+      "q2": {
+        "question": "How does the development process work?",
+        "answer": "Our process follows five systematic phases: Discovery, Strategy & Architecture, Interactive Design, Precision Development, and Production Launch. We provide continuous weekly updates and prototype demos."
+      },
+      "q3": {
+        "question": "How long does a typical project take?",
+        "answer": "Landing pages and corporate websites typically take 2 to 4 weeks. Complex SaaS applications, portals, and custom e-commerce platforms range from 6 to 12 weeks depending on scope and integrations."
+      },
+      "q4": {
+        "question": "Can you work with an existing codebase or redesign a current website?",
+        "answer": "Yes. We frequently conduct code and architectural audits to modernize legacy systems, refactor performance bottlenecks, or completely redesign legacy platforms into modern Next.js applications."
+      },
+      "q5": {
+        "question": "Do you provide post-launch maintenance and support?",
+        "answer": "Absolutely. We offer tailored SLA support packages including proactive security monitoring, framework updates, cloud infrastructure scaling, and ongoing feature development."
+      },
+      "q6": {
+        "question": "Can I request custom integrations (CRM, payment, AI APIs)?",
+        "answer": "Yes. We have deep experience integrating third-party APIs including Stripe, PayPal, Salesforce, HubSpot, OpenAI/Anthropic, AWS, and custom enterprise databases."
+      },
+      "q7": {
+        "question": "How do I get a quotation for my project?",
+        "answer": "Fill out our project inquiry form below with your requirements, timeline, and estimated budget. We will review your brief and schedule an introductory technical call within 24 hours."
+      }
+    }
+  },
+  "contact": {
+    "badge": "START A CONVERSATION",
+    "headline": "Have an idea? Let's build something great together.",
+    "description": "Tell us about your project vision, timeline, and goals. We will analyze your requirements and get back to you with actionable insights within 24 hours.",
+    "form": {
+      "nameLabel": "Full Name",
+      "namePlaceholder": "e.g. Alex Morgan",
+      "emailLabel": "Work Email",
+      "emailPlaceholder": "alex@company.com",
+      "companyLabel": "Company / Organization (Optional)",
+      "companyPlaceholder": "e.g. Acme Studio",
+      "serviceLabel": "Service Required",
+      "servicePlaceholder": "Select a service",
+      "budgetLabel": "Estimated Budget (USD)",
+      "budgetPlaceholder": "Select your budget range",
+      "messageLabel": "Project Details & Goals",
+      "messagePlaceholder": "Tell us about your project, goals, key challenges, and expected launch date...",
+      "submit": "Send Project Inquiry",
+      "submitting": "Transmitting...",
+      "successTitle": "Inquiry Transmitted Successfully",
+      "successDesc": "Thank you! Our engineering team has received your brief and will contact you within 24 hours.",
+      "errorTitle": "Submission Failed",
+      "errorDesc": "An unexpected error occurred while sending your inquiry. Please try again or reach out directly via email.",
+      "servicesOptions": {
+        "web": "Web Development",
+        "ecommerce": "E-Commerce Solution",
+        "webapp": "Custom Web Application",
+        "uiux": "UI/UX & Product Design",
+        "mobile": "Mobile App Development",
+        "ai": "AI & Process Automation"
+      },
+      "budgetOptions": {
+        "tier1": "$3,000 - $7,000",
+        "tier2": "$7,000 - $15,000",
+        "tier3": "$15,000 - $30,000",
+        "tier4": "$30,000+"
+      },
+      "errors": {
+        "nameMin": "Name must be at least 2 characters.",
+        "emailInvalid": "Please enter a valid work email address.",
+        "serviceRequired": "Please select the primary service required.",
+        "messageMin": "Please provide at least 15 characters describing your project."
+      }
+    },
+    "directContact": {
+      "title": "Direct Channels",
+      "emailTitle": "Email Us Directly",
+      "emailValue": "contact@h4code.agency",
+      "whatsappTitle": "WhatsApp Direct",
+      "whatsappValue": "+1 (555) 234-5678",
+      "availabilityTitle": "Studio Hours",
+      "availabilityValue": "Monday - Friday, 9:00 AM - 6:00 PM (GMT+1)",
+      "responseGuarantee": "Average response time: under 4 hours."
+    }
+  },
+  "footer": {
+    "tagline": "Engineering premium digital experiences that empower ambitious brands worldwide.",
+    "rights": "All rights reserved.",
+    "backToTop": "Back to Top",
+    "linksTitle": "Navigation",
+    "servicesTitle": "Capabilities",
+    "connectTitle": "Connect",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}
+
