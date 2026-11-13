@@ -1,166 +1,353 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Container } from '../ui/Container';
-import { SectionHeading } from '../ui/SectionHeading';
 import { AnimatedSection } from '../ui/AnimatedSection';
-import { Globe, Smartphone, Monitor, Palette, ArrowUpRight } from 'lucide-react';
 
-interface BentoItem {
-  id: string;
-  icon: React.ReactNode;
-  imageSrc: string;
-  imageAlt: string;
-  badgeText: string;
-  isWide: boolean;
+/* ── 1. Website Development Wireframe Mockup ──────────────────────────── */
+function WebDevWireframe() {
+  return (
+    <div className="w-full max-w-[380px] sm:max-w-[430px] rounded-2xl bg-white shadow-2xl overflow-hidden select-none border border-white/20 transition-transform duration-500 group-hover:scale-[1.02]">
+      {/* Browser Top Bar */}
+      <div className="bg-white px-4 py-3 flex items-center gap-2 border-b border-neutral-100">
+        <div className="flex items-center gap-1.5">
+          <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
+          <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
+          <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
+        </div>
+        <div className="flex-1 max-w-[140px] h-3.5 bg-neutral-100 rounded-full mx-auto" />
+      </div>
+
+      {/* Browser Body */}
+      <div className="bg-[#8ba6ff] p-5 sm:p-7 min-h-[220px] sm:min-h-[260px] flex flex-col justify-between">
+        {/* Top Navbar Skeleton */}
+        <div className="flex items-center justify-between pb-3">
+          <div className="w-10 h-3 bg-white/90 rounded-full" />
+          <div className="flex gap-2">
+            <div className="w-7 h-2 bg-white/60 rounded-full" />
+            <div className="w-7 h-2 bg-white/60 rounded-full" />
+            <div className="w-7 h-2 bg-white/60 rounded-full" />
+          </div>
+          <div className="w-8 h-3 bg-white rounded-full" />
+        </div>
+
+        {/* Hero Section Layout */}
+        <div className="grid grid-cols-12 gap-4 items-center my-auto">
+          {/* Left Text Column */}
+          <div className="col-span-7 space-y-2.5">
+            <div className="w-full h-4 bg-[#3461fd] rounded-md" />
+            <div className="w-4/5 h-4 bg-[#3461fd] rounded-md" />
+            <div className="w-3/4 h-2 bg-white/70 rounded-full mt-2" />
+            <div className="w-1/2 h-2 bg-white/70 rounded-full" />
+            <div className="pt-2">
+              <div className="w-14 h-4 bg-white rounded-full shadow-sm" />
+            </div>
+          </div>
+
+          {/* Right White Card / Image Block */}
+          <div className="col-span-5">
+            <div className="aspect-square w-full bg-white rounded-xl shadow-md flex items-center justify-center p-3">
+              <div className="w-full h-full bg-[#dde2ff] rounded-lg" />
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Feature Pill Row */}
+        <div className="flex gap-2 pt-3">
+          <div className="w-14 h-2.5 bg-white/60 rounded-md" />
+          <div className="w-14 h-2.5 bg-white/60 rounded-md" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ── 2. Web App Development Wireframe Mockup ──────────────────────────── */
+function WebAppWireframe() {
+  return (
+    <div className="w-full max-w-[380px] sm:max-w-[430px] rounded-2xl bg-white shadow-2xl overflow-hidden select-none border border-white/20 transition-transform duration-500 group-hover:scale-[1.02]">
+      {/* Browser Top Bar */}
+      <div className="bg-white px-4 py-3 flex items-center gap-2 border-b border-neutral-100">
+        <div className="flex items-center gap-1.5">
+          <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
+          <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
+          <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
+        </div>
+        <div className="flex-1 max-w-[140px] h-3.5 bg-neutral-100 rounded-full mx-auto" />
+      </div>
+
+      {/* Browser Body with Sidebar and Grid */}
+      <div className="bg-[#8ba6ff] p-4 sm:p-5 min-h-[220px] sm:min-h-[260px] flex gap-3">
+        {/* Left Sidebar */}
+        <div className="w-12 sm:w-14 flex flex-col gap-2 pt-1 border-r border-white/20 pr-2">
+          <div className="w-full h-3 bg-white rounded-md mb-2" />
+          <div className="w-3/4 h-2 bg-white/70 rounded-full" />
+          <div className="w-full h-2 bg-white/70 rounded-full" />
+          <div className="w-4/5 h-2 bg-white/70 rounded-full" />
+          <div className="w-3/4 h-2 bg-white/70 rounded-full" />
+          <div className="mt-auto w-full h-3 bg-white/90 rounded-md" />
+        </div>
+
+        {/* Right Dashboard Grid (2 rows x 3 cols) */}
+        <div className="flex-1 flex flex-col justify-between">
+          <div className="grid grid-cols-3 gap-2 sm:gap-2.5">
+            <div className="aspect-[4/3] rounded-lg bg-white shadow-sm p-1.5 flex flex-col justify-end">
+              <div className="w-3/4 h-1.5 bg-[#8ba6ff] rounded-full" />
+            </div>
+            <div className="aspect-[4/3] rounded-lg bg-[#3461fd] shadow-sm p-1.5 flex flex-col justify-end">
+              <div className="w-3/4 h-1.5 bg-white/80 rounded-full" />
+            </div>
+            <div className="aspect-[4/3] rounded-lg bg-white shadow-sm p-1.5 flex flex-col justify-end">
+              <div className="w-3/4 h-1.5 bg-[#8ba6ff] rounded-full" />
+            </div>
+            <div className="aspect-[4/3] rounded-lg bg-[#3461fd] shadow-sm p-1.5 flex flex-col justify-end">
+              <div className="w-3/4 h-1.5 bg-white/80 rounded-full" />
+            </div>
+            <div className="aspect-[4/3] rounded-lg bg-white shadow-sm p-1.5 flex flex-col justify-end">
+              <div className="w-3/4 h-1.5 bg-[#8ba6ff] rounded-full" />
+            </div>
+            <div className="aspect-[4/3] rounded-lg bg-white shadow-sm p-1.5 flex flex-col justify-end">
+              <div className="w-3/4 h-1.5 bg-[#8ba6ff] rounded-full" />
+            </div>
+          </div>
+
+          <div className="flex gap-2 pt-2">
+            <div className="w-16 h-2 bg-white/60 rounded-full" />
+            <div className="w-10 h-2 bg-white/60 rounded-full" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ── 3. Mobile App Development Wireframe Mockup ───────────────────────── */
+function MobileDevWireframe() {
+  return (
+    <div className="w-full max-w-[380px] sm:max-w-[430px] flex items-end justify-center gap-3 sm:gap-4 py-2 select-none transition-transform duration-500 group-hover:scale-[1.02]">
+      {/* Left Phone */}
+      <div className="w-24 sm:w-28 rounded-[20px] border-[2.5px] border-white/90 bg-[#8ba6ff] p-2 shadow-xl flex flex-col gap-2 h-44 sm:h-48 opacity-90">
+        <div className="w-7 h-1.5 bg-white/80 rounded-full mx-auto" />
+        <div className="w-full h-12 bg-white rounded-lg shadow-sm p-1.5">
+          <div className="w-1/2 h-1.5 bg-[#8ba6ff] rounded-full mb-1" />
+          <div className="w-3/4 h-1 bg-neutral-200 rounded-full" />
+        </div>
+        <div className="space-y-1.5 pt-1">
+          <div className="w-full h-2.5 bg-white/70 rounded-md" />
+          <div className="w-full h-2.5 bg-white/70 rounded-md" />
+          <div className="w-4/5 h-2.5 bg-white/70 rounded-md" />
+        </div>
+      </div>
+
+      {/* Center Phone (Hero / Main) */}
+      <div className="w-28 sm:w-32 rounded-[24px] border-[3px] border-white bg-[#8ba6ff] p-2.5 shadow-2xl flex flex-col gap-2.5 h-52 sm:h-56 z-10 -translate-y-2">
+        {/* Dynamic Island */}
+        <div className="w-9 h-2 bg-white rounded-full mx-auto shadow-sm" />
+        {/* Hero Card */}
+        <div className="w-full h-16 bg-white rounded-xl shadow-md p-2 flex flex-col justify-between">
+          <div className="w-3/4 h-2 bg-[#3461fd] rounded-full" />
+          <div className="w-1/2 h-1.5 bg-neutral-200 rounded-full" />
+          <div className="w-8 h-2 bg-[#8ba6ff] rounded-full" />
+        </div>
+        {/* App Icons Grid 2x3 */}
+        <div className="grid grid-cols-3 gap-1.5 pt-1">
+          <div className="aspect-square bg-white rounded-md shadow-sm" />
+          <div className="aspect-square bg-[#3461fd] rounded-md shadow-sm" />
+          <div className="aspect-square bg-white rounded-md shadow-sm" />
+          <div className="aspect-square bg-white rounded-md shadow-sm" />
+          <div className="aspect-square bg-[#3461fd] rounded-md shadow-sm" />
+          <div className="aspect-square bg-white rounded-md shadow-sm" />
+        </div>
+      </div>
+
+      {/* Right Phone */}
+      <div className="w-24 sm:w-28 rounded-[20px] border-[2.5px] border-white/90 bg-[#8ba6ff] p-2 shadow-xl flex flex-col gap-2 h-44 sm:h-48 opacity-90">
+        <div className="w-7 h-1.5 bg-white/80 rounded-full mx-auto" />
+        <div className="grid grid-cols-2 gap-1.5">
+          <div className="aspect-[4/3] bg-white rounded-md shadow-sm" />
+          <div className="aspect-[4/3] bg-white rounded-md shadow-sm" />
+          <div className="aspect-[4/3] bg-white rounded-md shadow-sm" />
+          <div className="aspect-[4/3] bg-white rounded-md shadow-sm" />
+        </div>
+        <div className="w-full h-4 bg-white/80 rounded-lg mt-auto" />
+      </div>
+    </div>
+  );
+}
+
+/* ── 4. Web Design & UI/UX Wireframe Mockup ───────────────────────────── */
+function WebDesignWireframe() {
+  return (
+    <div className="w-full max-w-[380px] sm:max-w-[430px] rounded-2xl bg-white shadow-2xl overflow-hidden select-none border border-white/20 transition-transform duration-500 group-hover:scale-[1.02]">
+      {/* Design App Header */}
+      <div className="bg-white px-4 py-3 flex items-center justify-between border-b border-neutral-100">
+        <div className="flex items-center gap-1.5">
+          <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
+          <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
+          <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
+        </div>
+        {/* Design Tools Pills */}
+        <div className="flex gap-1.5">
+          <span className="w-4 h-4 rounded bg-[#3461fd]/20" />
+          <span className="w-4 h-4 rounded bg-neutral-100" />
+          <span className="w-4 h-4 rounded bg-neutral-100" />
+        </div>
+      </div>
+
+      {/* Design Canvas */}
+      <div className="bg-[#8ba6ff] p-5 sm:p-7 min-h-[220px] sm:min-h-[260px] flex flex-col justify-between relative overflow-hidden">
+        {/* Floating Figma-like Artboard */}
+        <div className="relative z-10 w-full bg-white rounded-xl p-4 shadow-lg">
+          {/* Color Tokens Bar */}
+          <div className="flex items-center justify-between mb-3 border-b border-neutral-100 pb-2">
+            <div className="flex items-center gap-1.5">
+              <span className="w-3.5 h-3.5 rounded-full bg-[#3461fd]" />
+              <span className="w-3.5 h-3.5 rounded-full bg-[#8ba6ff]" />
+              <span className="w-3.5 h-3.5 rounded-full bg-[#f8d018]" />
+              <span className="w-3.5 h-3.5 rounded-full bg-[#061436]" />
+            </div>
+            <div className="w-12 h-2 bg-neutral-200 rounded-full" />
+          </div>
+
+          {/* Wireframe Layout Cards */}
+          <div className="grid grid-cols-12 gap-3 items-center">
+            <div className="col-span-5 aspect-[4/3] bg-[#dde2ff] rounded-lg" />
+            <div className="col-span-7 space-y-1.5">
+              <div className="w-3/4 h-3 bg-[#3461fd] rounded-md" />
+              <div className="w-full h-2 bg-neutral-200 rounded-full" />
+              <div className="w-2/3 h-2 bg-neutral-200 rounded-full" />
+              <div className="w-10 h-3 bg-[#f8d018] rounded-full mt-1" />
+            </div>
+          </div>
+        </div>
+
+        {/* Vector Pen Tool Bezier Curve with Anchor Points */}
+        <div className="relative w-full h-10 mt-3">
+          <svg className="w-full h-full overflow-visible" viewBox="0 0 320 40" fill="none">
+            <path
+              d="M10 30 C 90 0, 160 40, 240 10 S 310 30, 310 30"
+              stroke="white"
+              strokeWidth="2.5"
+              strokeDasharray="4 4"
+            />
+            {/* Anchor Points */}
+            <rect x="6" y="26" width="8" height="8" fill="white" stroke="#3461fd" strokeWidth="1.5" />
+            <circle cx="160" cy="20" r="4" fill="#f8d018" stroke="white" strokeWidth="1.5" />
+            <rect x="306" y="26" width="8" height="8" fill="white" stroke="#3461fd" strokeWidth="1.5" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ── Section Data ─────────────────────────────────────────────────────── */
+interface ServiceItem {
+  key: string;
+  wireframe: React.ReactNode;
 }
 
 export function Services() {
   const t = useTranslations('services');
 
-  const bentoItems: BentoItem[] = [
+  const services: ServiceItem[] = [
     {
-      id: 'webDev',
-      icon: <Globe className="w-5 h-5 text-primary" />,
-      imageSrc: '/services/web-dev.jpg',
-      imageAlt: 'Web Development visual mockup',
-      badgeText: 'Next.js 16 & React 19',
-      isWide: true,
+      key: 'webDev',
+      wireframe: <WebDevWireframe />,
     },
     {
-      id: 'mobileDev',
-      icon: <Smartphone className="w-5 h-5 text-primary" />,
-      imageSrc: '/services/mobile-dev.jpg',
-      imageAlt: 'Mobile Development visual mockup',
-      badgeText: 'iOS & Android Native',
-      isWide: false,
+      key: 'webApps',
+      wireframe: <WebAppWireframe />,
     },
     {
-      id: 'desktopDev',
-      icon: <Monitor className="w-5 h-5 text-primary" />,
-      imageSrc: '/services/desktop-dev.jpg',
-      imageAlt: 'Desktop Development visual mockup',
-      badgeText: 'macOS & Windows',
-      isWide: false,
+      key: 'mobileDev',
+      wireframe: <MobileDevWireframe />,
     },
     {
-      id: 'webDesign',
-      icon: <Palette className="w-5 h-5 text-primary" />,
-      imageSrc: '/services/web-design.jpg',
-      imageAlt: 'Web & UI/UX Design visual mockup',
-      badgeText: 'Figma & Design Systems',
-      isWide: true,
+      key: 'webDesign',
+      wireframe: <WebDesignWireframe />,
     },
   ];
 
   return (
     <section
       id="services"
-      className="relative py-24 sm:py-32 bg-background border-t border-border transition-colors duration-200 overflow-hidden"
+      className="relative py-28 sm:py-36 bg-[#000000] text-white selection:bg-[#3461fd] selection:text-white overflow-hidden"
     >
-      {/* Background ambient lighting */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-primary/5 blur-[140px] pointer-events-none rounded-full" />
-      <div className="absolute bottom-10 right-10 w-96 h-96 bg-secondary/5 blur-[120px] pointer-events-none rounded-full" />
+      {/* Ambient background glow accents */}
+      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#3461fd]/10 blur-[150px] pointer-events-none rounded-full" />
+      <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-[#3461fd]/10 blur-[150px] pointer-events-none rounded-full" />
 
       <Container>
-        {/* Section Heading */}
+        {/* Section Header (Centered) */}
         <AnimatedSection direction="up">
-          <SectionHeading
-            badge={t('badge')}
-            title={t('headline')}
-            description={t('description')}
-            align="center"
-          />
+          <div className="text-center max-w-3xl mx-auto mb-20 sm:mb-28">
+            <span className="text-xs sm:text-sm font-semibold tracking-widest uppercase text-neutral-400 mb-4 block">
+              {t('badge')}
+            </span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-black tracking-tight leading-[1.12] text-white">
+              {t('headline')}
+            </h2>
+          </div>
         </AnimatedSection>
 
-        {/* Bento Grid */}
-        <div className="grid grid-cols-12 gap-6 sm:gap-8 mt-12 sm:mt-16">
-          {bentoItems.map((item, index) => {
-            const title = t(`items.${item.id}.title`);
-            const description = t(`items.${item.id}.description`);
-            const tags = [
-              t(`items.${item.id}.tags.0`),
-              t(`items.${item.id}.tags.1`),
-              t(`items.${item.id}.tags.2`),
-              t(`items.${item.id}.tags.3`),
-            ];
+        {/* Alternating Services Rows Stack */}
+        <div className="space-y-20 sm:space-y-32">
+          {services.map((service, index) => {
+            const title = t(`items.${service.key}.title`);
+            const description = t(`items.${service.key}.description`);
+
+            // Even index (0, 2): Visual on Left, Text on Right
+            // Odd index (1, 3): Text on Left, Visual on Right (reversed on lg screens)
+            const isReversed = index % 2 === 1;
 
             return (
               <AnimatedSection
-                key={item.id}
+                key={service.key}
                 direction="up"
-                delay={0.1 * index}
-                className={
-                  item.isWide
-                    ? 'col-span-12 lg:col-span-7'
-                    : 'col-span-12 lg:col-span-5'
-                }
+                delay={0.15 * index}
               >
-                <div className="group relative h-full rounded-3xl p-6 sm:p-8 flex flex-col justify-between overflow-hidden bg-card text-card-foreground border border-border hover:border-primary/50 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
-                  {/* Subtle top hover rim light */}
-                  <div className="absolute top-0 inset-x-0 h-[1.5px] bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="group grid grid-cols-1 lg:grid-cols-12 gap-10 sm:gap-14 lg:gap-20 items-center">
+                  
+                  {/* Visual Wireframe Card Container */}
+                  <div
+                    className={`lg:col-span-6 w-full ${
+                      isReversed ? 'lg:order-2' : 'lg:order-1'
+                    }`}
+                  >
+                    <div className="relative w-full aspect-[4/3] sm:aspect-[16/11] rounded-[28px] sm:rounded-[36px] bg-[#3461fd] p-6 sm:p-10 flex items-center justify-center shadow-2xl overflow-hidden transition-all duration-500 group-hover:shadow-[0_0_60px_rgba(52,97,253,0.35)] group-hover:scale-[1.01]">
+                      {/* Subtle ambient light reflections inside the blue box */}
+                      <div className="absolute -top-16 -right-16 w-56 h-56 bg-white/20 blur-3xl rounded-full pointer-events-none" />
+                      <div className="absolute -bottom-16 -left-16 w-56 h-56 bg-black/20 blur-3xl rounded-full pointer-events-none" />
 
-                  {/* Header: Icon, Badge & Action Arrow */}
-                  <div className="flex items-center justify-between mb-5">
-                    <div className="flex items-center gap-3">
-                      <div className="w-11 h-11 rounded-2xl bg-surface border border-border flex items-center justify-center group-hover:bg-primary/10 group-hover:border-primary/30 transition-all duration-300 shadow-sm">
-                        {item.icon}
-                      </div>
-                      <span className="text-xs font-semibold px-3 py-1 rounded-full bg-surface border border-border/70 text-muted-foreground group-hover:border-primary/20 transition-colors">
-                        {item.badgeText}
-                      </span>
+                      {/* Wireframe Mockup */}
+                      {service.wireframe}
                     </div>
-
-                    <a
-                      href="#contact"
-                      className="w-9 h-9 rounded-full bg-surface border border-border flex items-center justify-center text-muted-foreground group-hover:text-primary-foreground group-hover:bg-primary group-hover:border-primary transition-all duration-300 shadow-sm"
-                      aria-label={`Inquire about ${title}`}
-                    >
-                      <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 rtl:group-hover:-translate-x-0.5" />
-                    </a>
                   </div>
 
-                  {/* Title & Description */}
-                  <div className="mb-6">
-                    <h3 className="text-2xl sm:text-[26px] font-bold tracking-tight text-foreground mb-3 group-hover:text-primary transition-colors">
+                  {/* Text Content & Learn More Action */}
+                  <div
+                    className={`lg:col-span-6 flex flex-col justify-center max-w-xl ${
+                      isReversed ? 'lg:order-1' : 'lg:order-2'
+                    }`}
+                  >
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-white mb-4 sm:mb-5">
                       {title}
                     </h3>
-                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed line-clamp-3">
+                    <p className="text-base sm:text-lg text-neutral-400 leading-relaxed mb-8">
                       {description}
                     </p>
-                  </div>
-
-                  {/* Visual Image Showcase (Compressed & Optimized) */}
-                  <div className="relative w-full h-56 sm:h-64 lg:h-72 rounded-2xl overflow-hidden border border-border/80 bg-surface/50 mb-6 shadow-inner">
-                    <Image
-                      src={item.imageSrc}
-                      alt={item.imageAlt}
-                      fill
-                      sizes={
-                        item.isWide
-                          ? '(max-width: 1024px) 100vw, 60vw'
-                          : '(max-width: 1024px) 100vw, 40vw'
-                      }
-                      className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
-                      loading={index < 2 ? 'eager' : 'lazy'}
-                    />
-                    {/* Subtle inner glass overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
-                  </div>
-
-                  {/* Capability Tags */}
-                  <div className="pt-4 border-t border-border/60 flex flex-wrap gap-2">
-                    {tags.map((tag, tagIdx) => (
-                      <span
-                        key={tagIdx}
-                        className="px-3 py-1 rounded-lg text-xs font-medium bg-surface text-muted-foreground border border-border/70 group-hover:border-primary/30 group-hover:text-foreground transition-colors"
+                    <div>
+                      <a
+                        href="#contact"
+                        className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-[#1c1c1e] text-white hover:bg-neutral-800 border border-white/10 font-medium text-sm transition-all duration-200 shadow-md hover:scale-[1.03] active:scale-[0.98]"
                       >
-                        {tag}
-                      </span>
-                    ))}
+                        {t('learnMore')}
+                      </a>
+                    </div>
                   </div>
+
                 </div>
               </AnimatedSection>
             );

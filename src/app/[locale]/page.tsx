@@ -28,11 +28,7 @@ export default async function HomePage({ params }: PageProps) {
         <Hero />
         <Marquee />
         <Services />
-        <About />
-        <Projects />
         <Process />
-        <Technologies />
-        <Testimonials />
         <FAQ />
         <CTA />
         <Contact />

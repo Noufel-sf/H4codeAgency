@@ -42,9 +42,10 @@
     ]
   },
   "services": {
-    "badge": "NOS EXPERTISES",
-    "headline": "Tout ce dont vous avez besoin pour forger votre présence digitale.",
+    "badge": "NOS SERVICES",
+    "headline": "Nous donnons vie aux produits digitaux des entreprises, partout dans le monde.",
     "description": "De la conception stratégique au déploiement en production, nos services d'ingénierie et de design s'adaptent avec précision à vos ambitions.",
+    "learnMore": "En savoir plus",
     "items": {
       "webDev": {
         "title": "Développement Web",

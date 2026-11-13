@@ -42,9 +42,10 @@
     ]
   },
   "services": {
-    "badge": "WHAT WE DO",
-    "headline": "Everything you need to build your digital presence.",
+    "badge": "OUR SERVICE",
+    "headline": "We help businesses to make their product come to life, worldwide.",
     "description": "From concept through production deployment, our engineering & design services are engineered to scale seamlessly with your vision.",
+    "learnMore": "Learn more",
     "items": {
       "webDev": {
         "title": "Web Development",
