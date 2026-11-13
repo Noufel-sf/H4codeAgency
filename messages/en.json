@@ -23,6 +23,24 @@
       "delivery": "On-Time Delivery"
     }
   },
+  "marquee": {
+    "tapeGreen": [
+      "UX & UI Architecture",
+      "Full-Stack Development",
+      "Next.js 16 & React 19",
+      "AI & Workflow Automation",
+      "High-Converting Platforms",
+      "Bespoke Digital Products"
+    ],
+    "tapeBlack": [
+      "99.8% Client Satisfaction",
+      "Sub-Second Velocity",
+      "Zero Legacy Debt",
+      "Over 40 Production Launches",
+      "Enterprise Grade Scalability",
+      "Dedicated Senior Engineering"
+    ]
+  },
   "services": {
     "badge": "WHAT WE DO",
     "headline": "Everything you need to build your digital presence.",

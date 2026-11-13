@@ -228,3 +228,43 @@ body {
   border: 1px solid var(--glass-border-color);
   box-shadow: var(--glass-shadow);
 }
+
+/* Continuous Infinite Marquee Tickers (Framer-style infinite loop, never ends, zero gaps) */
+@keyframes marquee-track-scroll-left {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes marquee-track-scroll-right {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-marquee-left {
+  display: flex;
+  flex-shrink: 0;
+  width: max-content;
+  align-items: center;
+  white-space: nowrap;
+  animation: marquee-track-scroll-left 45s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-right {
+  display: flex;
+  flex-shrink: 0;
+  width: max-content;
+  align-items: center;
+  white-space: nowrap;
+  animation: marquee-track-scroll-right 45s linear infinite;
+  will-change: transform;
+}
+

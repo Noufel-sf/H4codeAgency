@@ -23,6 +23,24 @@
       "delivery": "Livraison dans les Délais"
     }
   },
+  "marquee": {
+    "tapeGreen": [
+      "Architecture UI & UX",
+      "Développement Full-Stack",
+      "Next.js 16 & React 19",
+      "Automatisation & Workflows IA",
+      "E-Commerce Haute Conversion",
+      "Produits Digitaux Sur Mesure"
+    ],
+    "tapeBlack": [
+      "99.8% Satisfaction Client",
+      "Vélocité Inférieure à la Seconde",
+      "Zéro Dette Technique",
+      "Plus de 40 Projets en Production",
+      "Évolutivité Haute Performance",
+      "Ingénieurs Seniors Dédiés"
+    ]
+  },
   "services": {
     "badge": "NOS EXPERTISES",
     "headline": "Tout ce dont vous avez besoin pour forger votre présence digitale.",

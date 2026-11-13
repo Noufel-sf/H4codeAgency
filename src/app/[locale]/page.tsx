@@ -2,6 +2,7 @@ import { setRequestLocale } from 'next-intl/server';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { Hero } from '@/components/sections/Hero';
+import { Marquee } from '@/components/sections/Marquee';
 import { Services } from '@/components/sections/Services';
 import { About } from '@/components/sections/About';
 import { Projects } from '@/components/sections/Projects';
@@ -25,6 +26,7 @@ export default async function HomePage({ params }: PageProps) {
       <Navbar />
       <main className="flex-1">
         <Hero />
+        <Marquee />
         <Services />
         <About />
         <Projects />
