@@ -209,9 +209,10 @@
     }
   },
   "faq": {
-    "badge": "QUESTIONS FRÉQUENTES",
-    "headline": "Des réponses claires à vos interrogations.",
-    "description": "Tout ce que vous devez savoir sur notre mode de collaboration, nos délais de livraison et nos standards de qualité.",
+    "badge": "FAQ",
+    "headline": "Questions fréquemment posées par nos clients.",
+    "description": "Une question spécifique ? Écrivez-nous directement sur WhatsApp.",
+    "whatsappBtn": "Discutez sur WhatsApp",
     "items": {
       "q1": {
         "question": "Quels types de projets développez-vous ?",

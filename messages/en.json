@@ -209,9 +209,10 @@
     }
   },
   "faq": {
-    "badge": "FREQUENTLY ASKED QUESTIONS",
-    "headline": "Answers to common questions.",
-    "description": "Everything you need to know about our collaboration model, delivery timelines, and engineering standards.",
+    "badge": "FAQ",
+    "headline": "Questions commonly asked by our partners.",
+    "description": "Have another question? Ask us directly on WhatsApp.",
+    "whatsappBtn": "Ask us on WhatsApp",
     "items": {
       "q1": {
         "question": "What types of projects do you develop?",
