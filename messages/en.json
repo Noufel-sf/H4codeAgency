@@ -209,6 +209,12 @@
       }
     }
   },
+  "cta": {
+    "headline": "Ready to turn your idea into a digital product?",
+    "subtitle": "Schedule a call and begin automating",
+    "button": "Contact us now",
+    "email": "contact@h4code.agency"
+  },
   "contact": {
     "badge": "START A CONVERSATION",
     "headline": "Have an idea? Let's build something great together.",

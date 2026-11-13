@@ -9,6 +9,7 @@ import { Process } from '@/components/sections/Process';
 import { Technologies } from '@/components/sections/Technologies';
 import { Testimonials } from '@/components/sections/Testimonials';
 import { FAQ } from '@/components/sections/FAQ';
+import { CTA } from '@/components/sections/CTA';
 import { Contact } from '@/components/sections/Contact';
 
 interface PageProps {
@@ -20,7 +21,7 @@ export default async function HomePage({ params }: PageProps) {
   setRequestLocale(locale);
 
   return (
-    <div className="relative min-h-screen bg-white text-slate-900 dark:bg-[#090B10] dark:text-[#F5F7FC] flex flex-col transition-colors duration-200">
+    <div className="relative min-h-screen bg-background text-foreground flex flex-col transition-colors duration-200">
       <Navbar />
       <main className="flex-1">
         <Hero />
@@ -31,6 +32,7 @@ export default async function HomePage({ params }: PageProps) {
         <Technologies />
         <Testimonials />
         <FAQ />
+        <CTA />
         <Contact />
       </main>
       <Footer />

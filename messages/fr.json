@@ -209,6 +209,12 @@
       }
     }
   },
+  "cta": {
+    "headline": "Prêt à transformer votre idée en produit digital ?",
+    "subtitle": "Planifiez un échange et commencez à automatiser vos processus",
+    "button": "Contactez-nous maintenant",
+    "email": "contact@h4code.agency"
+  },
   "contact": {
     "badge": "ENGAGEONS LA CONVERSATION",
     "headline": "Vous avez un projet en tête ? Créons quelque chose d'exceptionnel ensemble.",
