@@ -13,7 +13,7 @@ export function Testimonials() {
   const testimonialKeys = ['item1', 'item2', 'item3'] as const;
 
   return (
-    <section className="relative py-24 sm:py-32 bg-background border-y border-border transition-colors duration-200 overflow-hidden">
+    <section className="relative py-24 sm:py-32 bg-transparent border-y border-border transition-colors duration-200 overflow-hidden">
       {/* Background ambient lighting */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-72 bg-primary/5 blur-[120px] pointer-events-none" />
 

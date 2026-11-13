@@ -43,7 +43,7 @@ export function Technologies() {
   ];
 
   return (
-    <section className="relative py-24 sm:py-32 bg-surface/50 border-t border-border transition-colors duration-200">
+    <section className="relative py-24 sm:py-32 bg-transparent border-t border-border transition-colors duration-200">
       <Container>
         <AnimatedSection direction="up">
           <SectionHeading

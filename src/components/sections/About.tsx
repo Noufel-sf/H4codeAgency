@@ -30,7 +30,7 @@ export function About() {
   ];
 
   return (
-    <section id="about" className="relative py-24 sm:py-32 bg-background border-y border-border transition-colors duration-200">
+    <section id="about" className="relative py-24 sm:py-32 bg-transparent border-y border-border transition-colors duration-200">
       {/* Background glow */}
       <div className="absolute top-1/3 end-0 w-80 h-80 bg-primary/10 blur-[140px] pointer-events-none" />
 

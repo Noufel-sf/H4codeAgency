@@ -78,10 +78,7 @@ export function Contact() {
   ];
 
   return (
-    <section id="contact" className="relative py-24 sm:py-32 bg-background border-t border-border transition-colors duration-200 overflow-hidden">
-      {/* Background glow */}
-      <div className="absolute top-1/2 end-10 w-96 h-96 bg-primary/10 blur-[150px] pointer-events-none" />
-
+    <section id="contact" className="relative py-24 sm:py-32  border-t border-border transition-colors duration-200 overflow-hidden">
       <Container>
         <AnimatedSection direction="up">
           <SectionHeading

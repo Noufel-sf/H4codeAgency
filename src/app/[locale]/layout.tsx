@@ -123,7 +123,7 @@ export default async function LocaleLayout({
           isRtl ? 'font-arabic' : 'font-sans'
         } bg-background text-foreground antialiased transition-colors duration-200 selection:bg-primary selection:text-white`}
       >
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <NextIntlClientProvider locale={locale} messages={messages}>
             {children}
             <Toaster

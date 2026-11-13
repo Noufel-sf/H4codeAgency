@@ -55,7 +55,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="relative bg-surface border-t border-border pt-16 pb-12 overflow-hidden transition-colors duration-200">
+    <footer className="relative bg-transparent border-t border-border pt-16 pb-12 overflow-hidden transition-colors duration-200">
       {/* Background ambient glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-24 bg-primary/10 blur-[90px] pointer-events-none" />
 

@@ -10,12 +10,20 @@
     "letsTalk": "Let's Talk"
   },
   "hero": {
+    "availableBadge": "Available to work",
+    "letsTalkBadge": "Let's talk",
+    "greeting": "Hi, we're",
+    "agencyName": "H4Code a",
+    "role": "Digital Agency",
+    "crafting": "Creating",
+    "products": "Digital Products",
     "tagline": "Digital Development Studio • Premium Engineering",
     "headlinePrefix": "Your Brand Deserves",
     "headlineHighlight": "More Than Just A Social Page.",
-    "description": "We design your brand identity, build your high-converting platform, and engineer scalable software that moves your business forward — from initial concept to launch and scale.",
+    "description": "Digital agency helping companies and startups turn complex ideas into high-converting digital products, scalable web apps, and modern platforms.",
     "ctaPrimary": "Start a Project",
     "ctaSecondary": "View Our Work",
+    "whatsappText": "Chat on WhatsApp",
     "scroll": "Scroll to explore",
     "metrics": {
       "satisfaction": "Client Satisfaction",

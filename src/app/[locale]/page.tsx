@@ -19,20 +19,39 @@ export default async function HomePage({ params }: PageProps) {
   setRequestLocale(locale);
 
   return (
-    <div className="relative min-h-screen bg-background text-foreground flex flex-col transition-colors duration-200">
-      <Navbar />
-      <main className="flex-1">
-        <Hero />
-        <Marquee />
-        <Services />
-        <Projects />
-        <Process />
-        <FAQ />
-        <CTA />
-        <Contact />
-      </main>
-      <Footer />
+    <div className="min-h-screen w-full relative overflow-x-hidden bg-background text-foreground transition-colors duration-200">
+      {/* PatternCraft Radial Gradient Background from Bottom (Light Mode) */}
+      <div
+        className="fixed inset-0 z-0 pointer-events-none opacity-100 dark:opacity-0 transition-opacity duration-300"
+        style={{
+          background: 'radial-gradient(125% 125% at 50% 90%, #fff 40%, #6366f1 100%)',
+        }}
+        aria-hidden="true"
+      />
+
+      {/* PatternCraft Radial Gradient Background (Dark Mode equivalent) */}
+      <div
+        className="fixed inset-0 z-0 pointer-events-none opacity-0 dark:opacity-100 transition-opacity duration-300"
+        style={{
+          background: 'radial-gradient(125% 125% at 50% 90%, #060913 40%, #1e1b4b 100%)',
+        }}
+        aria-hidden="true"
+      />
+
+      {/* Content & Components */}
+      <div className="relative z-10 flex flex-col min-h-screen">
+        <Navbar />
+        <main className="flex-1">
+          <Hero />
+          <Marquee />
+          <Services />
+          <Projects />
+          <Process />
+          <FAQ />
+          <CTA />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }
-

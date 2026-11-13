@@ -108,7 +108,7 @@ export function Process() {
   return (
     <section
       id="process"
-      className="relative py-24 sm:py-32 bg-surface/50 border-t border-border transition-colors duration-200 overflow-hidden"
+      className="relative py-24 sm:py-32 bg-transparent border-t border-border transition-colors duration-200 overflow-hidden"
     >
       <Container>
         {/* Centered Pill Badge & Headline matching user reference */}

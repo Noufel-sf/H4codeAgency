@@ -10,12 +10,20 @@
     "letsTalk": "Échangeons"
   },
   "hero": {
+    "availableBadge": "Disponible pour projets",
+    "letsTalkBadge": "Discutons",
+    "greeting": "Bonjour, nous sommes",
+    "agencyName": "H4Code une",
+    "role": "Agence Digitale",
+    "crafting": "Créant des",
+    "products": "Produits Digitaux",
     "tagline": "Studio de Développement Digital • Ingénierie d'Élite",
     "headlinePrefix": "Votre Marque Mérite",
     "headlineHighlight": "Bien Plus Qu'une Simple Page Réseau.",
-    "description": "Nous façonnons votre identité, développons votre plateforme e-commerce et concevons des logiciels sur mesure qui convertissent et accélèrent vos ventes.",
+    "description": "Agence digitale accompagnant entreprises et startups à transformer leurs visions en produits digitaux à fort impact, applications web scalables et plateformes modernes.",
     "ctaPrimary": "Démarrer un Projet",
     "ctaSecondary": "Voir nos Réalisations",
+    "whatsappText": "Discuter sur WhatsApp",
     "scroll": "Faites défiler pour explorer",
     "metrics": {
       "satisfaction": "Satisfaction Client",

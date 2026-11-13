@@ -124,7 +124,7 @@ export function Marquee() {
   );
 
   return (
-    <section className="relative py-16 sm:py-24 md:py-32 overflow-hidden bg-background select-none pointer-events-none transition-colors duration-200">
+    <section className="relative py-16 sm:py-24 md:py-32 overflow-hidden bg-transparent select-none pointer-events-none transition-colors duration-200">
       {/* Inline styles ensure zero dependency on PostCSS cache or compile lag */}
       <style>{`
         @keyframes marquee-track-scroll-left {

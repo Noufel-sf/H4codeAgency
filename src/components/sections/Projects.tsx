@@ -301,7 +301,7 @@ export function Projects() {
   return (
     <section
       id="work"
-      className="relative py-24 sm:py-32 bg-background text-foreground border-t border-border transition-colors duration-200 overflow-hidden"
+      className="relative py-24 sm:py-32 bg-transparent text-foreground border-t border-border transition-colors duration-200 overflow-hidden"
     >
       <Container>
         {/* ── Section Header (2 Columns matching reference image) ── */}
