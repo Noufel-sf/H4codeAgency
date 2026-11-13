@@ -22,7 +22,7 @@ function BrandBadge() {
       className="inline-flex items-center justify-center align-middle mx-1.5 sm:mx-2 md:mx-3 w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-slate-900 via-zinc-900 to-black text-white border-2 border-foreground/15 shadow-md select-none group hover:scale-105 transition-transform"
       title="H4Code"
     >
-      <span className="font-black tracking-tight text-xs sm:text-base md:text-lg bg-gradient-to-tr from-emerald-400 via-cyan-300 to-white bg-clip-text text-transparent">
+      <span className="font-black tracking-tight text-xs sm:text-base md:text-lg bg-gradient-to-tr from-primary via-blue-400 to-white bg-clip-text text-transparent">
         H4
       </span>
     </span>
@@ -68,11 +68,11 @@ function MiniWindowMockup() {
       </div>
       {/* Mini layout inside */}
       <div className="flex-1 flex gap-1 items-stretch">
-        <div className="w-1/4 bg-emerald-500/20 border-r border-border/40" />
+        <div className="w-1/4 bg-primary/20 border-r border-border/40" />
         <div className="flex-1 flex flex-col justify-center gap-0.5 sm:gap-1">
           <div className="w-full h-1 bg-foreground/30" />
           <div className="w-3/4 h-1 bg-foreground/20" />
-          <div className="w-1/2 h-1 bg-emerald-500/50" />
+          <div className="w-1/2 h-1 bg-primary/60" />
         </div>
       </div>
       {/* Micro Cursor Pointer */}
@@ -98,24 +98,24 @@ export function Hero() {
       className="relative min-h-[85vh] flex items-center justify-center pt-32 sm:pt-36 pb-20 sm:pb-24 overflow-hidden bg-transparent text-foreground transition-colors duration-200"
     >
       <Container className="relative z-10 max-w-5xl mx-auto text-center px-4">
-        {/* Top Status & WhatsApp Pill Bar */}
+        {/* Top Status & Action Pill Bar */}
         <AnimatedSection direction="up" delay={0.1}>
           <div className="inline-flex items-center gap-1.5 p-1 bg-surface/90 border border-border shadow-sm mb-8 sm:mb-10 text-xs sm:text-sm select-none">
-            {/* Left: Available status with pulsating green dot */}
+            {/* Left: Available status with pulsating primary brand dot */}
             <div className="flex items-center gap-2 px-3 py-1 font-medium text-foreground">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex h-2 w-2 bg-emerald-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full bg-primary opacity-75"></span>
+                <span className="relative inline-flex h-2 w-2 bg-primary"></span>
               </span>
               <span>{t('availableBadge')}</span>
             </div>
 
-            {/* Right: WhatsApp direct chat action */}
+            {/* Right: Direct chat action */}
             <a
               href="https://wa.me/213559929899"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#25D366] hover:bg-[#20ba59] text-white font-semibold transition-all shadow-sm cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-3 py-1 bg-primary hover:bg-primary-hover text-primary-foreground font-semibold transition-all shadow-sm cursor-pointer"
             >
               <WhatsAppIcon className="w-3.5 h-3.5 fill-current" />
               <span>{t('letsTalkBadge')}</span>
@@ -131,7 +131,7 @@ export function Hero() {
               {t('greeting')} <BrandBadge /> {t('agencyName')}
             </span>{' '}
             {/* Line 2: Product Designer [Sticker] Creating */}
-            <span className="inline text-emerald-600 dark:text-emerald-400">
+            <span className="inline text-primary">
               {t('role')}
             </span>{' '}
             <ToolSticker />{' '}
@@ -172,7 +172,7 @@ export function Hero() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-7 py-3.5 text-sm font-bold bg-surface hover:bg-surface-hover text-foreground border border-border transition-all duration-300 hover:-translate-y-0.5 cursor-pointer group shadow-sm"
             >
-              <WhatsAppIcon className="w-4 h-4 text-[#25D366] fill-current" />
+              <WhatsAppIcon className="w-4 h-4 text-primary fill-current" />
               <span>{t('whatsappText')}</span>
             </a>
           </div>
