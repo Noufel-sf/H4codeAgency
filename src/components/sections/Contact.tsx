@@ -111,9 +111,9 @@ export function Contact() {
               <AnimatedSection direction="up" delay={0.2}>
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
-                  className="flex items-start gap-4 p-5 rounded-2xl bg-card border border-border hover:border-primary/40 transition-all shadow-xs group"
+                  className="flex items-start gap-4 p-5 bg-card border border-border hover:border-primary/40 transition-all shadow-xs group"
                 >
-                  <div className="w-11 h-11 rounded-xl bg-surface border border-border flex items-center justify-center text-primary group-hover:bg-primary/10 transition-colors">
+                  <div className="w-11 h-11 bg-surface border border-border flex items-center justify-center text-primary group-hover:bg-primary/10 transition-colors">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
@@ -130,9 +130,9 @@ export function Contact() {
                   href={siteConfig.contact.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-4 p-5 rounded-2xl bg-card border border-border hover:border-emerald-500/40 transition-all shadow-xs group"
+                  className="flex items-start gap-4 p-5 bg-card border border-border hover:border-emerald-500/40 transition-all shadow-xs group"
                 >
-                  <div className="w-11 h-11 rounded-xl bg-surface border border-border flex items-center justify-center text-emerald-600 dark:text-emerald-400 group-hover:bg-emerald-500/10 transition-colors">
+                  <div className="w-11 h-11 bg-surface border border-border flex items-center justify-center text-emerald-600 dark:text-emerald-400 group-hover:bg-emerald-500/10 transition-colors">
                     <MessageCircle className="w-5 h-5" />
                   </div>
                   <div>
@@ -145,8 +145,8 @@ export function Contact() {
               </AnimatedSection>
 
               <AnimatedSection direction="up" delay={0.3}>
-                <div className="flex items-start gap-4 p-5 rounded-2xl bg-card border border-border shadow-xs">
-                  <div className="w-11 h-11 rounded-xl bg-surface border border-border flex items-center justify-center text-amber-600 dark:text-amber-400">
+                <div className="flex items-start gap-4 p-5 bg-card border border-border shadow-xs">
+                  <div className="w-11 h-11 bg-surface border border-border flex items-center justify-center text-amber-600 dark:text-amber-400">
                     <Clock className="w-5 h-5" />
                   </div>
                   <div>
@@ -163,10 +163,10 @@ export function Contact() {
           {/* Form */}
           <div className="lg:col-span-7">
             <AnimatedSection direction="left" delay={0.2}>
-              <div className="rounded-3xl bg-card border border-border p-6 sm:p-10 shadow-xl relative">
+              <div className="bg-card border border-border p-6 sm:p-10 shadow-xl relative">
                 {isSubmitted ? (
                   <div className="py-12 text-center space-y-4 animate-in fade-in zoom-in-95 duration-300">
-                    <div className="w-16 h-16 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mx-auto">
+                    <div className="w-16 h-16 bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mx-auto">
                       <CheckCircle2 className="w-8 h-8" />
                     </div>
                     <h3 className="text-2xl font-bold text-foreground">
@@ -178,7 +178,7 @@ export function Contact() {
                     <button
                       type="button"
                       onClick={() => setIsSubmitted(false)}
-                      className="mt-4 px-6 py-2.5 rounded-full text-xs font-semibold bg-surface hover:bg-surface-hover border border-border text-foreground transition-all cursor-pointer"
+                      className="mt-4 px-6 py-2.5 text-xs font-semibold bg-surface hover:bg-surface-hover border border-border text-foreground transition-all cursor-pointer"
                     >
                       Send another message
                     </button>
@@ -195,7 +195,7 @@ export function Contact() {
                           type="text"
                           placeholder={t('form.namePlaceholder')}
                           {...register('name')}
-                          className="w-full px-4 py-3 rounded-xl bg-surface border border-border text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+                          className="w-full px-4 py-3 bg-surface border border-border text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                         />
                         {errors.name && (
                           <p className="text-xs text-rose-500 dark:text-rose-400">
@@ -212,7 +212,7 @@ export function Contact() {
                           type="email"
                           placeholder={t('form.emailPlaceholder')}
                           {...register('email')}
-                          className="w-full px-4 py-3 rounded-xl bg-surface border border-border text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+                          className="w-full px-4 py-3 bg-surface border border-border text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                         />
                         {errors.email && (
                           <p className="text-xs text-rose-500 dark:text-rose-400">
@@ -232,7 +232,7 @@ export function Contact() {
                           type="text"
                           placeholder={t('form.companyPlaceholder')}
                           {...register('company')}
-                          className="w-full px-4 py-3 rounded-xl bg-surface border border-border text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+                          className="w-full px-4 py-3 bg-surface border border-border text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                         />
                       </div>
 
@@ -243,7 +243,7 @@ export function Contact() {
                         <select
                           {...register('service')}
                           defaultValue=""
-                          className="w-full px-4 py-3 rounded-xl bg-surface border border-border text-sm text-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all cursor-pointer"
+                          className="w-full px-4 py-3 bg-surface border border-border text-sm text-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all cursor-pointer"
                         >
                           <option value="" disabled className="bg-card text-muted-foreground">
                             {t('form.servicePlaceholder')}
@@ -270,7 +270,7 @@ export function Contact() {
                       <select
                         {...register('budget')}
                         defaultValue=""
-                        className="w-full px-4 py-3 rounded-xl bg-surface border border-border text-sm text-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all cursor-pointer"
+                        className="w-full px-4 py-3 bg-surface border border-border text-sm text-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all cursor-pointer"
                       >
                         <option value="" disabled className="bg-card text-muted-foreground">
                           {t('form.budgetPlaceholder')}
@@ -292,7 +292,7 @@ export function Contact() {
                         rows={4}
                         placeholder={t('form.messagePlaceholder')}
                         {...register('message')}
-                        className="w-full px-4 py-3 rounded-xl bg-surface border border-border text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all resize-none"
+                        className="w-full px-4 py-3 bg-surface border border-border text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all resize-none"
                       />
                       {errors.message && (
                         <p className="text-xs text-rose-500 dark:text-rose-400">
@@ -305,7 +305,7 @@ export function Contact() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-4 px-6 rounded-full bg-primary hover:bg-primary-hover text-primary-foreground font-bold text-sm shadow-md transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                      className="w-full py-4 px-6 bg-primary hover:bg-primary-hover text-primary-foreground font-bold text-sm shadow-md transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
                     >
                       {isSubmitting ? (
                         <span>{t('form.submitting')}</span>

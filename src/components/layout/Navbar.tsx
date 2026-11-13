@@ -63,7 +63,7 @@ export function Navbar() {
   return (
     <>
       <header className="fixed top-4 sm:top-6 inset-x-0 z-50 flex justify-center px-4 pointer-events-none">
-        <div className="pointer-events-auto flex items-center justify-between sm:justify-center gap-2 sm:gap-6 px-4 sm:px-6 py-2 sm:py-2.5 rounded-full glass-panel transition-all duration-300">
+        <div className="pointer-events-auto flex items-center justify-between sm:justify-center gap-2 sm:gap-6 px-4 sm:px-6 py-2 sm:py-2.5 glass-panel transition-all duration-300">
           
           {/* Brand Logo */}
           <a
@@ -108,7 +108,7 @@ export function Navbar() {
                     type="button"
                     onClick={() => handleLanguageSwitch(lang.code)}
                     className={cn(
-                      'transition-colors cursor-pointer px-1 py-0.5 rounded text-xs',
+                      'transition-colors cursor-pointer px-1 py-0.5  text-xs',
                       isSelected
                         ? 'text-primary font-bold'
                         : 'text-muted-foreground hover:text-foreground'
@@ -126,14 +126,14 @@ export function Navbar() {
 
           {/* Theme Toggle (Sun / Moon) */}
           <div className="ps-1 sm:ps-2 border-s border-border flex items-center">
-            <ThemeToggle className="w-8 h-8 rounded-full" />
+            <ThemeToggle className="w-8 h-8" />
           </div>
 
           {/* Mobile Menu Hamburger */}
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
-            className="lg:hidden p-1.5 rounded-full text-foreground hover:bg-surface transition-colors"
+            className="lg:hidden p-1.5 text-foreground hover:bg-surface transition-colors"
             aria-label="Open menu"
           >
             <Menu className="w-4 h-4" />

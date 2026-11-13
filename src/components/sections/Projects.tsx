@@ -26,20 +26,20 @@ export function Projects() {
     (
       <div className="w-full space-y-4">
         <div className="grid grid-cols-3 gap-3">
-          <div className="p-3 rounded-xl bg-white/[0.03] border border-white/5 space-y-1">
+          <div className="p-3 bg-white/[0.03] border border-white/5 space-y-1">
             <span className="text-[10px] text-[#929BAA]">Throughput</span>
             <div className="text-sm font-bold text-emerald-400">1.42 M req/s</div>
           </div>
-          <div className="p-3 rounded-xl bg-white/[0.03] border border-white/5 space-y-1">
+          <div className="p-3 bg-white/[0.03] border border-white/5 space-y-1">
             <span className="text-[10px] text-[#929BAA]">Global Latency</span>
             <div className="text-sm font-bold text-[#4776F5]">14 ms avg</div>
           </div>
-          <div className="p-3 rounded-xl bg-white/[0.03] border border-white/5 space-y-1">
+          <div className="p-3 bg-white/[0.03] border border-white/5 space-y-1">
             <span className="text-[10px] text-[#929BAA]">Active Nodes</span>
             <div className="text-sm font-bold text-white">48 Pods</div>
           </div>
         </div>
-        <div className="p-4 rounded-xl bg-[#090B10]/80 border border-white/10 space-y-2">
+        <div className="p-4 bg-[#090B10]/80 border border-white/10 space-y-2">
           <div className="flex items-center justify-between text-xs text-[#929BAA]">
             <span className="flex items-center gap-1.5 text-white">
               <Activity className="w-3.5 h-3.5 text-[#315BDB]" />
@@ -52,7 +52,7 @@ export function Projects() {
               <div
                 key={i}
                 style={{ height: `${h}%` }}
-                className="flex-1 bg-gradient-to-t from-[#315BDB] to-[#60A5FA] rounded-sm opacity-80 hover:opacity-100 transition-opacity"
+                className="flex-1 bg-gradient-to-t from-[#315BDB] to-[#60A5FA] opacity-80 hover:opacity-100 transition-opacity"
               />
             ))}
           </div>
@@ -74,8 +74,8 @@ export function Projects() {
           </div>
         </div>
         <div className="grid grid-cols-2 gap-3">
-          <div className="p-4 rounded-xl bg-white/[0.03] border border-white/10 space-y-3">
-            <div className="h-20 rounded-lg bg-gradient-to-tr from-stone-900 to-stone-800 flex items-center justify-center">
+          <div className="p-4 bg-white/[0.03] border border-white/10 space-y-3">
+            <div className="h-20 bg-gradient-to-tr from-stone-900 to-stone-800 flex items-center justify-center">
               <Sparkles className="w-6 h-6 text-amber-300/80" />
             </div>
             <div>
@@ -83,8 +83,8 @@ export function Projects() {
               <div className="text-[11px] text-[#929BAA]">€3,450 • Limited Edition</div>
             </div>
           </div>
-          <div className="p-4 rounded-xl bg-white/[0.03] border border-white/10 space-y-3">
-            <div className="h-20 rounded-lg bg-gradient-to-tr from-stone-900 to-stone-800 flex items-center justify-center">
+          <div className="p-4 bg-white/[0.03] border border-white/10 space-y-3">
+            <div className="h-20 bg-gradient-to-tr from-stone-900 to-stone-800 flex items-center justify-center">
               <ShoppingBag className="w-6 h-6 text-stone-400" />
             </div>
             <div>
@@ -99,10 +99,10 @@ export function Projects() {
     // Project 3: Synapse Telemedicine Mobile
     (
       <div className="w-full max-w-sm mx-auto space-y-3">
-        <div className="p-4 rounded-2xl bg-[#090B10] border border-white/10 space-y-3 shadow-xl">
+        <div className="p-4 bg-[#090B10] border border-white/10 space-y-3 shadow-xl">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center">
+              <div className="w-7 h-7 bg-cyan-500/20 text-cyan-400 flex items-center justify-center">
                 <HeartPulse className="w-4 h-4" />
               </div>
               <div>
@@ -110,11 +110,11 @@ export function Projects() {
                 <div className="text-[10px] text-[#929BAA]">Cardiology Telehealth Consultation</div>
               </div>
             </div>
-            <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+            <span className="text-[10px] px-2 py-0.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
               Encrypted
             </span>
           </div>
-          <div className="p-2.5 rounded-xl bg-white/[0.03] border border-white/5 text-[11px] text-[#929BAA] space-y-1">
+          <div className="p-2.5 bg-white/[0.03] border border-white/5 text-[11px] text-[#929BAA] space-y-1">
             <div className="flex justify-between">
               <span>Appointment:</span>
               <span className="text-white">Today, 14:30 GMT</span>
@@ -139,15 +139,15 @@ export function Projects() {
           <span className="text-[11px] text-emerald-400">99.4% precision</span>
         </div>
         <div className="grid grid-cols-3 gap-2 text-[10px]">
-          <div className="p-2.5 rounded-lg bg-white/[0.03] border border-white/10 text-center space-y-1">
+          <div className="p-2.5 bg-white/[0.03] border border-white/10 text-center space-y-1">
             <div className="text-[#929BAA]">Trigger</div>
             <div className="text-white font-bold">Webhook API</div>
           </div>
-          <div className="p-2.5 rounded-lg bg-[#315BDB]/20 border border-[#4776F5]/40 text-center space-y-1">
+          <div className="p-2.5 bg-[#315BDB]/20 border border-[#4776F5]/40 text-center space-y-1">
             <div className="text-[#60A5FA]">LLM Reasoning</div>
             <div className="text-white font-bold">Claude 3.7 + RAG</div>
           </div>
-          <div className="p-2.5 rounded-lg bg-white/[0.03] border border-white/10 text-center space-y-1">
+          <div className="p-2.5 bg-white/[0.03] border border-white/10 text-center space-y-1">
             <div className="text-[#929BAA]">Action</div>
             <div className="text-emerald-400 font-bold">Postgres Sync</div>
           </div>

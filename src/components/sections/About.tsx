@@ -62,9 +62,9 @@ export function About() {
                   direction="up"
                   delay={0.1 * index + 0.2}
                 >
-                  <div className="p-5 rounded-xl bg-card border border-border hover:border-primary/40 transition-colors h-full">
+                  <div className="p-5 bg-card border border-border hover:border-primary/40 transition-colors h-full">
                     <div className="flex items-center gap-3 mb-2.5">
-                      <div className="p-2 rounded-lg bg-surface border border-border shadow-xs">
+                      <div className="p-2 bg-surface border border-border shadow-xs">
                         {item.icon}
                       </div>
                       <h4 className="font-bold text-sm text-foreground">
@@ -83,7 +83,7 @@ export function About() {
           {/* Right Column: Creative Visual Editorial Showcase */}
           <div className="lg:col-span-5">
             <AnimatedSection direction="left" delay={0.3}>
-              <div className="relative rounded-2xl bg-secondary text-secondary-foreground border border-border p-6 sm:p-8 shadow-xl overflow-hidden">
+              <div className="relative bg-secondary text-secondary-foreground border border-border p-6 sm:p-8 shadow-xl overflow-hidden">
                 <div className="absolute top-0 end-0 w-48 h-48 bg-primary/20 blur-3xl pointer-events-none" />
 
                 <div className="space-y-6">
@@ -124,7 +124,7 @@ export function About() {
                     ].map((item, idx) => (
                       <div
                         key={idx}
-                        className="flex items-center justify-between p-3 rounded-lg bg-surface/50 border border-border/40 text-xs"
+                        className="flex items-center justify-between p-3 bg-surface/50 border border-border/40 text-xs"
                       >
                         <div className="flex items-center gap-2.5 text-secondary-foreground">
                           <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />

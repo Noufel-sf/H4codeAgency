@@ -50,11 +50,11 @@ export function SectionHeading({
       {badge && (
         <div
           className={cn(
-            'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase mb-4 border border-border bg-surface text-muted-foreground',
+            'inline-flex items-center gap-2 px-3 py-1  text-xs font-semibold tracking-wider uppercase mb-4 border border-border bg-surface text-muted-foreground',
             align === 'center' ? 'mx-auto' : ''
           )}
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+          <span className="w-1.5 h-1.5 bg-primary animate-pulse" />
           <span>{badge}</span>
         </div>
       )}

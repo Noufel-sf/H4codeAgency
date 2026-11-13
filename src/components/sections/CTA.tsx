@@ -152,7 +152,7 @@ export function CTA() {
     <section className="relative py-16 sm:py-24 bg-background transition-colors duration-200 overflow-hidden">
       <Container size="narrow">
         <AnimatedSection direction="up">
-          <div className="relative rounded-[2.5rem] bg-card border border-border p-8 sm:p-14 md:p-16 text-center flex flex-col items-center justify-center shadow-[0_4px_30px_rgba(0,0,0,0.03)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.4)]">
+          <div className="relative -[2.5rem] bg-card border border-border p-8 sm:p-14 md:p-16 text-center flex flex-col items-center justify-center shadow-[0_4px_30px_rgba(0,0,0,0.03)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.4)]">
             {/* Main Headline */}
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground tracking-tight max-w-2xl leading-tight">
               {t('headline')}
@@ -166,10 +166,10 @@ export function CTA() {
             {/* Action Button */}
             <a
               href="#contact"
-              className="mt-8 inline-flex items-center gap-3 px-6 py-3.5 rounded-full bg-secondary hover:bg-secondary-hover text-secondary-foreground text-sm font-semibold transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-0.5 group cursor-pointer"
+              className="mt-8 inline-flex items-center gap-3 px-6 py-3.5 bg-secondary hover:bg-secondary-hover text-secondary-foreground text-sm font-semibold transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-0.5 group cursor-pointer"
             >
               <span>{t('button')}</span>
-              <span className="w-6 h-6 rounded-full bg-white/15 dark:bg-white/10 flex items-center justify-center transition-transform group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5">
+              <span className="w-6 h-6 bg-white/15 dark:bg-white/10 flex items-center justify-center transition-transform group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5">
                 <ArrowIcon className="w-3.5 h-3.5" />
               </span>
             </a>
@@ -183,7 +183,7 @@ export function CTA() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.name}
-                  className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-surface border border-border/80 hover:border-primary/50 text-muted-foreground hover:text-foreground hover:bg-surface-hover flex items-center justify-center transition-all duration-200 hover:-translate-y-0.5 shadow-xs"
+                  className="w-10 h-10 sm:w-11 sm:h-11 bg-surface border border-border/80 hover:border-primary/50 text-muted-foreground hover:text-foreground hover:bg-surface-hover flex items-center justify-center transition-all duration-200 hover:-translate-y-0.5 shadow-xs"
                 >
                   {social.icon}
                 </a>

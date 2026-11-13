@@ -22,7 +22,7 @@ export function ServiceCard({
   return (
     <div
       className={cn(
-        'group relative rounded-2xl p-7 transition-all duration-300 flex flex-col justify-between overflow-hidden',
+        'group relative  p-7 transition-all duration-300 flex flex-col justify-between overflow-hidden',
         'bg-card text-card-foreground border border-border hover:border-primary/40',
         'shadow-sm hover:shadow-xl hover:-translate-y-1',
         featured && 'border-primary/30 bg-gradient-to-b from-primary/5 to-card'
@@ -34,12 +34,12 @@ export function ServiceCard({
       <div>
         {/* Icon & Index */}
         <div className="flex items-center justify-between mb-6">
-          <div className="w-12 h-12 rounded-xl bg-surface border border-border flex items-center justify-center text-primary group-hover:bg-primary/10 group-hover:border-primary/30 transition-all duration-300">
+          <div className="w-12 h-12 bg-surface border border-border flex items-center justify-center text-primary group-hover:bg-primary/10 group-hover:border-primary/30 transition-all duration-300">
             {icon}
           </div>
           <a
             href="#contact"
-            className="w-8 h-8 rounded-full bg-surface border border-border flex items-center justify-center text-muted-foreground group-hover:text-primary-foreground group-hover:bg-primary group-hover:border-primary transition-all duration-300"
+            className="w-8 h-8 bg-surface border border-border flex items-center justify-center text-muted-foreground group-hover:text-primary-foreground group-hover:bg-primary group-hover:border-primary transition-all duration-300"
             aria-label={`Inquire about ${title}`}
           >
             <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 rtl:group-hover:-translate-x-0.5" />
@@ -60,7 +60,7 @@ export function ServiceCard({
         {tags.map((tag, idx) => (
           <span
             key={idx}
-            className="px-2.5 py-1 rounded-md text-[11px] font-medium bg-surface text-muted-foreground border border-border/80 group-hover:border-primary/20 transition-colors"
+            className="px-2.5 py-1 text-[11px] font-medium bg-surface text-muted-foreground border border-border/80 group-hover:border-primary/20 transition-colors"
           >
             {tag}
           </span>

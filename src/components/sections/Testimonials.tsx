@@ -40,7 +40,7 @@ export function Testimonials() {
                 direction="up"
                 delay={0.15 * index}
               >
-                <div className="relative rounded-2xl bg-card border border-border p-7 flex flex-col justify-between h-full hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-lg">
+                <div className="relative bg-card border border-border p-7 flex flex-col justify-between h-full hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-lg">
                   <div>
                     <Quote className="w-8 h-8 text-primary/40 mb-4" />
                     <p className="text-sm sm:text-base text-foreground/90 leading-relaxed italic mb-6">
@@ -49,7 +49,7 @@ export function Testimonials() {
                   </div>
 
                   <div className="pt-5 border-t border-border/60 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-xs shadow-xs">
+                    <div className="w-10 h-10 bg-primary text-primary-foreground flex items-center justify-center font-bold text-xs shadow-xs">
                       {author.charAt(0)}
                     </div>
                     <div>

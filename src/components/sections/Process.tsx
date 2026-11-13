@@ -114,7 +114,7 @@ export function Process() {
         {/* Centered Pill Badge & Headline matching user reference */}
         <AnimatedSection direction="up">
           <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16 sm:mb-20">
-            <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium border border-border bg-card text-muted-foreground shadow-sm mb-5">
+            <span className="inline-flex items-center px-4 py-1.5 text-xs sm:text-sm font-medium border border-border bg-card text-muted-foreground shadow-sm mb-5">
               {t('badge')}
             </span>
 
@@ -175,7 +175,7 @@ export function Process() {
                   className="h-full flex justify-center"
                 >
                   <div
-                    className={`group relative w-full max-w-[310px] md:max-w-none h-full rounded-[1.75rem] bg-card border border-border p-6 sm:p-7 flex flex-col justify-between shadow-[0_4px_24px_rgba(0,0,0,0.03)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.3)] transition-all duration-300 hover:shadow-xl hover:border-primary/40 transform-gpu ${step.rotation}`}
+                    className={`group relative w-full max-w-[310px] md:max-w-none h-full -[1.75rem] bg-card border border-border p-6 sm:p-7 flex flex-col justify-between shadow-[0_4px_24px_rgba(0,0,0,0.03)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.3)] transition-all duration-300 hover:shadow-xl hover:border-primary/40 transform-gpu ${step.rotation}`}
                   >
                     {/* Top Content: Green Step Number & Step Title */}
                     <div>

@@ -26,7 +26,7 @@ export function ProjectCard({
   const isEven = index % 2 === 0;
 
   return (
-    <div className="group rounded-3xl bg-card text-card-foreground border border-border hover:border-primary/40 transition-all duration-500 overflow-hidden shadow-sm hover:shadow-xl">
+    <div className="group bg-card text-card-foreground border border-border hover:border-primary/40 transition-all duration-500 overflow-hidden shadow-sm hover:shadow-xl">
       <div className={cn(
         'grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-6 sm:p-10',
         isEven ? '' : 'lg:[&>*:first-child]:order-2'
@@ -51,7 +51,7 @@ export function ProjectCard({
             {technologies.map((tech, idx) => (
               <span
                 key={idx}
-                className="px-3 py-1 rounded-full text-xs font-medium bg-surface text-foreground/85 border border-border"
+                className="px-3 py-1 text-xs font-medium bg-surface text-foreground/85 border border-border"
               >
                 {tech}
               </span>
@@ -80,15 +80,15 @@ export function ProjectCard({
 
         {/* Visual Preview Graphic */}
         <div className="lg:col-span-7">
-          <div className="relative rounded-2xl bg-[#060913] border border-border/60 overflow-hidden transition-transform duration-500 group-hover:scale-[1.01]">
+          <div className="relative bg-[#060913] border border-border/60 overflow-hidden transition-transform duration-500 group-hover:scale-[1.01]">
             {/* Browser chrome header */}
             <div className="flex items-center justify-between px-4 py-2.5 bg-[#0e172c] border-b border-white/[0.08] text-xs text-[#9fb2ff]">
               <div className="flex items-center gap-1.5">
-                <span className="w-2.5 h-2.5 rounded-full bg-white/20" />
-                <span className="w-2.5 h-2.5 rounded-full bg-white/20" />
-                <span className="w-2.5 h-2.5 rounded-full bg-white/20" />
+                <span className="w-2.5 h-2.5 bg-white/20" />
+                <span className="w-2.5 h-2.5 bg-white/20" />
+                <span className="w-2.5 h-2.5 bg-white/20" />
               </div>
-              <div className="px-3 py-0.5 rounded-md bg-[#060913] text-[11px] font-mono text-[#9fb2ff]/60 max-w-[200px] truncate border border-white/[0.04]">
+              <div className="px-3 py-0.5 bg-[#060913] text-[11px] font-mono text-[#9fb2ff]/60 max-w-[200px] truncate border border-white/[0.04]">
                 https://demo.{title.toLowerCase().replace(/\s+/g, '')}.io
               </div>
               <div className="w-10" />

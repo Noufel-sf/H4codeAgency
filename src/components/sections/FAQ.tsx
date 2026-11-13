@@ -44,7 +44,7 @@ export function FAQ() {
               >
                 <div
                   className={cn(
-                    'rounded-2xl transition-all duration-300 overflow-hidden border',
+                    ' transition-all duration-300 overflow-hidden border',
                     isOpen
                       ? 'bg-card border-primary/40 shadow-sm'
                       : 'bg-surface border-border hover:border-primary/30'
@@ -61,7 +61,7 @@ export function FAQ() {
                     </span>
                     <div
                       className={cn(
-                        'w-7 h-7 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300',
+                        'w-7 h-7  flex items-center justify-center shrink-0 transition-transform duration-300',
                         isOpen
                           ? 'bg-primary text-primary-foreground rotate-180'
                           : 'bg-card text-muted-foreground'

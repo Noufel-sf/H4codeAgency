@@ -43,14 +43,14 @@ export function MobileMenu({ isOpen, onClose, isRtl }: MobileMenuProps) {
         <div>
           <div className="flex items-center justify-between pb-6 border-b border-border">
             <div className="flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-primary" />
+              <span className="w-2.5 h-2.5 bg-primary" />
               <span className="font-bold text-lg tracking-wider text-foreground">
                 H4<span className="text-primary">CODE</span>
               </span>
             </div>
             <button
               onClick={onClose}
-              className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-surface transition-colors"
+              className="p-2 text-muted-foreground hover:text-foreground hover:bg-surface transition-colors"
               aria-label="Close menu"
             >
               <X className="w-5 h-5" />
@@ -63,7 +63,7 @@ export function MobileMenu({ isOpen, onClose, isRtl }: MobileMenuProps) {
                 key={link.href}
                 href={link.href}
                 onClick={onClose}
-                className="flex items-center justify-between px-4 py-3 rounded-xl text-base font-medium text-muted-foreground hover:text-foreground hover:bg-surface transition-colors"
+                className="flex items-center justify-between px-4 py-3 text-base font-medium text-muted-foreground hover:text-foreground hover:bg-surface transition-colors"
               >
                 <span>{link.label}</span>
                 <ArrowIcon className="w-4 h-4 text-muted-foreground/40" />

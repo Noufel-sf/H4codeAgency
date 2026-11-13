@@ -61,24 +61,24 @@ export function Technologies() {
               direction="up"
               delay={0.15 * cIdx}
             >
-              <div className="rounded-2xl bg-card border border-border p-6 space-y-4 hover:border-primary/40 transition-all shadow-sm">
+              <div className="bg-card border border-border p-6 space-y-4 hover:border-primary/40 transition-all shadow-sm">
                 <div className="flex items-center justify-between pb-3 border-b border-border/60">
                   <h3 className="text-xs font-bold uppercase tracking-wider text-primary">
                     {t(`categories.${cat.categoryKey}`)}
                   </h3>
-                  <span className="w-2 h-2 rounded-full bg-primary" />
+                  <span className="w-2 h-2 bg-primary" />
                 </div>
 
                 <div className="space-y-2.5">
                   {cat.items.map((item, iIdx) => (
                     <div
                       key={iIdx}
-                      className="flex items-center justify-between p-3 rounded-xl bg-surface border border-border/80 hover:bg-surface-hover transition-colors shadow-xs"
+                      className="flex items-center justify-between p-3 bg-surface border border-border/80 hover:bg-surface-hover transition-colors shadow-xs"
                     >
                       <span className="text-sm font-semibold text-foreground">
                         {item.name}
                       </span>
-                      <span className="text-[11px] font-mono text-muted-foreground px-2 py-0.5 rounded bg-background border border-border">
+                      <span className="text-[11px] font-mono text-muted-foreground px-2 py-0.5 bg-background border border-border">
                         {item.tag}
                       </span>
                     </div>

@@ -156,6 +156,24 @@
 
   --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-arabic: 'IBM Plex Sans Arabic', 'Cairo', system-ui, Tahoma, sans-serif;
+
+  /* Zero-Radius Design System Tokens */
+  --radius-xs: 0px;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
+  --radius-4xl: 0px;
+  --radius-full: 0px;
+}
+
+/* Zero-Radius Design System — enforce sharp rectilinear corners */
+*,
+*::before,
+*::after {
+  border-radius: 0 !important;
 }
 
 html {

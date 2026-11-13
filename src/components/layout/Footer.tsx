@@ -64,7 +64,7 @@ export function Footer() {
           {/* Brand info */}
           <div className="lg:col-span-2 space-y-4">
             <a href="#home" className="inline-flex items-center gap-2.5">
-              <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary text-primary-foreground shadow-sm">
+              <div className="flex items-center justify-center w-8 h-8 bg-primary text-primary-foreground shadow-sm">
                 <span className="font-black text-xs text-white">H4</span>
               </div>
               <span className="font-extrabold text-xl tracking-wider text-foreground">
@@ -82,7 +82,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
-                className="w-9 h-9 rounded-full bg-card hover:bg-surface border border-border hover:border-primary/40 flex items-center justify-center text-muted-foreground hover:text-foreground transition-all shadow-xs"
+                className="w-9 h-9 bg-card hover:bg-surface border border-border hover:border-primary/40 flex items-center justify-center text-muted-foreground hover:text-foreground transition-all shadow-xs"
               >
                 <GithubIcon className="w-4 h-4" />
               </a>
@@ -91,7 +91,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="w-9 h-9 rounded-full bg-card hover:bg-surface border border-border hover:border-primary/40 flex items-center justify-center text-muted-foreground hover:text-foreground transition-all shadow-xs"
+                className="w-9 h-9 bg-card hover:bg-surface border border-border hover:border-primary/40 flex items-center justify-center text-muted-foreground hover:text-foreground transition-all shadow-xs"
               >
                 <LinkedinIcon className="w-4 h-4" />
               </a>
@@ -100,14 +100,14 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
-                className="w-9 h-9 rounded-full bg-card hover:bg-surface border border-border hover:border-emerald-500/40 flex items-center justify-center text-muted-foreground hover:text-emerald-600 dark:hover:text-emerald-400 transition-all shadow-xs"
+                className="w-9 h-9 bg-card hover:bg-surface border border-border hover:border-emerald-500/40 flex items-center justify-center text-muted-foreground hover:text-emerald-600 dark:hover:text-emerald-400 transition-all shadow-xs"
               >
                 <MessageCircle className="w-4 h-4" />
               </a>
               <a
                 href={`mailto:${siteConfig.contact.email}`}
                 aria-label="Email"
-                className="w-9 h-9 rounded-full bg-card hover:bg-surface border border-border hover:border-primary/40 flex items-center justify-center text-muted-foreground hover:text-foreground transition-all shadow-xs"
+                className="w-9 h-9 bg-card hover:bg-surface border border-border hover:border-primary/40 flex items-center justify-center text-muted-foreground hover:text-foreground transition-all shadow-xs"
               >
                 <Mail className="w-4 h-4" />
               </a>
@@ -164,7 +164,7 @@ export function Footer() {
                 <button
                   type="button"
                   onClick={scrollToTop}
-                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-card hover:bg-surface border border-border text-xs font-medium text-foreground transition-all cursor-pointer group shadow-xs"
+                  className="inline-flex items-center gap-2 px-3.5 py-2 bg-card hover:bg-surface border border-border text-xs font-medium text-foreground transition-all cursor-pointer group shadow-xs"
                 >
                   <span>{t('backToTop')}</span>
                   <ArrowUp className="w-3.5 h-3.5 transition-transform group-hover:-translate-y-0.5" />

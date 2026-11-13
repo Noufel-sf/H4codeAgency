@@ -45,7 +45,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
         aria-expanded={isOpen}
         aria-haspopup="true"
         aria-label="Select Language"
-        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium text-slate-800 dark:text-[#F5F7FC] bg-slate-100 hover:bg-slate-200 dark:bg-white/[0.05] dark:hover:bg-white/[0.1] border border-slate-200 dark:border-white/10 transition-all duration-200 cursor-pointer"
+        className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-800 dark:text-[#F5F7FC] bg-slate-100 hover:bg-slate-200 dark:bg-white/[0.05] dark:hover:bg-white/[0.1] border border-slate-200 dark:border-white/10 transition-all duration-200 cursor-pointer"
       >
         <Globe className="w-3.5 h-3.5 text-[#315BDB] dark:text-[#4776F5]" />
         <span>{activeLang.short}</span>
@@ -59,7 +59,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
 
       {isOpen && (
         <div
-          className="absolute end-0 mt-2 w-36 rounded-xl bg-white dark:bg-[#10141C] border border-slate-200 dark:border-white/10 shadow-2xl p-1 z-50 animate-in fade-in zoom-in-95 duration-150 backdrop-blur-xl"
+          className="absolute end-0 mt-2 w-36 bg-white dark:bg-[#10141C] border border-slate-200 dark:border-white/10 shadow-2xl p-1 z-50 animate-in fade-in zoom-in-95 duration-150 backdrop-blur-xl"
           role="menu"
         >
           {languages.map((lang) => {
@@ -70,7 +70,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
                 onClick={() => handleSelect(lang.code)}
                 role="menuitem"
                 className={cn(
-                  'w-full flex items-center justify-between px-3 py-2 text-xs rounded-lg font-medium transition-colors cursor-pointer',
+                  'w-full flex items-center justify-between px-3 py-2 text-xs  font-medium transition-colors cursor-pointer',
                   isActive
                     ? 'bg-blue-50 text-blue-600 dark:bg-[#315BDB]/20 dark:text-[#4776F5]'
                     : 'text-slate-600 dark:text-[#929BAA] hover:text-slate-900 dark:hover:text-[#F5F7FC] hover:bg-slate-100 dark:hover:bg-white/[0.05]'

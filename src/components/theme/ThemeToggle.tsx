@@ -17,7 +17,7 @@ export function ThemeToggle({ className }: { className?: string }) {
     return (
       <div
         className={cn(
-          'w-9 h-9 rounded-full bg-slate-100 dark:bg-white/[0.05] border border-slate-200 dark:border-white/10 flex items-center justify-center opacity-70',
+          'w-9 h-9  bg-slate-100 dark:bg-white/[0.05] border border-slate-200 dark:border-white/10 flex items-center justify-center opacity-70',
           className
         )}
       />
@@ -32,7 +32,7 @@ export function ThemeToggle({ className }: { className?: string }) {
       onClick={() => setTheme(isDark ? 'light' : 'dark')}
       aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
       className={cn(
-        'w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer select-none',
+        'w-9 h-9  flex items-center justify-center transition-all duration-300 cursor-pointer select-none',
         'bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200',
         'dark:bg-white/[0.05] dark:hover:bg-white/[0.1] dark:text-[#F5F7FC] dark:border-white/10',
         className

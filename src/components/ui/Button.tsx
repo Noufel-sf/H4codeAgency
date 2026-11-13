@@ -26,7 +26,7 @@ export function Button({
   ...props
 }: ButtonProps) {
   const baseStyles =
-    'relative inline-flex items-center justify-center font-medium transition-all duration-300 rounded-full focus:outline-none focus:ring-2 focus:ring-primary/50 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none group select-none cursor-pointer';
+    'relative inline-flex items-center justify-center font-medium transition-all duration-300  focus:outline-none focus:ring-2 focus:ring-primary/50 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none group select-none cursor-pointer';
 
   const variants = {
     primary:
