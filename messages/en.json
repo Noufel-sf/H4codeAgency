@@ -244,9 +244,11 @@
     }
   },
   "cta": {
-    "headline": "Ready to turn your idea into a digital product?",
-    "subtitle": "Schedule a call and begin automating",
-    "button": "Contact us now",
+    "headlinePrefix": "Focus on growing your business,",
+    "headlineHighlight": "we engineer everything else.",
+    "primaryBtn": "Start Your Project",
+    "whatsappBtn": "Ask us on WhatsApp",
+    "guarantee": "Free Architecture Audit • Zero Technical Debt • Direct WhatsApp Access",
     "email": "contact@h4code.agency"
   },
   "contact": {

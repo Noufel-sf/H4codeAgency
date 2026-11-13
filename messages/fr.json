@@ -244,9 +244,11 @@
     }
   },
   "cta": {
-    "headline": "Prêt à transformer votre idée en produit digital ?",
-    "subtitle": "Planifiez un échange et commencez à automatiser vos processus",
-    "button": "Contactez-nous maintenant",
+    "headlinePrefix": "Concentrez-vous sur vos ventes,",
+    "headlineHighlight": "on s'occupe de toute la technique.",
+    "primaryBtn": "Démarrer Votre Projet",
+    "whatsappBtn": "Écrivez-nous sur WhatsApp",
+    "guarantee": "Audit Gratuit • Zéro Dette Technique • Support Dédié sur WhatsApp",
     "email": "contact@h4code.agency"
   },
   "contact": {

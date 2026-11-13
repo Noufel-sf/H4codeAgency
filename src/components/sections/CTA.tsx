@@ -1,206 +1,200 @@
 'use client';
 
 import React from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { Container } from '../ui/Container';
 import { AnimatedSection } from '../ui/AnimatedSection';
-import { ArrowRight, ArrowLeft } from 'lucide-react';
-import { useLocale } from 'next-intl';
+
+/* ── Digital Matrix Pixel Wave Graphic (matching reference image) ───── */
+function PixelMatrixWave() {
+  // Generate structured clusters of square pixels that mimic the digital terrain in the screenshot
+  const columns = 54;
+  const rows = 12;
+
+  // Height profile function that creates wave peaks and valleys
+  const getOpacity = (col: number, row: number) => {
+    const wave = Math.sin((col / columns) * Math.PI * 3.5) * 0.4 + 0.5;
+    const verticalDist = (rows - row) / rows;
+    const noise = ((col * 17 + row * 29) % 11) / 10;
+    const threshold = wave * 0.7 + noise * 0.3;
+
+    if (verticalDist < threshold) {
+      if (noise > 0.6) return 0.75;
+      if (noise > 0.3) return 0.45;
+      return 0.2;
+    }
+    if (verticalDist < threshold + 0.18 && noise > 0.7) {
+      return 0.3;
+    }
+    return 0;
+  };
+
+  const dots: { x: number; y: number; opacity: number }[] = [];
+  for (let c = 0; c < columns; c++) {
+    for (let r = 0; r < rows; r++) {
+      const op = getOpacity(c, r);
+      if (op > 0) {
+        dots.push({
+          x: c * 24 + 12,
+          y: r * 14 + 10,
+          opacity: op,
+        });
+      }
+    }
+  }
+
+  return (
+    <div className="relative w-full h-36 sm:h-44 md:h-52 overflow-hidden select-none pointer-events-none mt-12 sm:mt-16">
+      <svg
+        viewBox="0 0 1300 180"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-full h-full object-cover"
+        preserveAspectRatio="xMidYMax slice"
+      >
+        {dots.map((dot, idx) => (
+          <rect
+            key={idx}
+            x={dot.x}
+            y={dot.y}
+            width="6"
+            height="6"
+            className="fill-cyan-400 dark:fill-cyan-300 transition-opacity"
+            style={{ opacity: dot.opacity }}
+          />
+        ))}
+      </svg>
+      {/* Soft gradient fade into background at the very bottom */}
+      <div className="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-background to-transparent" />
+    </div>
+  );
+}
+
+/* ── Social Icons Data ────────────────────────────────────────────────── */
+const SOCIALS = [
+  {
+    name: 'Instagram',
+    href: 'https://instagram.com/h4code',
+    hoverColor: 'hover:text-[#E4405F] hover:border-[#E4405F]/50',
+    icon: (
+      <svg className="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+        <rect width="20" height="20" x="2" y="2" />
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+      </svg>
+    ),
+  },
+  {
+    name: 'LinkedIn',
+    href: 'https://linkedin.com/company/h4code',
+    hoverColor: 'hover:text-[#0A66C2] hover:border-[#0A66C2]/50',
+    icon: (
+      <svg className="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+        <rect width="4" height="12" x="2" y="9" />
+        <circle cx="4" cy="4" r="2" />
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Facebook',
+    href: 'https://facebook.com/h4code',
+    hoverColor: 'hover:text-[#1877F2] hover:border-[#1877F2]/50',
+    icon: (
+      <svg className="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+      </svg>
+    ),
+  },
+  {
+    name: 'WhatsApp',
+    href: 'https://wa.me/213555000000',
+    hoverColor: 'hover:text-[#25D366] hover:border-[#25D366]/50',
+    icon: (
+      <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+      </svg>
+    ),
+  },
+];
 
 export function CTA() {
   const t = useTranslations('cta');
   const locale = useLocale();
   const isRtl = locale === 'ar';
-  const ArrowIcon = isRtl ? ArrowLeft : ArrowRight;
-
-  const socialLinks = [
-    {
-      name: 'Facebook',
-      href: 'https://facebook.com',
-      icon: (
-        <svg
-          className="w-4 h-4"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-        </svg>
-      )
-    },
-    {
-      name: 'LinkedIn',
-      href: 'https://linkedin.com',
-      icon: (
-        <svg
-          className="w-4 h-4"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <rect width="4" height="12" x="2" y="9" />
-          <circle cx="4" cy="4" r="2" />
-          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-        </svg>
-      )
-    },
-    {
-      name: 'Instagram',
-      href: 'https://instagram.com',
-      icon: (
-        <svg
-          className="w-4 h-4"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-          <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-        </svg>
-      )
-    },
-    {
-      name: 'Google',
-      href: 'mailto:contact@h4code.agency',
-      icon: (
-        <svg
-          className="w-4 h-4"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M21 12a9 9 0 1 1-2.64-6.36L16.2 7.8A6 6 0 1 0 18 12h-6v-3h9" />
-        </svg>
-      )
-    },
-    {
-      name: 'Behance',
-      href: 'https://behance.net',
-      icon: (
-        <svg
-          className="w-4 h-4"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M3 7h4.5a2.5 2.5 0 0 1 0 5H3V7zm0 5h5a2.5 2.5 0 0 1 0 5H3v-5z" />
-          <path d="M14 13.5a3.5 3.5 0 1 0 3.5-3.5 3.5 3.5 0 0 0-3.5 3.5zm0 0h7" />
-          <path d="M15 7h5" />
-        </svg>
-      )
-    },
-    {
-      name: 'Dribbble',
-      href: 'https://dribbble.com',
-      icon: (
-        <svg
-          className="w-4 h-4"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <circle cx="12" cy="12" r="10" />
-          <path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94" />
-          <path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32" />
-          <path d="M8.56 2.75c4.37 6 6 9.42 8 17.72" />
-        </svg>
-      )
-    },
-    {
-      name: 'Figma',
-      href: 'https://figma.com',
-      icon: (
-        <svg
-          className="w-4 h-4"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z" />
-          <path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z" />
-          <path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z" />
-          <path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z" />
-          <path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z" />
-        </svg>
-      )
-    }
-  ];
 
   return (
-    <section className="relative py-16 sm:py-24 bg-background transition-colors duration-200 overflow-hidden">
+    <section className="relative pt-24 sm:pt-32 pb-0 bg-background transition-colors duration-200 overflow-hidden">
       <Container size="narrow">
         <AnimatedSection direction="up">
-          <div className="relative -[2.5rem] bg-card border border-border p-8 sm:p-14 md:p-16 text-center flex flex-col items-center justify-center shadow-[0_4px_30px_rgba(0,0,0,0.03)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.4)]">
-            {/* Main Headline */}
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground tracking-tight max-w-2xl leading-tight">
-              {t('headline')}
+          <div className="text-center flex flex-col items-center justify-center max-w-3xl mx-auto">
+            
+            {/* ── Headline with Signature Cyan/Brand Marker Highlight ── */}
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-black text-foreground tracking-tight leading-[1.2] sm:leading-[1.18] max-w-3xl">
+              <span>{t('headlinePrefix')} </span>
+              <span className="relative inline-block whitespace-nowrap">
+                <span className="relative z-10">{t('headlineHighlight')}</span>
+                {/* Marker stroke matching reference image */}
+                <span
+                  className="absolute left-0 bottom-1.5 sm:bottom-2 w-full h-3.5 sm:h-5 bg-cyan-300/60 dark:bg-cyan-500/30 -z-0 pointer-events-none"
+                  aria-hidden="true"
+                />
+              </span>
             </h2>
 
-            {/* Subtitle */}
-            <p className="text-sm sm:text-base text-muted-foreground mt-3 sm:mt-4 font-normal max-w-md">
-              {t('subtitle')}
+            {/* ── Two Action Buttons ── */}
+            <div className="mt-10 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+              {/* Button 1: Primary Dark Start Action */}
+              <a
+                href="#contact"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-secondary hover:bg-secondary-hover text-secondary-foreground text-base font-bold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 cursor-pointer min-w-[200px]"
+              >
+                {t('primaryBtn')}
+              </a>
+
+              {/* Button 2: WhatsApp Action (matching reference) */}
+              <a
+                href="https://wa.me/213555000000"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 bg-card text-foreground hover:bg-surface border border-border/80 hover:border-primary/40 text-base font-semibold shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer min-w-[200px]"
+              >
+                <span>{t('whatsappBtn')}</span>
+                <span className="text-[#25D366] inline-flex items-center">
+                  <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                  </svg>
+                </span>
+              </a>
+            </div>
+
+            {/* ── Subtitle / Guarantee bullet points (matching reference) ── */}
+            <p className="mt-5 sm:mt-6 text-xs sm:text-sm text-muted-foreground font-medium tracking-wide">
+              {t('guarantee')}
             </p>
 
-            {/* Action Button */}
-            <a
-              href="#contact"
-              className="mt-8 inline-flex items-center gap-3 px-6 py-3.5 bg-secondary hover:bg-secondary-hover text-secondary-foreground text-sm font-semibold transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-0.5 group cursor-pointer"
-            >
-              <span>{t('button')}</span>
-              <span className="w-6 h-6 bg-white/15 dark:bg-white/10 flex items-center justify-center transition-transform group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5">
-                <ArrowIcon className="w-3.5 h-3.5" />
-              </span>
-            </a>
-
-            {/* Social Icons Row */}
-            <div className="mt-8 flex items-center justify-center gap-2 sm:gap-3 flex-wrap">
-              {socialLinks.map((social) => (
+            {/* ── Socials: Insta, LinkedIn, Facebook, WhatsApp ── */}
+            <div className="mt-8 flex items-center justify-center gap-3">
+              {SOCIALS.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.name}
-                  className="w-10 h-10 sm:w-11 sm:h-11 bg-surface border border-border/80 hover:border-primary/50 text-muted-foreground hover:text-foreground hover:bg-surface-hover flex items-center justify-center transition-all duration-200 hover:-translate-y-0.5 shadow-xs"
+                  className={`w-11 h-11 bg-card border border-border text-muted-foreground hover:bg-surface flex items-center justify-center transition-all duration-200 hover:-translate-y-0.5 shadow-xs ${social.hoverColor}`}
                 >
                   {social.icon}
                 </a>
               ))}
             </div>
 
-            {/* Email link at the bottom */}
-            <a
-              href={`mailto:${t('email')}`}
-              className="mt-8 text-xs sm:text-sm font-medium text-foreground/80 hover:text-primary transition-colors cursor-pointer tracking-wide"
-            >
-              {t('email')}
-            </a>
           </div>
         </AnimatedSection>
       </Container>
+
+      {/* ── Futuristic Digital Pixel Wave Bottom Motif (matching reference image) ── */}
+      <PixelMatrixWave />
     </section>
   );
 }
-
