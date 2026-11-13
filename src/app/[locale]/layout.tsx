@@ -6,7 +6,7 @@ import { routing } from '@/i18n/routing';
 import { siteConfig } from '@/config/site';
 import { Toaster } from 'sonner';
 import { ThemeProvider } from '@/components/theme/ThemeProvider';
-import '@/app/compiled.css';
+import '@/app/globals.css';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
