@@ -4,14 +4,10 @@ import { Footer } from '@/components/layout/Footer';
 import { Hero } from '@/components/sections/Hero';
 import { Marquee } from '@/components/sections/Marquee';
 import { Services } from '@/components/sections/Services';
-import { About } from '@/components/sections/About';
-import { Projects } from '@/components/sections/Projects';
 import { Process } from '@/components/sections/Process';
-import { Technologies } from '@/components/sections/Technologies';
-import { Testimonials } from '@/components/sections/Testimonials';
-import { FAQ } from '@/components/sections/FAQ';
 import { CTA } from '@/components/sections/CTA';
 import { Contact } from '@/components/sections/Contact';
+import { FAQ } from '@/components/sections/FAQ';
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -28,9 +24,9 @@ export default async function HomePage({ params }: PageProps) {
         <Hero />
         <Marquee />
         <Services />
+        <FAQ />
         <Process />
         <CTA />
-        <Contact />
       </main>
       <Footer />
     </div>
