@@ -48,8 +48,23 @@
     "items": {
       "webDev": {
         "title": "Web Development",
-        "description": "Enterprise-grade web applications, corporate websites, and dynamic platforms built with cutting-edge architectures for unmatched speed.",
-        "tags": ["Next.js & React", "High-Performance SSR", "Scalable CMS", "SEO Optimized"]
+        "description": "Enterprise-grade web applications, interactive web platforms, and dynamic portals built with Next.js 16 and cutting-edge architectures for sub-second load times.",
+        "tags": ["Next.js 16 & React 19", "Full-Stack Architecture", "High-Performance SSR", "Scalable Cloud APIs"]
+      },
+      "mobileDev": {
+        "title": "Mobile Development",
+        "description": "Performant cross-platform mobile experiences that deliver silky-smooth 120Hz native performance, intuitive touch gestures, and offline-first capabilities across iOS and Android.",
+        "tags": ["iOS & Android", "React Native", "Native Performance", "Fluid Gestures"]
+      },
+      "desktopDev": {
+        "title": "Desktop Development",
+        "description": "Robust, high-performance native desktop software engineered for macOS and Windows, handling intensive workloads, system-level integrations, and offline computing.",
+        "tags": ["Cross-Platform", "macOS & Windows", "High Compute Engine", "System Integrations"]
+      },
+      "webDesign": {
+        "title": "Web & UI/UX Design",
+        "description": "Human-centric digital product design with bespoke typography, scalable design systems, interactive prototypes, and micro-interactions that captivate and convert.",
+        "tags": ["Design Systems", "Figma Prototypes", "Micro-Interactions", "Conversion Audits"]
       },
       "ecommerce": {
         "title": "E-Commerce Solutions",

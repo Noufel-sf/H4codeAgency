@@ -47,9 +47,24 @@
     "description": "De la conception stratégique au déploiement en production, nos services d'ingénierie et de design s'adaptent avec précision à vos ambitions.",
     "items": {
       "webDev": {
-        "title": "Développement Web Moderne",
-        "description": "Applications web d'entreprise, sites vitrines premium et plateformes dynamiques propulsées par des architectures de pointe garantissant une vitesse optimale.",
-        "tags": ["Next.js & React", "SSR Haute Performance", "CMS Scalable", "Optimisation SEO"]
+        "title": "Développement Web",
+        "description": "Applications web d'entreprise, plateformes interactives et portails dynamiques conçus avec Next.js 16 pour des temps de chargement instantanés.",
+        "tags": ["Next.js 16 & React 19", "Architecture Full-Stack", "SSR Haute Performance", "APIs Cloud Évolutives"]
+      },
+      "mobileDev": {
+        "title": "Développement Mobile",
+        "description": "Expériences mobiles multiplateformes ultra-fluides à 120Hz, gestes tactiles intuitifs et fonctionnement hors-ligne natif sur iOS et Android.",
+        "tags": ["iOS & Android", "React Native", "Performance Native", "Gestuelle Fluide"]
+      },
+      "desktopDev": {
+        "title": "Développement Desktop",
+        "description": "Logiciels natifs robustes et performants pour macOS et Windows, taillés pour les calculs intensifs et les intégrations directes au système.",
+        "tags": ["Multiplateforme", "macOS & Windows", "Moteur de Calcul", "Intégration Système"]
+      },
+      "webDesign": {
+        "title": "Design Web & UI/UX",
+        "description": "Conception de produits digitaux centrée sur l'humain, typographie sur-mesure, design systems évolutifs et prototypes interactifs à fort impact.",
+        "tags": ["Design Systems", "Prototypes Figma", "Micro-Interactions", "Audit de Conversion"]
       },
       "ecommerce": {
         "title": "Solutions E-Commerce",
