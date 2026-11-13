@@ -119,11 +119,14 @@
     }
   },
   "projects": {
-    "badge": "SELECTED WORK",
-    "headline": "Digital experiences built to make a difference.",
-    "description": "A curated preview of bespoke platforms, web products, and modern interfaces we have engineered.",
+    "badge": "OUR WORK",
+    "headline": "We help businesses to make their product come to life, worldwide.",
+    "description": "Our experience has helped our clients launch new companies in the digital arena throughout the years. Take a look at some of our greatest work.",
+    "seeAll": "See all works",
     "viewProject": "View Case Study",
     "livePreview": "Live Site",
+    "slider1Title": "Web & E-Commerce Platforms",
+    "slider2Title": "SaaS & Mobile Applications",
     "items": {
       "project1": {
         "title": "Nexus Enterprise Cloud",

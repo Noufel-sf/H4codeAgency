@@ -4,6 +4,7 @@ import { Footer } from '@/components/layout/Footer';
 import { Hero } from '@/components/sections/Hero';
 import { Marquee } from '@/components/sections/Marquee';
 import { Services } from '@/components/sections/Services';
+import { Projects } from '@/components/sections/Projects';
 import { Process } from '@/components/sections/Process';
 import { CTA } from '@/components/sections/CTA';
 import { Contact } from '@/components/sections/Contact';
@@ -24,9 +25,11 @@ export default async function HomePage({ params }: PageProps) {
         <Hero />
         <Marquee />
         <Services />
-        <FAQ />
+        <Projects />
         <Process />
+        <FAQ />
         <CTA />
+        <Contact />
       </main>
       <Footer />
     </div>

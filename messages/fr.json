@@ -119,11 +119,14 @@
     }
   },
   "projects": {
-    "badge": "RÉALISATIONS SÉLECTIONNÉES",
-    "headline": "Des expériences numériques conçues pour marquer les esprits.",
-    "description": "Un aperçu soigné de plateformes sur mesure, d'applications web et d'écosystèmes digitaux que nous avons développés.",
+    "badge": "NOS RÉALISATIONS",
+    "headline": "Nous donnons vie aux produits digitaux des entreprises, partout dans le monde.",
+    "description": "Notre expertise a permis à nos clients de lancer des produits performants et scalables. Découvrez un aperçu de nos solutions d'élite.",
+    "seeAll": "Voir tous nos projets",
     "viewProject": "Voir l'Étude de Cas",
     "livePreview": "Site en Ligne",
+    "slider1Title": "Plateformes Web & E-Commerce",
+    "slider2Title": "Applications SaaS & Mobiles",
     "items": {
       "project1": {
         "title": "Nexus Enterprise Cloud",
