@@ -76,16 +76,16 @@ export async function generateMetadata({
       siteName: siteConfig.name,
       locale: locale === 'ar' ? 'ar_AR' : locale === 'fr' ? 'fr_FR' : 'en_US',
       type: 'website',
-      images: [
-        {
-          url: '/og-image.jpg',
-          secureUrl: '/og-image.jpg',
-          width: 1200,
-          height: 630,
-          type: 'image/jpeg',
-          alt: 'H4Code — Elite Digital Agency',
-        },
-      ],
+      // images: [
+      //   {
+      //     url: '/og-image.jpg',
+      //     secureUrl: '/og-image.jpg',
+      //     width: 1200,
+      //     height: 630,
+      //     type: 'image/jpeg',
+      //     alt: 'H4Code — Elite Digital Agency',
+      //   },
+      // ],
     },
     twitter: {
       card: 'summary_large_image',
