@@ -51,7 +51,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
         <span>{activeLang.short}</span>
         <ChevronDown
           className={cn(
-            'w-3 h-3 text-slate-500 dark:text-[#929BAA] transition-transform duration-200',
+            'w-3 h-3 text-slate-500 dark:text-zinc-400 transition-transform duration-200',
             isOpen && 'rotate-180'
           )}
         />
@@ -59,7 +59,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
 
       {isOpen && (
         <div
-          className="absolute end-0 mt-2 w-36 bg-white dark:bg-[#10141C] border border-slate-200 dark:border-white/10 shadow-2xl p-1 z-50 animate-in fade-in zoom-in-95 duration-150 backdrop-blur-xl"
+          className="absolute end-0 mt-2 w-36 bg-card border border-border shadow-2xl p-1 z-50 animate-in fade-in zoom-in-95 duration-150 backdrop-blur-xl"
           role="menu"
         >
           {languages.map((lang) => {
@@ -70,10 +70,10 @@ export function LanguageSwitcher({ className }: { className?: string }) {
                 onClick={() => handleSelect(lang.code)}
                 role="menuitem"
                 className={cn(
-                  'w-full flex items-center justify-between px-3 py-2 text-xs  font-medium transition-colors cursor-pointer',
+                  'w-full flex items-center justify-between px-3 py-2 text-xs font-medium transition-colors cursor-pointer',
                   isActive
-                    ? 'bg-blue-50 text-blue-600 dark:bg-[#315BDB]/20 dark:text-[#4776F5]'
-                    : 'text-slate-600 dark:text-[#929BAA] hover:text-slate-900 dark:hover:text-[#F5F7FC] hover:bg-slate-100 dark:hover:bg-white/[0.05]'
+                    ? 'bg-primary/15 text-primary font-bold'
+                    : 'text-muted-foreground hover:text-foreground hover:bg-surface'
                 )}
               >
                 <div className="flex items-center gap-2">

@@ -29,11 +29,11 @@ export default async function HomePage({ params }: PageProps) {
         aria-hidden="true"
       />
 
-      {/* PatternCraft Radial Gradient Background (Dark Mode equivalent) */}
+      {/* Radial Gradient Background (Dark Mode: Clean Deep Dark, Zero Blue Tint) */}
       <div
         className="fixed inset-0 z-0 pointer-events-none opacity-0 dark:opacity-100 transition-opacity duration-300"
         style={{
-          background: 'radial-gradient(125% 125% at 50% 90%, #060913 40%, #1e1b4b 100%)',
+          background: 'radial-gradient(125% 125% at 50% 90%, #0c0c0e 40%, #000000 100%)',
         }}
         aria-hidden="true"
       />

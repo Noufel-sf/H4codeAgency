@@ -703,7 +703,7 @@ export function Projects() {
           <AnimatedSection direction="up" delay={0.1}>
             <div className="group flex flex-col justify-between bg-card border border-border hover:border-primary/40 transition-all duration-300 shadow-sm">
               {/* Visual Card Area with Soft Pastel Canvas */}
-              <div className="relative w-full aspect-[4/3] bg-[#dce3f1] dark:bg-[#141b2b] p-4 sm:p-7 flex items-center justify-center overflow-hidden border-b border-border">
+              <div className="relative w-full aspect-[4/3] bg-[#dce3f1] dark:bg-[#141416] p-4 sm:p-7 flex items-center justify-center overflow-hidden border-b border-border">
                 {/* Slide Content with AnimatePresence */}
                 <AnimatePresence mode="wait">
                   <motion.div
