@@ -125,7 +125,7 @@ export function CTA() {
   const isRtl = locale === 'ar';
 
   return (
-    <section className="relative pt-24 sm:pt-32 pb-0 bg-transparent transition-colors duration-200 overflow-hidden">
+    <section  id='cta' className="relative pt-24 sm:pt-32 pb-0 bg-transparent transition-colors duration-200 overflow-hidden">
       <Container size="narrow">
         <AnimatedSection direction="up">
           <div className="text-center flex flex-col items-center justify-center max-w-3xl mx-auto">

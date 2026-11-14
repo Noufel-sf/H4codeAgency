@@ -62,7 +62,6 @@ export function Navbar() {
     { id: 'services', label: t('services') },
     { id: 'work', label: t('work') },
     { id: 'about', label: t('about') },
-    { id: 'contact', label: t('contact') }
   ];
 
   const languages = [
@@ -112,7 +111,7 @@ export function Navbar() {
           <div className="hidden lg:block w-[1px] h-4 bg-border" />
 
           {/* Desktop Nav Links with Active Smooth Sliding Highlight */}
-          <nav className="hidden lg:flex items-center gap-1 text-xs font-medium relative">
+          <nav className="hidden lg:flex items-center gap-1 text-xs font-medium relative z-10">
             {navItems.map((item) => {
               const isActive = activeSection === item.id;
               return (
@@ -124,13 +123,13 @@ export function Navbar() {
                     'relative px-3 py-1.5 text-xs font-semibold transition-colors duration-200 select-none cursor-pointer',
                     isActive
                       ? 'text-primary-foreground font-bold'
-                      : 'text-muted-foreground hover:text-foreground'
+                      : 'text-muted-foreground hover:text-foreground hover:bg-surface/60'
                   )}
                 >
                   {isActive && (
                     <motion.span
                       layoutId="navbarActiveHighlight"
-                      className="absolute inset-0 bg-primary -z-10 shadow-xs"
+                      className="absolute inset-0 bg-primary z-0 shadow-xs"
                       transition={{ type: 'spring', stiffness: 400, damping: 30 }}
                     />
                   )}

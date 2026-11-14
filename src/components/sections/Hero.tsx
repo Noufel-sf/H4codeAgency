@@ -164,7 +164,7 @@ export function Hero() {
           <div className="flex flex-wrap items-center justify-center gap-3.5 sm:gap-4 mt-8 sm:mt-10">
             {/* Primary Dark Button */}
             <a
-              href="#contact"
+              href="#cta"
               className="inline-flex items-center justify-center gap-2 px-7 py-3.5 text-sm font-bold bg-secondary hover:bg-secondary-hover text-secondary-foreground transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-0.5 cursor-pointer group border border-border"
             >
               <span>{t('ctaPrimary')}</span>
