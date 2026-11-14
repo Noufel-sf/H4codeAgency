@@ -75,7 +75,7 @@ function PixelMatrixWave() {
 const SOCIALS = [
   {
     name: 'Instagram',
-    href: 'https://instagram.com/h4code',
+    href: 'https://www.instagram.com/h4codeagency?xtok=MXE0aTFrdXFwcW5vMQ==',
     hoverColor: 'hover:text-[#E4405F] hover:border-[#E4405F]/50',
     icon: (
       <svg className="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
