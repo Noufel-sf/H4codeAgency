@@ -125,27 +125,30 @@ export function CTA() {
   const isRtl = locale === 'ar';
 
   return (
-    <section  id='cta' className="relative pt-24 sm:pt-32 pb-0 bg-transparent transition-colors duration-200 overflow-hidden">
+    <section id="cta" className="relative pt-20 sm:pt-32 pb-0 bg-transparent transition-colors duration-200 overflow-hidden">
       <Container size="narrow">
         <AnimatedSection direction="up">
-          <div className="text-center flex flex-col items-center justify-center max-w-3xl mx-auto">
+          <div className="text-center flex flex-col items-center justify-center max-w-3xl mx-auto w-full px-2 sm:px-0">
             
-            {/* ── Headline with Signature Cyan/Brand Marker Highlight ── */}
-            <h2 className="text-3xl sm:text-5xl md:text-6xl font-black text-foreground tracking-tight leading-[1.2] sm:leading-[1.18] max-w-3xl">
+            {/* ── Headline with Signature Responsive Marker Highlight ── */}
+            <h2 className="text-xl min-[380px]:text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-foreground tracking-tight leading-[1.3] sm:leading-[1.18] max-w-3xl mx-auto text-center break-words w-full px-2 sm:px-0">
               <span>{t('headlinePrefix')} </span>
-              <span className="relative inline-block whitespace-nowrap">
-                <span className="relative z-10">{t('headlineHighlight')}</span>
-                {/* Marker stroke that dynamically draws from start to end when reached */}
-                <motion.span
-                  initial={{ scaleX: 0 }}
-                  whileInView={{ scaleX: 1 }}
-                  viewport={{ once: false, amount: 0.1 }}
-                  transition={{ duration: 0.85, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-                  style={{ originX: isRtl ? 1 : 0, willChange: 'transform' }}
-                  className="absolute left-0 bottom-1.5 sm:bottom-2 w-full h-3.5 sm:h-5 bg-blue-500 -z-0 pointer-events-none"
-                  aria-hidden="true"
-                />
-              </span>
+              <motion.span
+                initial={{ backgroundSize: '0% 45%' }}
+                whileInView={{ backgroundSize: '100% 45%' }}
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{ duration: 0.85, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+                style={{
+                  backgroundImage: 'linear-gradient(to right, #06b6d4 , #5f71e3ff)',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: isRtl ? 'right 90%' : 'left 90%',
+                  WebkitBoxDecorationBreak: 'clone',
+                  boxDecorationBreak: 'clone',
+                }}
+                className="relative inline font-black pb-0.5 text-foreground"
+              >
+                {t('headlineHighlight')}
+              </motion.span>
             </h2>
 
             {/* ── Two Action Buttons ── */}
