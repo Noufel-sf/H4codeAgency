@@ -91,16 +91,21 @@ export function SectionHeading({
         {parsedHighlight && (
           <span
             className={cn(
-              'relative inline-block px-3 sm:px-4 py-0.5 sm:py-1 -rotate-1 font-black select-none mr-2 rtl:ml-2 border',
+              'relative inline-block px-2.5 sm:px-3.5 py-0.5 -rotate-1 font-black select-none mr-2 rtl:ml-2 whitespace-nowrap leading-tight overflow-hidden align-baseline border',
               darkTheme
-                ? 'border-white/20 bg-white/5 text-white'
-                : 'border-[#3461fd]/30 bg-[#3461fd]/10 text-[#3461fd]'
+                ? 'border-white/20 text-white'
+                : 'border-[#3461fd]/40 text-white'
             )}
           >
-            {/* Base text: guarantees the word is always fully rendered */}
-            <span>{parsedHighlight}</span>
+            {/* Background base wireframe tint */}
+            <span
+              className={cn(
+                'absolute inset-0 -z-20',
+                darkTheme ? 'bg-white/10' : 'bg-[#3461fd]/20'
+              )}
+            />
 
-            {/* Dynamic scroll-draw solid blue badge overlay */}
+            {/* Dynamic scroll-draw solid blue badge fill */}
             <motion.span
               initial={{ width: '0%' }}
               whileInView={{ width: '100%' }}
@@ -112,14 +117,15 @@ export function SectionHeading({
               }}
               style={{ willChange: 'width' }}
               className={cn(
-                'absolute inset-0 overflow-hidden whitespace-nowrap pointer-events-none bg-[#3461fd] text-white',
+                'absolute inset-0 bg-[#3461fd] -z-10',
                 isRtl ? 'right-0' : 'left-0'
               )}
-            >
-              <span className="inline-block px-3 sm:px-4 py-0.5 sm:py-1">
-                {parsedHighlight}
-              </span>
-            </motion.span>
+            />
+
+            {/* Clean, single text instance (never desyncs or creates extra height) */}
+            <span className="relative z-10 text-white drop-shadow-xs">
+              {parsedHighlight}
+            </span>
           </span>
         )}{' '}
         <span>{renderRestOfTitle()}</span>

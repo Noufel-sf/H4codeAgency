@@ -648,11 +648,11 @@ export function Projects() {
                 {t('badge')}
               </span>
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-black tracking-tight leading-[1.18] text-foreground max-w-xl">
-                <span className="relative inline-block px-3.5 sm:px-4 py-0.5 sm:py-1 -rotate-1 font-black select-none mr-2 rtl:ml-2 border border-[#3461fd]/30 bg-[#3461fd]/10 text-[#3461fd]">
-                  {/* Base text: guarantees the word is always fully rendered */}
-                  <span>{t('headlineHighlight')}</span>
+                <span className="relative inline-block px-2.5 sm:px-3.5 py-0.5 -rotate-1 font-black select-none mr-2 rtl:ml-2 whitespace-nowrap leading-tight overflow-hidden align-baseline border border-[#3461fd]/40 text-white">
+                  {/* Background base wireframe tint */}
+                  <span className="absolute inset-0 bg-[#3461fd]/20 -z-20" />
 
-                  {/* Dynamic scroll-draw solid blue badge overlay */}
+                  {/* Dynamic scroll-draw solid blue badge fill */}
                   <motion.span
                     initial={{ width: '0%' }}
                     whileInView={{ width: '100%' }}
@@ -664,14 +664,15 @@ export function Projects() {
                     }}
                     style={{ willChange: 'width' }}
                     className={cn(
-                      'absolute inset-0 overflow-hidden whitespace-nowrap pointer-events-none bg-[#3461fd] text-white',
+                      'absolute inset-0 bg-[#3461fd] -z-10',
                       isRtl ? 'right-0' : 'left-0'
                     )}
-                  >
-                    <span className="inline-block px-3.5 sm:px-4 py-0.5 sm:py-1">
-                      {t('headlineHighlight')}
-                    </span>
-                  </motion.span>
+                  />
+
+                  {/* Clean text */}
+                  <span className="relative z-10 text-white drop-shadow-xs">
+                    {t('headlineHighlight')}
+                  </span>
                 </span>{' '}
                 <span>{t('headlineRest')}</span>
               </h2>
