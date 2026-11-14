@@ -4,6 +4,7 @@ import React from 'react';
 import { useTranslations } from 'next-intl';
 import { Container } from '../ui/Container';
 import { AnimatedSection } from '../ui/AnimatedSection';
+import { SectionHeading } from '../ui/SectionHeading';
 
 /* ── 1. Website Development Wireframe Mockup (Sharp / Zero Radius) ────── */
 function WebDevWireframe() {
@@ -282,14 +283,13 @@ export function Services() {
       <Container>
         {/* Section Header (Centered) */}
         <AnimatedSection direction="up">
-          <div className="text-center max-w-3xl mx-auto mb-20 sm:mb-28">
-            <span className="text-xs sm:text-sm font-semibold tracking-widest uppercase text-neutral-400 mb-4 block font-mono">
-              {t('badge')}
-            </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-black tracking-tight leading-[1.12] text-white">
-              {t('headline')}
-            </h2>
-          </div>
+          <SectionHeading
+            badge={t('badge')}
+            title={t('headline')}
+            description={t('description')}
+            align="center"
+            darkTheme={true}
+          />
         </AnimatedSection>
 
         {/* Alternating Services Rows Stack (Zero Radius / Sharp) */}

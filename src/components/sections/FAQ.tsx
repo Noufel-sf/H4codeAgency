@@ -1,13 +1,16 @@
 'use client';
 
 import React, { useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
+import { motion } from 'framer-motion';
 import { Container } from '../ui/Container';
 import { AnimatedSection } from '../ui/AnimatedSection';
 import { cn } from '@/lib/utils';
 
 export function FAQ() {
   const t = useTranslations('faq');
+  const locale = useLocale();
+  const isRtl = locale === 'ar';
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggle = (idx: number) => {
@@ -34,7 +37,32 @@ export function FAQ() {
 
               {/* Main Headline */}
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground tracking-tight leading-[1.18] mb-4">
-                {t('headline')}
+                <span className="relative inline-block px-3.5 sm:px-4 py-0.5 sm:py-1 -rotate-1 font-black select-none mr-2 rtl:ml-2 border border-[#3461fd]/30 bg-[#3461fd]/10 text-[#3461fd]">
+                  {/* Base text: guarantees the word is always fully rendered */}
+                  <span>{t('headlineHighlight')}</span>
+
+                  {/* Dynamic scroll-draw solid blue badge overlay */}
+                  <motion.span
+                    initial={{ width: '0%' }}
+                    whileInView={{ width: '100%' }}
+                    viewport={{ once: false, amount: 0.1 }}
+                    transition={{
+                      duration: 0.7,
+                      delay: 0.1,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
+                    style={{ willChange: 'width' }}
+                    className={cn(
+                      'absolute inset-0 overflow-hidden whitespace-nowrap pointer-events-none bg-[#3461fd] text-white',
+                      isRtl ? 'right-0' : 'left-0'
+                    )}
+                  >
+                    <span className="inline-block px-3.5 sm:px-4 py-0.5 sm:py-1">
+                      {t('headlineHighlight')}
+                    </span>
+                  </motion.span>
+                </span>{' '}
+                <span>{t('headlineRest')}</span>
               </h2>
 
               {/* Subtitle / Question Inquiry */}

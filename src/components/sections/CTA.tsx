@@ -4,6 +4,7 @@ import React from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Container } from '../ui/Container';
 import { AnimatedSection } from '../ui/AnimatedSection';
+import { motion } from 'framer-motion';
 
 /* ── Digital Matrix Pixel Wave Graphic (matching reference image) ───── */
 function PixelMatrixWave() {
@@ -134,8 +135,13 @@ export function CTA() {
               <span>{t('headlinePrefix')} </span>
               <span className="relative inline-block whitespace-nowrap">
                 <span className="relative z-10">{t('headlineHighlight')}</span>
-                {/* Marker stroke matching reference image */}
-                <span
+                {/* Marker stroke that dynamically draws from start to end when reached */}
+                <motion.span
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  viewport={{ once: false, amount: 0.1 }}
+                  transition={{ duration: 0.85, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+                  style={{ originX: isRtl ? 1 : 0, willChange: 'transform' }}
                   className="absolute left-0 bottom-1.5 sm:bottom-2 w-full h-3.5 sm:h-5 bg-yellow-400 -z-0 pointer-events-none"
                   aria-hidden="true"
                 />

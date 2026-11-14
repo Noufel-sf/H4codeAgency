@@ -6,6 +6,7 @@ import { Container } from '../ui/Container';
 import { AnimatedSection } from '../ui/AnimatedSection';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { cn } from '@/lib/utils';
 
 /* ── 1. Reusable Multiplayer Cursor ───────────────────────────────────── */
 function MultiplayerCursor({
@@ -646,8 +647,33 @@ export function Projects() {
               <span className="text-xs sm:text-sm font-semibold tracking-widest uppercase text-primary mb-4 block font-mono">
                 {t('badge')}
               </span>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-black tracking-tight leading-[1.14] text-foreground max-w-xl">
-                {t('headline')}
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-black tracking-tight leading-[1.18] text-foreground max-w-xl">
+                <span className="relative inline-block px-3.5 sm:px-4 py-0.5 sm:py-1 -rotate-1 font-black select-none mr-2 rtl:ml-2 border border-[#3461fd]/30 bg-[#3461fd]/10 text-[#3461fd]">
+                  {/* Base text: guarantees the word is always fully rendered */}
+                  <span>{t('headlineHighlight')}</span>
+
+                  {/* Dynamic scroll-draw solid blue badge overlay */}
+                  <motion.span
+                    initial={{ width: '0%' }}
+                    whileInView={{ width: '100%' }}
+                    viewport={{ once: false, amount: 0.1 }}
+                    transition={{
+                      duration: 0.7,
+                      delay: 0.1,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
+                    style={{ willChange: 'width' }}
+                    className={cn(
+                      'absolute inset-0 overflow-hidden whitespace-nowrap pointer-events-none bg-[#3461fd] text-white',
+                      isRtl ? 'right-0' : 'left-0'
+                    )}
+                  >
+                    <span className="inline-block px-3.5 sm:px-4 py-0.5 sm:py-1">
+                      {t('headlineHighlight')}
+                    </span>
+                  </motion.span>
+                </span>{' '}
+                <span>{t('headlineRest')}</span>
               </h2>
             </div>
 

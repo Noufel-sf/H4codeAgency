@@ -95,7 +95,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[85vh] flex items-center justify-center pt-32 sm:pt-36 pb-20 sm:pb-24 overflow-hidden bg-transparent text-foreground transition-colors duration-200"
+      className="relative min-h-[85vh] flex items-center justify-center pt-32 sm:pt-36 pb-20 sm:pb-12 overflow-hidden bg-transparent text-foreground transition-colors duration-200"
     >
       <Container className="relative z-10 max-w-5xl mx-auto text-center px-4">
         {/* Top Status & Action Pill Bar */}

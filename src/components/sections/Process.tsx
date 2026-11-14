@@ -4,6 +4,7 @@ import React from 'react';
 import { useTranslations } from 'next-intl';
 import { Container } from '../ui/Container';
 import { AnimatedSection } from '../ui/AnimatedSection';
+import { SectionHeading } from '../ui/SectionHeading';
 
 export function Process() {
   const t = useTranslations('process');
@@ -111,17 +112,14 @@ export function Process() {
       className="relative py-24 sm:py-32 bg-transparent border-t border-border transition-colors duration-200 overflow-hidden"
     >
       <Container>
-        {/* Centered Pill Badge & Headline matching user reference */}
+        {/* Centered Section Heading matching user reference */}
         <AnimatedSection direction="up">
-          <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16 sm:mb-20">
-            <span className="inline-flex items-center px-4 py-1.5 text-xs sm:text-sm font-medium border border-border bg-card text-muted-foreground shadow-sm mb-5">
-              {t('badge')}
-            </span>
-
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground tracking-tight leading-tight">
-              {t('headline')}
-            </h2>
-          </div>
+          <SectionHeading
+            badge={t('badge')}
+            title={t('headline')}
+            description={t('description')}
+            align="center"
+          />
         </AnimatedSection>
 
         {/* Compact Playing-Card Grid with Curved Hand-Drawn Connectors */}

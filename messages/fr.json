@@ -51,8 +51,8 @@
   },
   "services": {
     "badge": "NOS SERVICES",
-    "headline": "Nous donnons vie aux produits digitaux des entreprises, partout dans le monde.",
-    "description": "De la conception stratégique au déploiement en production, nos services d'ingénierie et de design s'adaptent avec précision à vos ambitions.",
+    "headline": "[Ingénierie d'Élite] Pour Marques Visionnaires",
+    "description": "Des wireframes stratégiques au déploiement en production, nos services d'ingénierie et de design propulsent vos ambitions digitales.",
     "learnMore": "En savoir plus",
     "items": {
       "webDev": {
@@ -104,7 +104,7 @@
   },
   "about": {
     "badge": "POURQUOI NOUS CHOISIR",
-    "headline": "La technologie n'est pas une fin en soi. Résoudre vos défis l'est.",
+    "headline": "[Technologie Ciblée] Qui Résout Vos Vrais Défis",
     "paragraph1": "Nous sommes un studio resserré d'ingénieurs seniors et de designers de produits alliant rigueur technique et créativité visuelle pour concevoir des logiciels à fort impact.",
     "paragraph2": "Nous refusons les modèles préfabriqués génériques. Nous collaborons étroitement avec les fondateurs et décideurs pour bâtir des solutions sur mesure qui évoluent sans dette technique.",
     "differentiators": {
@@ -128,7 +128,9 @@
   },
   "projects": {
     "badge": "SOLUTIONS & ARCHITECTURE",
-    "headline": "Du Wireframe Stratégique aux Produits Digitaux Performants.",
+    "headlineHighlight": "Solutions &",
+    "headlineRest": "Architecture Digitale",
+    "headline": "[Solutions &] Architecture Digitale",
     "description": "Nous concevons des plateformes web sur mesure, des applications mobiles fluides et des architectures cloud optimisées pour la croissance de votre entreprise.",
     "seeAll": "Discuter de votre projet",
     "viewProject": "Explorer l'Architecture",
@@ -191,9 +193,9 @@
     }
   },
   "process": {
-    "badge": "Comment ça marche",
-    "headline": "Voici à quoi ressemble notre collaboration",
-    "description": "Un processus transparent en 3 étapes clés, de l'idée initiale jusqu'à la mise en ligne et le suivi continu.",
+    "badge": "MÉTHODOLOGIE",
+    "headline": "[Accélérez] Votre Cycle de Développement",
+    "description": "Un processus transparent en 3 étapes clés, du wireframing initial jusqu'à la mise en ligne et le suivi continu.",
     "steps": {
       "step1": {
         "number": "01",
@@ -214,7 +216,7 @@
   },
   "technologies": {
     "badge": "NOTRE BOÎTE À OUTILS",
-    "headline": "Conçu avec les technologies les plus modernes.",
+    "headline": "[Technologies Modernes] Conçues Pour la Vitesse & l'Échelle",
     "description": "Nous sélectionnons des technologies modernes et éprouvées qui allient performance, robustesse et vélocité de développement.",
     "categories": {
       "frontend": "Frontend & Expérience",
@@ -224,7 +226,7 @@
   },
   "testimonials": {
     "badge": "TÉMOIGNAGES CLIENTS",
-    "headline": "Le travail d'excellence se reflète dans les résultats de ceux qui l'utilisent.",
+    "headline": "[Confiance Partagée] Validée Par Des Fondateurs Visionnaires",
     "description": "Ce que les fondateurs et directeurs techniques partagent après avoir collaboré avec notre équipe d'ingénierie.",
     "items": {
       "item1": {
@@ -249,7 +251,9 @@
   },
   "faq": {
     "badge": "FAQ",
-    "headline": "Questions fréquemment posées par nos clients.",
+    "headlineHighlight": "Des Questions ?",
+    "headlineRest": "Nous Avons les Réponses.",
+    "headline": "[Des Questions ?] Nous Avons les Réponses.",
     "description": "Une question spécifique ? Écrivez-nous directement sur WhatsApp.",
     "whatsappBtn": "Discutez sur WhatsApp",
     "items": {
@@ -293,7 +297,7 @@
   },
   "contact": {
     "badge": "ENGAGEONS LA CONVERSATION",
-    "headline": "Vous avez un projet en tête ? Créons quelque chose d'exceptionnel ensemble.",
+    "headline": "[Construisons] Quelque Chose d'Exceptionnel Ensemble",
     "description": "Partagez vos ambitions, vos objectifs et votre calendrier. Notre équipe technique analysera votre demande et reviendra vers vous sous 24 heures.",
     "form": {
       "nameLabel": "Nom Complet",

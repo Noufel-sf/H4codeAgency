@@ -51,8 +51,8 @@
   },
   "services": {
     "badge": "OUR SERVICE",
-    "headline": "We help businesses to make their product come to life, worldwide.",
-    "description": "From concept through production deployment, our engineering & design services are engineered to scale seamlessly with your vision.",
+    "headline": "[Elite Engineering] For Visionary Brands",
+    "description": "From architecture wireframes to production deployment, our engineering & design services are crafted to scale seamlessly with your vision.",
     "learnMore": "Learn more",
     "items": {
       "webDev": {
@@ -104,7 +104,7 @@
   },
   "about": {
     "badge": "WHY WORK WITH US",
-    "headline": "Technology is not the goal. Solving your problems is.",
+    "headline": "[Purpose-Driven] Technology That Solves Real Problems",
     "paragraph1": "We are a tight-knit collective of senior software engineers and product designers who bridge the gap between creative artistry and robust computational systems.",
     "paragraph2": "Instead of churning out generic page templates, we collaborate closely with founders and executive teams to engineer purposeful software that scales without technical debt.",
     "differentiators": {
@@ -128,7 +128,9 @@
   },
   "projects": {
     "badge": "SOLUTIONS & ARCHITECTURE",
-    "headline": "From Strategic Wireframes To Scalable Digital Products.",
+    "headlineHighlight": "Solutions &",
+    "headlineRest": "Digital Architecture",
+    "headline": "[Solutions &] Digital Architecture",
     "description": "We architect high-conversion web platforms, mobile applications, and intelligent cloud systems tailored to solve complex business goals.",
     "seeAll": "Discuss Your Project",
     "viewProject": "Explore Architecture",
@@ -191,9 +193,9 @@
     }
   },
   "process": {
-    "badge": "How it works",
-    "headline": "Here's what working together looks like",
-    "description": "A clear, transparent 3-step collaboration flow from your initial concept to delivery and beyond.",
+    "badge": "HOW IT WORKS",
+    "headline": "[Supercharge] Your Development Flow",
+    "description": "A clear, transparent 3-step collaboration flow from strategic wireframing to production deployment.",
     "steps": {
       "step1": {
         "number": "01",
@@ -214,7 +216,7 @@
   },
   "technologies": {
     "badge": "OUR TOOLKIT",
-    "headline": "Built with modern technologies.",
+    "headline": "[Modern Toolkit] Engineered For Extreme Performance",
     "description": "We handpick modern, battle-tested tools that guarantee high performance, security, and developer agility.",
     "categories": {
       "frontend": "Frontend & Creative",
@@ -224,7 +226,7 @@
   },
   "testimonials": {
     "badge": "CLIENT FEEDBACK",
-    "headline": "Good work speaks through the people who experience it.",
+    "headline": "[Client Trust] Verified By Visionary Founders",
     "description": "Here is what ambitious founders and technical leaders say about collaborating with our engineering team.",
     "items": {
       "item1": {
@@ -249,8 +251,10 @@
   },
   "faq": {
     "badge": "FAQ",
-    "headline": "Questions commonly asked by our partners.",
-    "description": "Have another question? Ask us directly on WhatsApp.",
+    "headlineHighlight": "Got Questions?",
+    "headlineRest": "We Have Answers.",
+    "headline": "[Got Questions?] We Have Answers.",
+    "description": "Everything you need to know about partnering with us. Have another question? Ask us directly on WhatsApp.",
     "whatsappBtn": "Ask us on WhatsApp",
     "items": {
       "q1": {
@@ -293,7 +297,7 @@
   },
   "contact": {
     "badge": "START A CONVERSATION",
-    "headline": "Have an idea? Let's build something great together.",
+    "headline": "[Let's Build] Something Exceptional Together",
     "description": "Tell us about your project vision, timeline, and goals. We will analyze your requirements and get back to you with actionable insights within 24 hours.",
     "form": {
       "nameLabel": "Full Name",
