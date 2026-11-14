@@ -6,6 +6,7 @@ import { Marquee } from '@/components/sections/Marquee';
 import { Services } from '@/components/sections/Services';
 import { Projects } from '@/components/sections/Projects';
 import { Process } from '@/components/sections/Process';
+import { About } from '@/components/sections/About';
 import { CTA } from '@/components/sections/CTA';
 import { Contact } from '@/components/sections/Contact';
 import { FAQ } from '@/components/sections/FAQ';
@@ -47,6 +48,7 @@ export default async function HomePage({ params }: PageProps) {
           <Services />
           <Projects />
           <Process />
+          <About />
           <FAQ />
           <CTA />
         </main>
