@@ -22,7 +22,7 @@ export function FAQ() {
       className="relative py-24 sm:py-32 bg-transparent text-foreground border-t border-border transition-colors duration-200 overflow-hidden"
     >
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 ">
           
           {/* ── Left / Heading Column (Sticky on Desktop) ── */}
           <div className="lg:col-span-5 lg:sticky lg:top-28">

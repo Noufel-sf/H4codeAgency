@@ -127,14 +127,42 @@
     }
   },
   "projects": {
-    "badge": "OUR WORK",
-    "headline": "We help businesses to make their product come to life, worldwide.",
-    "description": "Our experience has helped our clients launch new companies in the digital arena throughout the years. Take a look at some of our greatest work.",
-    "seeAll": "See all works",
-    "viewProject": "View Case Study",
-    "livePreview": "Live Site",
+    "badge": "SOLUTIONS & ARCHITECTURE",
+    "headline": "From Strategic Wireframes To Scalable Digital Products.",
+    "description": "We architect high-conversion web platforms, mobile applications, and intelligent cloud systems tailored to solve complex business goals.",
+    "seeAll": "Discuss Your Project",
+    "viewProject": "Explore Architecture",
+    "livePreview": "Preview Canvas",
     "slider1Title": "Web & E-Commerce Platforms",
     "slider2Title": "SaaS & Mobile Applications",
+    "slider1": {
+      "slide1": {
+        "title": "E-Commerce & Digital Storefronts",
+        "category": "High-Conversion Architecture • Next.js & Stripe"
+      },
+      "slide2": {
+        "title": "Enterprise Web Applications",
+        "category": "Scalable Full-Stack Web Architecture • React 19"
+      },
+      "slide3": {
+        "title": "Design Systems & Component Kits",
+        "category": "Modular UI Architecture & Interactive Prototypes"
+      }
+    },
+    "slider2": {
+      "slide1": {
+        "title": "Cross-Platform Mobile Applications",
+        "category": "iOS & Android • Fluid Native UX"
+      },
+      "slide2": {
+        "title": "AI & Automated Workflow Engines",
+        "category": "Intelligent Agent Pipelines & Custom APIs"
+      },
+      "slide3": {
+        "title": "Bespoke SaaS & Management Portals",
+        "category": "Tailored Systems & Cloud Architecture"
+      }
+    },
     "items": {
       "project1": {
         "title": "Nexus Enterprise Cloud",

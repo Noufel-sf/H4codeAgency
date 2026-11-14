@@ -127,14 +127,42 @@
     }
   },
   "projects": {
-    "badge": "NOS RÉALISATIONS",
-    "headline": "Nous donnons vie aux produits digitaux des entreprises, partout dans le monde.",
-    "description": "Notre expertise a permis à nos clients de lancer des produits performants et scalables. Découvrez un aperçu de nos solutions d'élite.",
-    "seeAll": "Voir tous nos projets",
-    "viewProject": "Voir l'Étude de Cas",
-    "livePreview": "Site en Ligne",
+    "badge": "SOLUTIONS & ARCHITECTURE",
+    "headline": "Du Wireframe Stratégique aux Produits Digitaux Performants.",
+    "description": "Nous concevons des plateformes web sur mesure, des applications mobiles fluides et des architectures cloud optimisées pour la croissance de votre entreprise.",
+    "seeAll": "Discuter de votre projet",
+    "viewProject": "Explorer l'Architecture",
+    "livePreview": "Aperçu du Canvas",
     "slider1Title": "Plateformes Web & E-Commerce",
     "slider2Title": "Applications SaaS & Mobiles",
+    "slider1": {
+      "slide1": {
+        "title": "Plateformes E-Commerce & Storefronts",
+        "category": "Architecture Haute Conversion • Next.js & Stripe"
+      },
+      "slide2": {
+        "title": "Applications Web & Tableaux de Bord SaaS",
+        "category": "Développement Full-Stack Scalable • React 19"
+      },
+      "slide3": {
+        "title": "Design Systems & Librairies Modulaires",
+        "category": "Architecture UI Réutilisable & Prototypes Rapides"
+      }
+    },
+    "slider2": {
+      "slide1": {
+        "title": "Applications Mobiles Multiplateformes",
+        "category": "iOS & Android • Expérience Native 120Hz"
+      },
+      "slide2": {
+        "title": "IA & Automatisation de Processus",
+        "category": "Pipelines d'Agents Intelligents & APIs Métier"
+      },
+      "slide3": {
+        "title": "Portails SaaS & Logiciels Sur Mesure",
+        "category": "Systèmes Dédiés & Infrastructure Cloud"
+      }
+    },
     "items": {
       "project1": {
         "title": "Nexus Enterprise Cloud",
