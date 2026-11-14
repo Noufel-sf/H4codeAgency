@@ -37,11 +37,11 @@ export function FAQ() {
 
               {/* Main Headline */}
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground tracking-tight leading-[1.18] mb-4">
-                <span className="relative inline-block px-2.5 sm:px-3.5 py-0.5 -rotate-1 font-black select-none mr-2 rtl:ml-2 whitespace-nowrap leading-tight overflow-hidden align-baseline border border-[#3461fd]/40 text-white">
+                <span className="relative inline-block px-2.5 sm:px-3.5 py-0.5 -rotate-1 font-black select-none mr-2 rtl:ml-2 whitespace-nowrap leading-tight overflow-hidden align-baseline border border-primary/40 text-primary-foreground">
                   {/* Background base wireframe tint */}
-                  <span className="absolute inset-0 bg-[#3461fd]/20 -z-20" />
+                  <span className="absolute inset-0 bg-primary/20 -z-20" />
 
-                  {/* Dynamic scroll-draw solid blue badge fill */}
+                  {/* Dynamic scroll-draw solid primary badge fill */}
                   <motion.span
                     initial={{ width: '0%' }}
                     whileInView={{ width: '100%' }}
@@ -53,13 +53,13 @@ export function FAQ() {
                     }}
                     style={{ willChange: 'width' }}
                     className={cn(
-                      'absolute inset-0 bg-[#3461fd] -z-10',
+                      'absolute inset-0 bg-primary -z-10',
                       isRtl ? 'right-0' : 'left-0'
                     )}
                   />
 
                   {/* Clean text */}
-                  <span className="relative z-10 text-white drop-shadow-xs">
+                  <span className="relative z-10 text-primary-foreground drop-shadow-xs">
                     {t('headlineHighlight')}
                   </span>
                 </span>{' '}

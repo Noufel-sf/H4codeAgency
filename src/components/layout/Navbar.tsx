@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { useTranslations, useLocale } from 'next-intl';
 import { usePathname, useRouter } from '@/i18n/routing';
 import { Menu } from 'lucide-react';
@@ -21,15 +22,29 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'services', 'work', 'about', 'contact'];
-      const scrollPosition = window.scrollY + 200;
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const fullHeight = document.documentElement.scrollHeight;
 
+      // If near the top
+      if (scrollY < 120) {
+        setActiveSection('home');
+        return;
+      }
+
+      // If near the bottom
+      if (scrollY + windowHeight >= fullHeight - 80) {
+        setActiveSection('contact');
+        return;
+      }
+
+      // Check section bounding boxes
+      const sections = ['contact', 'about', 'work', 'services', 'home'];
       for (const section of sections) {
         const el = document.getElementById(section);
         if (el) {
-          const top = el.offsetTop;
-          const height = el.offsetHeight;
-          if (scrollPosition >= top && scrollPosition < top + height) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= windowHeight * 0.45 && rect.bottom >= 100) {
             setActiveSection(section);
             break;
           }
@@ -38,6 +53,7 @@ export function Navbar() {
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -95,22 +111,30 @@ export function Navbar() {
           {/* Desktop Links Divider */}
           <div className="hidden lg:block w-[1px] h-4 bg-border" />
 
-          {/* Desktop Nav Links */}
-          <nav className="hidden lg:flex items-center gap-5 text-xs font-medium">
+          {/* Desktop Nav Links with Active Smooth Sliding Highlight */}
+          <nav className="hidden lg:flex items-center gap-1 text-xs font-medium relative">
             {navItems.map((item) => {
               const isActive = activeSection === item.id;
               return (
                 <a
                   key={item.id}
                   href={`#${item.id}`}
+                  onClick={() => setActiveSection(item.id)}
                   className={cn(
-                    'transition-colors duration-200',
+                    'relative px-3 py-1.5 text-xs font-semibold transition-colors duration-200 select-none cursor-pointer',
                     isActive
-                      ? 'text-primary font-bold'
+                      ? 'text-primary-foreground font-bold'
                       : 'text-muted-foreground hover:text-foreground'
                   )}
                 >
-                  {item.label}
+                  {isActive && (
+                    <motion.span
+                      layoutId="navbarActiveHighlight"
+                      className="absolute inset-0 bg-primary -z-10 shadow-xs"
+                      transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+                    />
+                  )}
+                  <span className="relative z-10">{item.label}</span>
                 </a>
               );
             })}
@@ -164,6 +188,7 @@ export function Navbar() {
         isOpen={mobileMenuOpen}
         onClose={() => setMobileMenuOpen(false)}
         isRtl={isRtl}
+        activeSection={activeSection}
       />
     </>
   );

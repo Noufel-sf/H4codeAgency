@@ -7,7 +7,7 @@
   /* Core Design Tokens */
   --paper: #f2f2f0;
   --paper-warm: #ededeb;
-  --blue-500: #4058a8;
+  --blue-500: #274dd9;
   --blue-600: #384d94;
   --navy-900: #0a1e5c;
   --navy-950: #061436;
@@ -96,7 +96,7 @@
   --muted: #0c1426;
   --muted-foreground: #9fb2ff;
 
-  --primary: #4f6cc4;
+  --primary: #3461fd;
   --primary-hover: #617ed6;
   --primary-foreground: #ffffff;
   --primary-light: rgba(64, 88, 168, 0.25);

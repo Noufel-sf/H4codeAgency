@@ -12,9 +12,10 @@ interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
   isRtl: boolean;
+  activeSection?: string;
 }
 
-export function MobileMenu({ isOpen, onClose, isRtl }: MobileMenuProps) {
+export function MobileMenu({ isOpen, onClose, isRtl, activeSection = 'home' }: MobileMenuProps) {
   const t = useTranslations('navigation');
 
   if (!isOpen) return null;
@@ -71,17 +72,24 @@ export function MobileMenu({ isOpen, onClose, isRtl }: MobileMenuProps) {
           </div>
 
           <nav className="mt-8 flex flex-col space-y-2">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={onClose}
-                className="flex items-center justify-between px-4 py-3 text-base font-medium text-muted-foreground hover:text-foreground hover:bg-surface transition-colors"
-              >
-                <span>{link.label}</span>
-                <ArrowIcon className="w-4 h-4 text-muted-foreground/40" />
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = activeSection === link.href.replace('#', '');
+              return (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={onClose}
+                  className={`flex items-center justify-between px-4 py-3 text-base font-medium transition-colors ${
+                    isActive
+                      ? 'bg-primary text-primary-foreground font-bold shadow-xs'
+                      : 'text-muted-foreground hover:text-foreground hover:bg-surface'
+                  }`}
+                >
+                  <span>{link.label}</span>
+                  <ArrowIcon className={`w-4 h-4 ${isActive ? 'text-primary-foreground' : 'text-muted-foreground/40'}`} />
+                </a>
+              );
+            })}
           </nav>
         </div>
 
