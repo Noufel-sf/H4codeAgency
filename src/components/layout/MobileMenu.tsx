@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { X, ArrowRight, ArrowLeft } from 'lucide-react';
 import { LanguageSwitcher } from './LanguageSwitcher';
@@ -42,11 +43,23 @@ export function MobileMenu({ isOpen, onClose, isRtl }: MobileMenuProps) {
       <div className="fixed inset-y-0 end-0 w-full max-w-xs bg-card border-s border-border shadow-2xl p-6 flex flex-col justify-between animate-in slide-in-from-right duration-300">
         <div>
           <div className="flex items-center justify-between pb-6 border-b border-border">
-            <div className="flex items-center gap-2">
-              <span className="w-2.5 h-2.5 bg-primary" />
-              <span className="font-bold text-lg tracking-wider text-foreground">
-                H4<span className="text-primary">CODE</span>
-              </span>
+            <div className="flex items-center">
+              {/* White mode (light theme) logo */}
+              <Image
+                src="/logowhitemode.png"
+                alt="H4Code"
+                width={120}
+                height={34}
+                className="h-7 w-auto object-contain dark:hidden"
+              />
+              {/* Dark mode logo */}
+              <Image
+                src="/logodarkmode.png"
+                alt="H4Code"
+                width={120}
+                height={34}
+                className="h-7 w-auto object-contain hidden dark:block"
+              />
             </div>
             <button
               onClick={onClose}

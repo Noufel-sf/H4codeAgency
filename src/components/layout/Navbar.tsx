@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 import { usePathname, useRouter } from '@/i18n/routing';
 import { Menu } from 'lucide-react';
@@ -65,13 +66,30 @@ export function Navbar() {
       <header className="fixed top-4 sm:top-6 inset-x-0 z-50 flex justify-center px-4 pointer-events-none">
         <div className="pointer-events-auto flex items-center justify-between sm:justify-center gap-2 sm:gap-6 px-4 sm:px-6 py-2 sm:py-2.5 glass-panel transition-all duration-300">
           
-          {/* Brand Logo */}
+          {/* Brand Logo with White/Dark Mode support */}
           <a
             href="#home"
-            className="flex items-center gap-2 font-bold text-sm sm:text-base tracking-tight text-foreground hover:opacity-85 transition-opacity"
+            className="flex items-center hover:opacity-85 transition-opacity"
             aria-label="H4Code"
           >
-            <span className="font-extrabold text-base sm:text-lg">H4Code</span>
+            {/* White mode (light theme) logo */}
+            <Image
+              src="/logowhitemode.png"
+              alt="H4Code"
+              width={130}
+              height={38}
+              className="h-7 sm:h-8 w-auto object-contain dark:hidden"
+              priority
+            />
+            {/* Dark mode logo */}
+            <Image
+              src="/logodarkmode.png"
+              alt="H4Code"
+              width={130}
+              height={38}
+              className="h-7 sm:h-8 w-auto object-contain hidden dark:block"
+              priority
+            />
           </a>
 
           {/* Desktop Links Divider */}

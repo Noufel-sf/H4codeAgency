@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 import { Container } from '../ui/Container';
 import { ArrowUp, MessageCircle, Mail } from 'lucide-react';
@@ -63,13 +64,23 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12 mb-14">
           {/* Brand info */}
           <div className="lg:col-span-2 space-y-4">
-            <a href="#home" className="inline-flex items-center gap-2.5">
-              <div className="flex items-center justify-center w-8 h-8 bg-primary text-primary-foreground shadow-sm">
-                <span className="font-black text-xs text-white">H4</span>
-              </div>
-              <span className="font-extrabold text-xl tracking-wider text-foreground">
-                H4<span className="text-primary">CODE</span>
-              </span>
+            <a href="#home" className="inline-flex items-center hover:opacity-85 transition-opacity">
+              {/* White mode (light theme) logo */}
+              <Image
+                src="/logowhitemode.png"
+                alt="H4Code"
+                width={150}
+                height={42}
+                className="h-8 sm:h-9 w-auto object-contain dark:hidden"
+              />
+              {/* Dark mode logo */}
+              <Image
+                src="/logodarkmode.png"
+                alt="H4Code"
+                width={150}
+                height={42}
+                className="h-8 sm:h-9 w-auto object-contain hidden dark:block"
+              />
             </a>
 
             <p className="text-sm text-muted-foreground max-w-sm leading-relaxed">

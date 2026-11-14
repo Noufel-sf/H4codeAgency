@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 import { Container } from '../ui/Container';
 import { AnimatedSection } from '../ui/AnimatedSection';
@@ -19,12 +20,17 @@ function WhatsAppIcon({ className = 'w-4 h-4' }: { className?: string }) {
 function BrandBadge() {
   return (
     <span
-      className="inline-flex items-center justify-center align-middle mx-1.5 sm:mx-2 md:mx-3 w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-slate-900 via-zinc-900 to-black text-white border-2 border-foreground/15 shadow-md select-none group hover:scale-105 transition-transform"
+      className="inline-flex items-center justify-center align-middle mx-1.5 sm:mx-2 md:mx-3 w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-surface border-2 border-border shadow-md select-none group hover:scale-105 transition-transform overflow-hidden"
       title="H4Code"
     >
-      <span className="font-black tracking-tight text-xs sm:text-base md:text-lg bg-gradient-to-tr from-primary via-blue-400 to-white bg-clip-text text-transparent">
-        H4
-      </span>
+      <Image
+        src="/logosmall.png"
+        alt="H4Code"
+        width={64}
+        height={44}
+        className="w-full h-full object-contain p-1 group-hover:scale-110 transition-transform"
+        priority
+      />
     </span>
   );
 }
