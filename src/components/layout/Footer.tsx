@@ -52,7 +52,6 @@ export function Footer() {
     { label: tServices('webApps.title'), href: '#services' },
     { label: tServices('uiux.title'), href: '#services' },
     { label: tServices('mobile.title'), href: '#services' },
-    { label: tServices('aiAutomation.title'), href: '#services' }
   ];
 
   return (
@@ -70,8 +69,8 @@ export function Footer() {
                 src="/logowhitemode.png"
                 alt="H4Code"
                 width={150}
-                height={42}
-                className="h-8 sm:h-9 w-auto object-contain dark:hidden"
+                height={160}
+                className=" object-contain dark:hidden"
               />
               {/* Dark mode logo */}
               <Image

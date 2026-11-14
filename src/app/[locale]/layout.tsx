@@ -75,12 +75,31 @@ export async function generateMetadata({
       url: `/${locale}`,
       siteName: siteConfig.name,
       locale: locale === 'ar' ? 'ar_AR' : locale === 'fr' ? 'fr_FR' : 'en_US',
-      type: 'website'
+      type: 'website',
+      images: [
+        {
+          url: '/og-image.jpg',
+          secureUrl: '/og-image.jpg',
+          width: 1200,
+          height: 630,
+          type: 'image/jpeg',
+          alt: 'H4Code — Elite Digital Agency',
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: currentTitle,
-      description: currentDesc
+      description: currentDesc,
+      images: ['/og-image.jpg'],
+    },
+    icons: {
+      icon: [
+        { url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' },
+        { url: '/icon.png', sizes: '512x512', type: 'image/png' },
+      ],
+      apple: [{ url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }],
+      shortcut: '/favicon.ico',
     },
     robots: {
       index: true,
